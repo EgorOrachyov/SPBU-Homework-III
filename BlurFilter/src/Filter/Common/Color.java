@@ -1,4 +1,4 @@
-package Filter.Tools;
+package Filter.Common;
 
 public class Color {
 

@@ -1,4 +1,4 @@
-package Filter.Tools;
+package Filter.Common;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -17,23 +17,15 @@ public class Image {
             data = new BufferedImage(width, height, BufferedImage.TYPE_4BYTE_ABGR);
     }
 
-    public Image(String filename) {
-        try {
-            data = ImageIO.read(new File(filename));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public Image(String filename) throws IOException {
+        data = ImageIO.read(new File(filename));
     }
 
-    public void saveImage(String filename, String format) {
-        try {
-            ImageIO.write(data, format, new File(filename));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public void saveImage(String filename, String format) throws IOException {
+        ImageIO.write(data, format, new File(filename));
     }
 
-    public void saveImage(String filename) {
+    public void saveImage(String filename) throws IOException {
         saveImage(filename, "png");
     }
 

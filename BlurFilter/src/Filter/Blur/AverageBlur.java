@@ -1,8 +1,8 @@
 package Filter.Blur;
 
 import Filter.IFilter;
-import Filter.Tools.Color;
-import Filter.Tools.Image;
+import Filter.Common.Color;
+import Filter.Common.Image;
 
 import java.awt.image.BufferedImage;
 

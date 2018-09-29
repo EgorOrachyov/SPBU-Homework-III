@@ -1,6 +1,6 @@
 package Filter;
 
-import Filter.Tools.Image;
+import Filter.Common.Image;
 
 public interface IFilter {
 

@@ -1,5 +1,7 @@
 import Filter.Blur.AverageBlur;
-import Filter.Tools.Image;
+import Filter.Common.Image;
+
+import java.io.IOException;
 
 public class Main {
 
@@ -9,9 +11,12 @@ public class Main {
         filter.setThreadsCount(8);
         filter.setPassType(AverageBlur.PASS_TYPE_HORIZONTAL);
 
-        Image source = new Image("pictures/source.png");
-        Image result = filter.apply(source);
-        result.saveImage("pictures/result.png");
-
+        try {
+            Image source = new Image("pictures/source.png");
+            Image result = filter.apply(source);
+            result.saveImage("pictures/result.png");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
