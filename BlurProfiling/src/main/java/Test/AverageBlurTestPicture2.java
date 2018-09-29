@@ -46,8 +46,15 @@ public class AverageBlurTestPicture2 {
     private static TestData data;
 
     static {
-        data = new TestData("pictures/test2.jpg");
+        // Test data for desired picture
+        data = new TestData("pictures/test2.jpg", AverageBlur.RANGE_TYPE_7);
     }
+
+    //////////////////////////////////////////////////////////
+    ///                                                    ///
+    ///           Horizontal Pass (cash friendly)          ///
+    ///                                                    ///
+    //////////////////////////////////////////////////////////
 
     @Benchmark
     public void BlurHR_Threads1() {
@@ -86,6 +93,52 @@ public class AverageBlurTestPicture2 {
         AverageBlur filter = new AverageBlur(data.rangeType);
         filter.setThreadsCount(data.threads.get(4));
         filter.setPassType(AverageBlur.PASS_TYPE_HORIZONTAL);
+        Image result = filter.apply(data.picture);
+    }
+
+    //////////////////////////////////////////////////////////
+    ///                                                    ///
+    ///        Vertical Pass (not cash friendly ?)         ///
+    ///                                                    ///
+    //////////////////////////////////////////////////////////
+
+    @Benchmark
+    public void BlurVR_Threads1() {
+        AverageBlur filter = new AverageBlur(data.rangeType);
+        filter.setThreadsCount(data.threads.get(0));
+        filter.setPassType(AverageBlur.PASS_TYPE_VERTICAL);
+        Image result = filter.apply(data.picture);
+    }
+
+    @Benchmark
+    public void BlurVR_Threads2() {
+        AverageBlur filter = new AverageBlur(data.rangeType);
+        filter.setThreadsCount(data.threads.get(1));
+        filter.setPassType(AverageBlur.PASS_TYPE_VERTICAL);
+        Image result = filter.apply(data.picture);
+    }
+
+    @Benchmark
+    public void BlurVR_Threads4() {
+        AverageBlur filter = new AverageBlur(data.rangeType);
+        filter.setThreadsCount(data.threads.get(2));
+        filter.setPassType(AverageBlur.PASS_TYPE_VERTICAL);
+        Image result = filter.apply(data.picture);
+    }
+
+    @Benchmark
+    public void BlurVR_Threads8() {
+        AverageBlur filter = new AverageBlur(data.rangeType);
+        filter.setThreadsCount(data.threads.get(3));
+        filter.setPassType(AverageBlur.PASS_TYPE_VERTICAL);
+        Image result = filter.apply(data.picture);
+    }
+
+    @Benchmark
+    public void BlurVR_Threads16() {
+        AverageBlur filter = new AverageBlur(data.rangeType);
+        filter.setThreadsCount(data.threads.get(4));
+        filter.setPassType(AverageBlur.PASS_TYPE_VERTICAL);
         Image result = filter.apply(data.picture);
     }
 }
