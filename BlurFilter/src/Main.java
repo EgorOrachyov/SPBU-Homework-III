@@ -65,16 +65,21 @@ public class Main {
 
             // Got files' names, check for additional params
             for (int i = 0; i < NUM_OF_PARAMS; ++i) {
-                if (parts.length >= SKIP_FILES_NAMES + NUM_OF_PARAMS * (i + 1)) {
-                    tmp = parts[SKIP_FILES_NAMES + NUM_OF_PARAMS * i];
-                    if (tmp.equals(range)) {
-                        rangeType = Integer.valueOf(parts[SKIP_FILES_NAMES + NUM_OF_PARAMS * i + TAKE_NEXT_ONE]);
-                    } else if (tmp.equals(threads)) {
-                        threadsCount = Integer.valueOf(parts[SKIP_FILES_NAMES + NUM_OF_PARAMS * i + TAKE_NEXT_ONE]);
-                    } else {
-                        errorOccured = true;
-                        break;
+                try {
+                    if (parts.length >= SKIP_FILES_NAMES + NUM_OF_PARAMS * (i + 1)) {
+                        tmp = parts[SKIP_FILES_NAMES + NUM_OF_PARAMS * i];
+                        if (tmp.equals(range)) {
+                            rangeType = Integer.valueOf(parts[SKIP_FILES_NAMES + NUM_OF_PARAMS * i + TAKE_NEXT_ONE]);
+                        } else if (tmp.equals(threads)) {
+                            threadsCount = Integer.valueOf(parts[SKIP_FILES_NAMES + NUM_OF_PARAMS * i + TAKE_NEXT_ONE]);
+                        } else {
+                            errorOccured = true;
+                            break;
+                        }
                     }
+                } catch (NumberFormatException e) {
+                    System.out.println("Wrong command line params");
+                    errorOccured = true;
                 }
             }
 
