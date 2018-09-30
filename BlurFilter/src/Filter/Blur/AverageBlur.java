@@ -12,14 +12,14 @@ import java.awt.image.BufferedImage;
  */
 public class AverageBlur implements IFilter {
 
-    public static final int RANGE_TYPE_5  = 2;
-    public static final int RANGE_TYPE_7  = 3;
-    public static final int RANGE_TYPE_9  = 4;
-    public static final int RANGE_TYPE_11 = 5;
-    public static final int RANGE_TYPE_13 = 6;
-    public static final int RANGE_TYPE_15 = 7;
-    public static final int RANGE_TYPE_17 = 8;
-    public static final int RANGE_TYPE_19 = 9;
+    public static final int RANGE_TYPE_5  = 5;
+    public static final int RANGE_TYPE_7  = 7;
+    public static final int RANGE_TYPE_9  = 9;
+    public static final int RANGE_TYPE_11 = 11;
+    public static final int RANGE_TYPE_13 = 13;
+    public static final int RANGE_TYPE_15 = 15;
+    public static final int RANGE_TYPE_17 = 17;
+    public static final int RANGE_TYPE_19 = 19;
 
     public static final int PASS_TYPE_VERTICAL   = 1;
     public static final int PASS_TYPE_HORIZONTAL = 2;
@@ -28,18 +28,10 @@ public class AverageBlur implements IFilter {
     private int passType;
     private int range;
 
-    private AverageBlur() {
+    public AverageBlur() {
+        range = RANGE_TYPE_7;
         threadsCount = 4;
         passType = PASS_TYPE_HORIZONTAL;
-    }
-
-    /**
-     * Blur ignore pixels out of the picture
-     * @param rangeType Range type for filtered pixels
-     */
-    public AverageBlur(int rangeType) {
-        this();
-        range = rangeType;
     }
 
     public void apply(Image source, Image result) {
@@ -99,14 +91,6 @@ public class AverageBlur implements IFilter {
         return result;
     }
 
-    public int getRange() {
-        return range;
-    }
-
-    public int getThreadsCount() {
-        return threadsCount;
-    }
-
     /**
      * Set desired number of threads for parallelism of the task
      * @param threadsCount Number of threads to use
@@ -115,6 +99,22 @@ public class AverageBlur implements IFilter {
         if (threadsCount >= 1) {
             this.threadsCount = threadsCount;
         }
+    }
+
+    public void setRange(int range) {
+        if (range > 1) {
+            this.range = range / 2 + 1;
+        } else {
+            this.range = RANGE_TYPE_7;
+        }
+    }
+
+    public int getRange() {
+        return range;
+    }
+
+    public int getThreadsCount() {
+        return threadsCount;
     }
 
     public int getPassType() {
