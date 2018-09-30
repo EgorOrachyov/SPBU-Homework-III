@@ -4,6 +4,10 @@ import Filter.Common.Image;
 import java.io.IOException;
 import java.util.Scanner;
 
+/**
+ * Console interface style application entry point
+ * (Handles Average blur)
+ */
 public class Main {
 
     public static void main(String[] args) {
@@ -24,6 +28,7 @@ public class Main {
         System.out.println("*-----------------------------------------------------------*");
 
         while (true) {
+            // Invite for input
             System.out.print("-> ");
 
             Image source;
@@ -32,14 +37,17 @@ public class Main {
             String filename;
             String outfilename;
             String tmp;
-            String exit = "exit";
-            String range = "range";
-            String threads = "threads";
-            int NUM_OF_PARAMS = 2;
+            final String exit = "exit";
+            final String range = "range";
+            final String threads = "threads";
+            final int NUM_OF_PARAMS = 2;
+            final int SKIP_FILES_NAMES = 2;
+            final int TAKE_NEXT_ONE = 1;
             int rangeType = AverageBlur.RANGE_TYPE_7;
             int threadsCount = 4;
             boolean errorOccured = false;
 
+            // Get user input, check for exit cmd
             tmp = in.nextLine();
             if (tmp.equals(exit)) {
                 break;
@@ -55,13 +63,14 @@ public class Main {
                 }
             }
 
+            // Got files' names, check for additional params
             for (int i = 0; i < NUM_OF_PARAMS; ++i) {
-                if (parts.length >= 2 + 2 * (i + 1)) {
-                    tmp = parts[2 + 2 * i];
+                if (parts.length >= SKIP_FILES_NAMES + NUM_OF_PARAMS * (i + 1)) {
+                    tmp = parts[SKIP_FILES_NAMES + NUM_OF_PARAMS * i];
                     if (tmp.equals(range)) {
-                        rangeType = Integer.valueOf(parts[3 + 2 * i]);
+                        rangeType = Integer.valueOf(parts[SKIP_FILES_NAMES + NUM_OF_PARAMS * i + TAKE_NEXT_ONE]);
                     } else if (tmp.equals(threads)) {
-                        threadsCount = Integer.valueOf(parts[3 + 2 * i]);
+                        threadsCount = Integer.valueOf(parts[SKIP_FILES_NAMES + NUM_OF_PARAMS * i + TAKE_NEXT_ONE]);
                     } else {
                         errorOccured = true;
                         break;
@@ -71,6 +80,7 @@ public class Main {
 
             if (errorOccured) continue;
 
+            // Get resource for blur
             try {
                 source = new Image(filename);
             } catch (IOException e) {
@@ -78,11 +88,12 @@ public class Main {
                 continue;
             }
 
+            // Set properties and blur
             filter.setRange(rangeType);
             filter.setThreadsCount(threadsCount);
-
             result = filter.apply(source);
 
+            // Try to save result
             try {
                 String extension = "png";
                 result.saveImage(outfilename, extension);
