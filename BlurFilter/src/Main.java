@@ -28,8 +28,19 @@ public class Main {
         System.out.println("*-----------------------------------------------------------*");
 
         while (true) {
-            // Invite for input
-            System.out.print("-> ");
+
+            // Common const vars
+            final String EXIT = "exit";
+            final String RANGE = "range";
+            final String THREADS = "threads";
+
+            final int NUM_OF_PARAMS = 2;
+            final int SKIP_FILES_NAMES = 2;
+            final int TAKE_NEXT_ONE = 1;
+            final int MIN_ARGS_COUNT = 2;
+
+            // Error indication
+            boolean errorOccur = false;
 
             Image source;
             Image result;
@@ -37,24 +48,20 @@ public class Main {
             String filename;
             String outfilename;
             String tmp;
-            final String exit = "exit";
-            final String range = "range";
-            final String threads = "threads";
-            final int NUM_OF_PARAMS = 2;
-            final int SKIP_FILES_NAMES = 2;
-            final int TAKE_NEXT_ONE = 1;
             int rangeType = AverageBlur.RANGE_TYPE_7;
             int threadsCount = 4;
-            boolean errorOccured = false;
+
+            // Invite for input
+            System.out.print("$ ");
 
             // Get user input, check for exit cmd
             tmp = in.nextLine();
-            if (tmp.equals(exit)) {
+            if (tmp.equals(EXIT)) {
                 break;
             }
             else {
                 parts = tmp.split(" ");
-                if (parts.length < 2) {
+                if (parts.length < MIN_ARGS_COUNT) {
                     continue;
                 }
                 else {
@@ -68,22 +75,22 @@ public class Main {
                 try {
                     if (parts.length >= SKIP_FILES_NAMES + NUM_OF_PARAMS * (i + 1)) {
                         tmp = parts[SKIP_FILES_NAMES + NUM_OF_PARAMS * i];
-                        if (tmp.equals(range)) {
+                        if (tmp.equals(RANGE)) {
                             rangeType = Integer.valueOf(parts[SKIP_FILES_NAMES + NUM_OF_PARAMS * i + TAKE_NEXT_ONE]);
-                        } else if (tmp.equals(threads)) {
+                        } else if (tmp.equals(THREADS)) {
                             threadsCount = Integer.valueOf(parts[SKIP_FILES_NAMES + NUM_OF_PARAMS * i + TAKE_NEXT_ONE]);
                         } else {
-                            errorOccured = true;
+                            errorOccur = true;
                             break;
                         }
                     }
                 } catch (NumberFormatException e) {
                     System.out.println("Wrong command line params");
-                    errorOccured = true;
+                    errorOccur = true;
                 }
             }
 
-            if (errorOccured) continue;
+            if (errorOccur) continue;
 
             // Get resource for blur
             try {

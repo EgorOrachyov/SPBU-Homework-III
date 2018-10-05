@@ -12,6 +12,9 @@ import java.awt.image.BufferedImage;
  */
 public class AverageBlur implements IFilter {
 
+    /**
+     * Common range types
+     */
     public static final int RANGE_TYPE_5  = 5;
     public static final int RANGE_TYPE_7  = 7;
     public static final int RANGE_TYPE_9  = 9;
@@ -21,17 +24,14 @@ public class AverageBlur implements IFilter {
     public static final int RANGE_TYPE_17 = 17;
     public static final int RANGE_TYPE_19 = 19;
 
-    public static final int PASS_TYPE_VERTICAL   = 1;
-    public static final int PASS_TYPE_HORIZONTAL = 2;
-
     private int threadsCount;
-    private int passType;
+    private PassType passType;
     private int range;
 
     public AverageBlur() {
         range = RANGE_TYPE_7;
         threadsCount = 4;
-        passType = PASS_TYPE_HORIZONTAL;
+        passType = PassType.HORIZONTAL;
     }
 
     public void apply(Image source, Image result) {
@@ -50,7 +50,7 @@ public class AverageBlur implements IFilter {
 
         Thread[] threads = new Thread[threadsCount];
 
-        if (passType == PASS_TYPE_HORIZONTAL) {
+        if (passType == PassType.HORIZONTAL) {
             int heightPart = imageHeight / threadsCount;
 
             for (int i = 0; i < threadsCount; ++i) {
@@ -60,7 +60,7 @@ public class AverageBlur implements IFilter {
                 threads[i].start();
             }
         }
-        else if (passType == PASS_TYPE_VERTICAL) {
+        else if (passType == PassType.VERTICAL) {
             int widthPart = imageWidth / threadsCount;
 
             for (int i = 0; i < threadsCount; ++i) {
@@ -109,6 +109,10 @@ public class AverageBlur implements IFilter {
         }
     }
 
+    public void setPassType(PassType passType) {
+        this.passType = passType;
+    }
+
     public int getRange() {
         return range;
     }
@@ -117,26 +121,23 @@ public class AverageBlur implements IFilter {
         return threadsCount;
     }
 
-    public int getPassType() {
+    public PassType getPassType() {
         return passType;
     }
 
-    public void setPassType(int passType) {
-        this.passType = passType;
-    }
 }
 
 class AverageBlurData {
 
     public int width;
     public int height;
-    public int passType;
     public int range;
+    public PassType passType;
     public BufferedImage src;
     public BufferedImage out;
 
     public AverageBlurData(int width, int height,
-                           int passType, int range,
+                           PassType passType, int range,
                            Image source, Image result) {
         this.width = width;
         this.height= height;
@@ -167,14 +168,14 @@ class AverageBlurPass implements Runnable {
     }
 
     public void run() {
-        if (data.passType == AverageBlur.PASS_TYPE_HORIZONTAL) {
+        if (data.passType == PassType.HORIZONTAL) {
             for (int y = startY; y < height; ++y) {
                 for (int x = startX; x < width; ++x) {
                     blurIgnoreBorders(x, y);
                 }
             }
         }
-        else if (data.passType == AverageBlur.PASS_TYPE_VERTICAL) {
+        else if (data.passType == PassType.VERTICAL) {
             for (int x = startX; x < width; ++x) {
                 for (int y = startY; y < height; ++y) {
                     blurIgnoreBorders(x, y);
@@ -208,5 +209,4 @@ class AverageBlurPass implements Runnable {
         result.multiplyToThis(1.0f / samplesCount);
         data.out.setRGB(x, y, result.getABGRColor());
     }
-
 }
