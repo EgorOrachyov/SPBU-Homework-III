@@ -75,14 +75,13 @@ public class AverageBlur implements IFilter {
         }
 
         // Wait for ending of our threads' work
-        boolean threadsAreWorking = true;
-        while (threadsAreWorking) {
-            threadsAreWorking = false;
+        try {
             for (int i = 0; i < threadsCount; ++i) {
-                threadsAreWorking |= threads[i].isAlive();
+                threads[i].join();
             }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
-
     }
 
     public Image apply(Image source) {
@@ -132,6 +131,8 @@ class AverageBlurData {
     public int width;
     public int height;
     public int range;
+    public int[] srcColor;
+    public int[] outColor;
     public PassType passType;
     public BufferedImage src;
     public BufferedImage out;
@@ -146,6 +147,10 @@ class AverageBlurData {
 
         src = source.getData();
         out = result.getData();
+
+        // Get 1-dimensional arrays of buffers' pixels' colors
+        srcColor = src.getRGB(0,0, width, height, null, 0 ,width);
+        outColor = out.getRGB(0, 0, width, height, null, 0, width);
     }
 
 }
@@ -182,6 +187,9 @@ class AverageBlurPass implements Runnable {
                 }
             }
         }
+
+        // save data in out buffered image
+        data.out.setRGB(0, 0, data.width, data.height, data.outColor, 0, width);
     }
 
     private boolean isPointInCanvas(int x, int y) {
@@ -201,12 +209,12 @@ class AverageBlurPass implements Runnable {
             for (int m = -data.range; m <= data.range; ++m) {
                 if (isPointInCanvas(x + m, y + k)) {
                     samplesCount += 1;
-                    result.addToThis(colorFromABGRInt(data.src.getRGB(x + m, y + k)));
+                    result.addToThis(colorFromABGRInt(data.srcColor[(y + k) * data.width + (x + m)]));
                 }
             }
         }
 
         result.multiplyToThis(1.0f / samplesCount);
-        data.out.setRGB(x, y, result.getABGRColor());
+        data.outColor[y * data.width + x] = result.getABGRColor();
     }
 }
