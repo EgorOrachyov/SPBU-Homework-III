@@ -2,6 +2,14 @@ package Application.LongAdd;
 
 import Application.TaskHandler;
 
+/**
+ * Multi-thread add algorithm via parallel prefix scan.
+ * Involves 4 independent threads passes:
+ * 1) Prediction pass (compute cmn)
+ * 2) Parallel prefix sum (collect pass)
+ * 3) Parallel prefix sum (distribute pass)
+ * 4) Evaluate pass
+ */
 public class AddMultithread implements BinaryOperator {
 
     public static final byte C = 2;
@@ -11,6 +19,10 @@ public class AddMultithread implements BinaryOperator {
     private final Thread thread[];
     private final TaskHandler handler[];
 
+    /**
+     * @param threadCounts Should be power of 2. If it is not, then threads count will be chosen
+     *                     as the nearest power of 2 to the argument
+     */
     public AddMultithread(int threadCounts) {
         int THREAD_COUNTS;
 
@@ -28,6 +40,14 @@ public class AddMultithread implements BinaryOperator {
         }
     }
 
+    /**
+     * @note if lengths of values are less then number of threads then standard
+     *       single thread add will be applied
+     *
+     * @param a Long decimal value
+     * @param b Lomg decimal value
+     * @return Add a and b
+     */
     @Override
     public DecimalValue apply(DecimalValue a, DecimalValue b) {
 
@@ -51,7 +71,8 @@ public class AddMultithread implements BinaryOperator {
         System.arraycopy(a.getBuffer(), 0, v1, 0, a.getBuffer().length);
         System.arraycopy(b.getBuffer(), 0, v2, 0, b.getBuffer().length);
 
-        createPool();
+        recreatePool();
+
         for(int i = 0; i < threadsCount; ++i) {
             handler[i].setTask(new ComputePrediction(v1, v2, res, step * (i + 1), step * (i + 2) - 1));
             thread[i].start();
@@ -61,15 +82,36 @@ public class AddMultithread implements BinaryOperator {
         localHandler.run();
 
         join();
-        System.out.println(new DecimalValue(res, length));
+        recreatePool();
 
-        createPool();
-        localHandler.setTask(new ParallelPrefixSum(res, carry, 0, step, threadsCount + 1, 0, threadsCount, handler, thread)).run();
+        localHandler.setTask(new ParallelPrefixSumCollect(res, carry, 0, step, threadsCount + 1, 0, threadsCount, handler, thread));
         localHandler.run();
 
-        System.out.println(new DecimalValue(carry, length));
+        recreatePool();
 
-        return null;
+        int currentHandler = 0;
+        for(int i = 3; i < threadsCount + 1; i += 2) {
+            handler[currentHandler].setTask(new ParallelPrefixSumDistribute(carry, i, 1, step));
+            thread[currentHandler].start();
+            currentHandler += 1;
+        }
+
+        join();
+        recreatePool();
+
+        for(int i = 0; i < threadsCount; ++i) {
+            handler[i].setTask(new Evaluate(v1, v2, carry, res, (i + 1) * step, (i == threadsCount - 1 ? length : (i + 2) * step - 1)));
+            thread[i].start();
+        }
+
+        res[0] = (byte)((v1[0] + v2[0]) % 10);
+        for(int i = 1; i <= step - 1; ++i) {
+            res[i] = (byte)((v1[i] + v2[i] + AddMultithread.willCarry(carry[i - 1])) % 10);
+        }
+
+        join();
+
+        return new DecimalValue(res);
     }
 
     private static int toPowerOfTwo(int value) {
@@ -87,6 +129,10 @@ public class AddMultithread implements BinaryOperator {
         else {
             return 1;
         }
+    }
+
+    public static boolean isPowerfTwo(int value) {
+        return (((value - 1) & value) == 0);
     }
 
     private static int align(int value, int alignment) {
@@ -107,8 +153,12 @@ public class AddMultithread implements BinaryOperator {
         }
     }
 
+    public static byte willCarry(byte prediction) {
+        return (byte)(prediction == C ? 1 : 0);
+    }
 
-    private void createPool() {
+
+    private void recreatePool() {
         for(int i = 0; i < thread.length; ++i) {
             thread[i] = new Thread(handler[i]);
         }
@@ -126,25 +176,43 @@ public class AddMultithread implements BinaryOperator {
 
     public static void main(String ... args) {
 
-        DecimalValue a = new DecimalValue("999999999999999");
-        DecimalValue b = new DecimalValue("1");
-        DecimalValue f = new DecimalValue("123485449");
+        AddTest();
+
+    }
+
+    private static void AddTest() {
+
+        DecimalValue a = new DecimalValue("3297198758148957984317985793481759898798541739");
+        DecimalValue b = new DecimalValue("239823894");
+        DecimalValue c = new DecimalValue("99999999999999999999999");
+        DecimalValue d = new DecimalValue("1");
+        DecimalValue e = new DecimalValue("0");
+        DecimalValue f = new DecimalValue("1234854");
         DecimalValue g = new DecimalValue("243253455");
 
-        AddMultithread addMultithread = new AddMultithread(4);
+        Add add = new Add();
 
-        addMultithread.apply(a, b);
-        addMultithread.apply(f, g);
+        System.out.println("Sequential add");
+        System.out.println(add.apply(a,b));
+        System.out.println(add.apply(a,c));
+        System.out.println(add.apply(b,a));
+        System.out.println(add.apply(c,d));
+        System.out.println(add.apply(a,b));
+        System.out.println(add.apply(e,e));
+        System.out.println(add.apply(f,g));
+        System.out.println(add.apply(g,b));
 
-        System.out.println(toPowerOfTwo(1));
-        System.out.println(toPowerOfTwo(2));
-        System.out.println(toPowerOfTwo(3));
-        System.out.println(toPowerOfTwo(4));
-        System.out.println(toPowerOfTwo(5));
-        System.out.println(toPowerOfTwo(7));
-        System.out.println(toPowerOfTwo(9));
-        System.out.println(toPowerOfTwo(15));
-        System.out.println(toPowerOfTwo(16));
+        AddMultithread addmt = new AddMultithread(8);
+
+        System.out.println("Multi-thread add");
+        System.out.println(addmt.apply(a,b));
+        System.out.println(addmt.apply(a,c));
+        System.out.println(addmt.apply(b,a));
+        System.out.println(addmt.apply(c,d));
+        System.out.println(addmt.apply(a,b));
+        System.out.println(addmt.apply(e,e));
+        System.out.println(addmt.apply(f,g));
+        System.out.println(addmt.apply(g,b));
 
     }
 }

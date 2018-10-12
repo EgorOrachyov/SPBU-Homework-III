@@ -52,7 +52,7 @@ public class Add implements BinaryOperator {
         return new DecimalValue(res, length);
     }
 
-    public static void main(String ... args) {
+    private static void main(String ... args) {
 
         Add add = new Add();
 

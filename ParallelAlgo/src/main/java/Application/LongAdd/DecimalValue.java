@@ -1,5 +1,9 @@
 package Application.LongAdd;
 
+/**
+ * Long decimal value, coded by 0..9 numbers in decimal
+ * counting system.
+ */
 public class DecimalValue {
 
     private byte[] buffer;

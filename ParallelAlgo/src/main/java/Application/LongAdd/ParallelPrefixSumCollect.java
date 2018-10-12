@@ -3,7 +3,7 @@ package Application.LongAdd;
 import Application.Task;
 import Application.TaskHandler;
 
-public class ParallelPrefixSum implements Task {
+public class ParallelPrefixSumCollect implements Task {
 
     private byte[] a;
     private byte[] c;
@@ -15,12 +15,26 @@ public class ParallelPrefixSum implements Task {
     private TaskHandler[] handler;
     private Thread[] thread;
 
-    public ParallelPrefixSum(byte[] in1, byte[] out,
-                             int start, int step, int blocks,
-                             int first, int count,
-                             TaskHandler[] handlers,
-                             Thread[] threads) {
-        a = in1;
+    /**
+     * @warnig To work properly num of blocks should be power of 2
+     * @warnig To work properly count of threads  should be power of 2 minus one
+     *
+     * @param in Array of predictions (CMN)
+     * @param out Array to save result of pps
+     * @param start Index of the first element in the arrays in and out of this handled block
+     * @param step Step between blocks
+     * @param blocks Number of blocks in this section
+     * @param first Index of the first thread and handler
+     * @param count Count of threads and handlers
+     * @param handlers Task Handler
+     * @param threads Threads to run task
+     */
+    public ParallelPrefixSumCollect(byte[] in, byte[] out,
+                                    int start, int step, int blocks,
+                                    int first, int count,
+                                    TaskHandler[] handlers,
+                                    Thread[] threads) {
+        a = in;
         c = out;
         this.start = start;
         this.step = step;
@@ -29,8 +43,6 @@ public class ParallelPrefixSum implements Task {
         this.count = count;
         handler = handlers;
         thread = threads;
-
-        System.out.printf("start: %d last: %d f thread %d l thread %d count: %d \n", start, start + step * blocks - 1, first, first + count - 1, count);
     }
 
     @Override
@@ -46,13 +58,13 @@ public class ParallelPrefixSum implements Task {
             final int newBlocks = blocks / 2;
             final int newCount = count / 2;
 
-            handler[first + newCount].setTask(new ParallelPrefixSum(a, c, start, step, newBlocks ,first, newCount, handler, thread));
+            handler[first + newCount].setTask(new ParallelPrefixSumCollect(a, c, start, step, newBlocks ,first, newCount, handler, thread));
             thread[first + newCount].start();
 
             if (newCount == 0) {
-                (new ParallelPrefixSum(a, c, start + step * newBlocks, step, 1, first, 0,null, null)).run();
+                (new ParallelPrefixSumCollect(a, c, start + step * newBlocks, step, 1, first, 0,null, null)).run();
             } else {
-                handler[first + count - 1].setTask(new ParallelPrefixSum(a, c, start + step * newBlocks, step, newBlocks, first + newCount + 1, newCount, handler, thread));
+                handler[first + count - 1].setTask(new ParallelPrefixSumCollect(a, c, start + step * newBlocks, step, newBlocks, first + newCount + 1, newCount, handler, thread));
                 handler[first + count - 1].run();
             }
 
