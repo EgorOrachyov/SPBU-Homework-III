@@ -1,6 +1,7 @@
 package Application.LongAdd;
 
 import Application.Task;
+import Application.Util;
 
 public class ParallelPrefixSumDistribute implements Task {
 
@@ -27,7 +28,7 @@ public class ParallelPrefixSumDistribute implements Task {
 
     @Override
     public void run() {
-        if (AddMultithread.isPowerfTwo(index - delta)) {
+        if (Util.isPowerfTwo(index - delta)) {
             final int prev = (index - delta) * step - 1;
             final int start = (index - 1) * step;
             final int last = (index) * step - 1;

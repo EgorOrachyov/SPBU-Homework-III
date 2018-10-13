@@ -1,6 +1,7 @@
 package Application.LongAdd;
 
 import Application.TaskHandler;
+import Application.Util;
 
 /**
  * Multi-thread add algorithm via parallel prefix scan.
@@ -24,13 +25,13 @@ public class AddMultithread implements BinaryOperator {
      *                     as the nearest power of 2 to the argument
      */
     public AddMultithread(int threadCounts) {
-        int THREAD_COUNTS;
+        int THREAD_COUNTS = Util.toPowerOfTwo(threadCounts);
 
-        if (threadCounts <= 1) {
+        if (THREAD_COUNTS <= 1) {
             THREAD_COUNTS = 3;
         }
         else {
-            THREAD_COUNTS = threadCounts - 1;
+            THREAD_COUNTS = THREAD_COUNTS - 1;
         }
 
         thread = new Thread[THREAD_COUNTS];
@@ -59,7 +60,7 @@ public class AddMultithread implements BinaryOperator {
 
         // Use alignment for buffers size which depends on !Total! threads count (threadsCount + 1)
         final int threadsCount = thread.length;
-        final int length = align(Math.max(a.getBuffer().length, b.getBuffer().length), threadsCount + 1);
+        final int length = Util.align(Math.max(a.getBuffer().length, b.getBuffer().length), threadsCount + 1);
         final int step = length / (threadsCount + 1);
         TaskHandler localHandler = new TaskHandler();
 
@@ -112,36 +113,6 @@ public class AddMultithread implements BinaryOperator {
         join();
 
         return new DecimalValue(res);
-    }
-
-    private static int toPowerOfTwo(int value) {
-        if (value > 1) {
-            if (((value - 1) & value) == 0) {
-                return value;
-            } else {
-                for(int i = 2; true; i *= 2) {
-                    if (i <= value && value <= i * 2) {
-                        return i * 2;
-                    }
-                }
-            }
-        }
-        else {
-            return 1;
-        }
-    }
-
-    public static boolean isPowerfTwo(int value) {
-        return (((value - 1) & value) == 0);
-    }
-
-    private static int align(int value, int alignment) {
-        if (value % alignment == 0) {
-            return value;
-        }
-        else {
-            return value + (alignment - (value % alignment));
-        }
     }
 
     public static byte operator(byte a, byte b) {
