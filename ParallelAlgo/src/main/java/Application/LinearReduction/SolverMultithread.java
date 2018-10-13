@@ -63,7 +63,7 @@ public class SolverMultithread {
             return 0;
         }
 
-        if (thread.length >= length) {
+        if (thread.length + 1 >= length) {
             return Solver.compute(a,b);
         }
 
@@ -72,6 +72,7 @@ public class SolverMultithread {
         final int blocks = threadsCount + 1;
         final int start = 0;
         final int firts = 0;
+        final int index = 0;
         int[] outBuffer1 = new int[threadsCount + 1];
         int[] outBuffer2 = new int[threadsCount + 1];
 
@@ -81,10 +82,10 @@ public class SolverMultithread {
 
         recreatePool();
         localHandler.setTask(new ParallelScan(a, b, outBuffer1, outBuffer2,
-                0, blocks, length, 0, 0, threadsCount, handler, thread));
+                start, blocks, length, index, firts, threadsCount, handler, thread));
         localHandler.run();
 
-        return outBuffer1[0] + outBuffer2[0];
+        return outBuffer1[index] + outBuffer2[index];
     }
 
     public static void main(String ... args) {
