@@ -28,7 +28,7 @@ public class AddMultithread implements BinaryOperator {
         int THREAD_COUNTS = Util.toPowerOfTwo(threadCounts);
 
         if (THREAD_COUNTS <= 1) {
-            THREAD_COUNTS = 3;
+            THREAD_COUNTS = 1;
         }
         else {
             THREAD_COUNTS = THREAD_COUNTS - 1;
@@ -88,16 +88,18 @@ public class AddMultithread implements BinaryOperator {
         localHandler.setTask(new ParallelPrefixSumCollect(res, carry, 0, step, threadsCount + 1, 0, threadsCount, handler, thread));
         localHandler.run();
 
-        recreatePool();
+        if (threadsCount >= 3) {
+            recreatePool();
+            int currentHandler = 0;
+            for (int i = 3; i < threadsCount + 1; i += 2) {
+                handler[currentHandler].setTask(new ParallelPrefixSumDistribute(carry, i, 1, step));
+                thread[currentHandler].start();
+                currentHandler += 1;
+            }
 
-        int currentHandler = 0;
-        for(int i = 3; i < threadsCount + 1; i += 2) {
-            handler[currentHandler].setTask(new ParallelPrefixSumDistribute(carry, i, 1, step));
-            thread[currentHandler].start();
-            currentHandler += 1;
+            join();
         }
 
-        join();
         recreatePool();
 
         for(int i = 0; i < threadsCount; ++i) {
@@ -161,6 +163,19 @@ public class AddMultithread implements BinaryOperator {
         DecimalValue f = new DecimalValue("1234854");
         DecimalValue g = new DecimalValue("243253455");
 
+        DecimalValue h = new DecimalValue(
+                "231764962795743987594788284386" +
+                "486325462354682375974598743890" +
+                "327846873420080785291194691264" +
+                "919479187419847983789332667326" +
+                "723979111414442412898712898999");
+        DecimalValue k = new DecimalValue(
+                "124765672135467521948017614857" +
+                "143059038096587983795278682876" +
+                "723678278587465738703480984905" +
+                "809239849823148164786174678114" +
+                "719874893700818939290898398297");
+
         Add add = new Add();
 
         System.out.println("Sequential add");
@@ -172,18 +187,19 @@ public class AddMultithread implements BinaryOperator {
         System.out.println(add.apply(e,e));
         System.out.println(add.apply(f,g));
         System.out.println(add.apply(g,b));
+        System.out.println(add.apply(h,k));
 
-        AddMultithread addmt = new AddMultithread(8);
+        AddMultithread addmt = new AddMultithread(32);
 
-        System.out.println("Multi-thread add");
-        System.out.println(addmt.apply(a,b));
-        System.out.println(addmt.apply(a,c));
-        System.out.println(addmt.apply(b,a));
-        System.out.println(addmt.apply(c,d));
-        System.out.println(addmt.apply(a,b));
-        System.out.println(addmt.apply(e,e));
-        System.out.println(addmt.apply(f,g));
-        System.out.println(addmt.apply(g,b));
+        //System.out.println("Multi-thread add");
+        //System.out.println(addmt.apply(a,b));
+        //System.out.println(addmt.apply(a,c));
+        //System.out.println(addmt.apply(b,a));
+        //System.out.println(addmt.apply(c,d));
+        //System.out.println(addmt.apply(a,b));
+        //System.out.println(addmt.apply(e,e));
+        //System.out.println(addmt.apply(f,g));
+        System.out.println(addmt.apply(h,k));
 
     }
 }

@@ -3,7 +3,7 @@ package Application;
 public class Util {
 
     public static boolean isPowerfTwo(int value) {
-        return (((value - 1) & value) == 0);
+        return  (value > 0) && (((value - 1) & value) == 0);
     }
 
     public static int toPowerOfTwo(int value) {

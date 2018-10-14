@@ -16,7 +16,7 @@ public class TransformMultithread {
         int THREAD_COUNTS = Util.toPowerOfTwo(threadCounts);
 
         if (THREAD_COUNTS <= 1) {
-            THREAD_COUNTS = 3;
+            THREAD_COUNTS = 2;
         }
         else {
             THREAD_COUNTS = THREAD_COUNTS - 1;

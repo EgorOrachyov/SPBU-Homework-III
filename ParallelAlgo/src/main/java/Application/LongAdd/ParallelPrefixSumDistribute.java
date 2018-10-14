@@ -28,7 +28,7 @@ public class ParallelPrefixSumDistribute implements Task {
 
     @Override
     public void run() {
-        if (Util.isPowerfTwo(index - delta)) {
+        if (canUnite(index - delta, index)) {
             final int prev = (index - delta) * step - 1;
             final int start = (index - 1) * step;
             final int last = (index) * step - 1;
@@ -38,7 +38,7 @@ public class ParallelPrefixSumDistribute implements Task {
             }
         }
         else {
-            (new ParallelPrefixSumDistribute(c, index - delta, delta * 2, step)).run();
+            (new ParallelPrefixSumDistribute(c, index - delta, delta(index - delta), step)).run();
 
             final int prev = (index - delta) * step - 1;
             final int start = (index - 1) * step;
@@ -48,5 +48,20 @@ public class ParallelPrefixSumDistribute implements Task {
                 c[i] = AddMultithread.operator(c[i - 1], c[i]);
             }
         }
+    }
+
+    private static boolean canUnite(int left, int right) {
+        return Util.isPowerfTwo(left) && Util.isPowerfTwo(right - left);
+    }
+
+    private static int delta(int left) {
+        int i = 0;
+        int a = left;
+        while ((a & 1) == 0) {
+            a = a >> 1;
+            i += 1;
+        }
+
+        return (1 << i);
     }
 }
