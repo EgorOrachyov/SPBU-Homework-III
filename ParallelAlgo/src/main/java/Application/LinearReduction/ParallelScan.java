@@ -76,7 +76,7 @@ public class ParallelScan implements Task {
             final int newBlocks = blocks / 2;
             final int countLeft = count / 2;
             final int countRight = count - countLeft;
-            final int starttLeft = start;
+            final int startLeft = start;
             final int startRight = start + countLeft;
             final int indexLeft = index;
             final int indexRight = index + newBlocks;
@@ -92,7 +92,7 @@ public class ParallelScan implements Task {
 
             thread[first].start();
 
-            (new ParallelScan(a, b, c1, c2, starttLeft, newBlocks, countLeft, indexLeft, firstLeft, threadsLeft, handler, thread)).run();
+            (new ParallelScan(a, b, c1, c2, startLeft, newBlocks, countLeft, indexLeft, firstLeft, threadsLeft, handler, thread)).run();
 
             try {
                 thread[first].join();

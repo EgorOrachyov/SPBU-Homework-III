@@ -1,13 +1,13 @@
-package Application.ParenthesesBalance;
+package Application.TurtleMovement;
 
 import Application.Task;
 import Application.TaskHandler;
 
 public class ParallelScan implements Task {
 
-    private byte[] a;
-    private int[] c1;
-    private int[] c2;
+    private Vector2d[] in;
+    private Vector2d[] pos;
+    private double[] angles;
     private int start;
     private int blocks;
     private int count;
@@ -21,13 +21,18 @@ public class ParallelScan implements Task {
      * Parallel scam implements binary operator defined for tuple in
      * the following way:
      *
-     * (a,b) x (c,d) = (a + c - d,b)
+     * ((x,y),a) x ((z,w),b) = ((x + x',y + y'), a + b)
+     *
+     * where
+     *
+     * | x'| = | cos a   -sin a | * | x |
+     * | y'|   | sin a    cos a |   | y |
      *
      * This operator is associative (it can be proven by simple test)
      *
-     * @param a Array of a characters
-     * @param out1 First element in tuple to save
-     * @param out2 Second element in touple to save
+     * @param in Array of pairs (angle,offset)
+     * @param pos Array of positions (x,y)
+     * @param angles Array of angles tmp
      * @param start First index of range to start
      * @param blocks Count of blocks to handle
      * @param count Num of element to handle
@@ -37,15 +42,15 @@ public class ParallelScan implements Task {
      * @param handlers TaskHandlers
      * @param threads Threads
      */
-    public ParallelScan(byte[] a, int[] out1, int[] out2,
+    public ParallelScan(Vector2d[] in, Vector2d[] pos, double[] angles,
                         int start, int blocks, int count, int index,
                         int first, int threadsCount,
                         TaskHandler[] handlers,
                         Thread[] threads) {
 
-        this.a = a;
-        c1 = out1;
-        c2 = out2;
+        this.in = in;
+        this.pos = pos;
+        this.angles = angles;
         this.start = start;
         this.blocks = blocks;
         this.count = count;
@@ -59,25 +64,21 @@ public class ParallelScan implements Task {
     @Override
     public void run() {
         if (blocks == 1) {
-            int unbalanced = 0;
-            int balance = 0;
+            double posX = 0;
+            double posY = 0;
+            double angle = 0;
 
-            for(int i = start; i < start + count; ++i) {
-                if (a[i] == ')') {
-                    if (balance == 0) {
-                        unbalanced += 1;
-                    }
-                    else {
-                        balance -= 1;
-                    }
-                }
-                else {
-                    balance += 1;
-                }
+            for (int i = start; i < start + count; ++i) {
+                double rot = Math.toRadians(in[i].x());
+                double offset = in[i].y();
+
+                angle += rot;
+                posX += offset * Math.cos(angle);
+                posY += offset * Math.sin(angle);
             }
 
-            c1[index] = unbalanced;
-            c2[index] = balance;
+            angles[index] = angle;
+            pos[index] = new Vector2d(posX, posY);
         }
         else {
             final int newBlocks = blocks / 2;
@@ -92,21 +93,26 @@ public class ParallelScan implements Task {
             final int firstLeft = first + 1;
             final int firstRight = first + threadsLeft + 1;
 
-            handler[first].setTask(new ParallelScan(a, c1, c2,
+            handler[first].setTask(new ParallelScan(in, pos, angles,
                     startRight, newBlocks, countRight, indexRight,
                     firstRight, threadsRight,
                     handler, thread));
 
             thread[first].start();
 
-            (new ParallelScan(a, c1, c2, startLeft, newBlocks, countLeft, indexLeft, firstLeft, threadsLeft, handler, thread)).run();
+            (new ParallelScan(in, pos, angles, startLeft, newBlocks, countLeft, indexLeft, firstLeft, threadsLeft, handler, thread)).run();
 
             try {
                 thread[first].join();
             } catch (InterruptedException e) {}
 
-            c1[index] = c1[indexLeft] + c1[indexRight] - c2[indexLeft];
-            c2[index] = c2[indexRight];
+            Matrix2x2d m = new Matrix2x2d(
+                    Math.cos(angles[indexLeft]), -Math.sin(angles[indexLeft]),
+                    Math.sin(angles[indexLeft]), Math.cos(angles[indexLeft])
+            );
+
+            angles[index] = angles[indexLeft] + angles[indexRight];
+            pos[index] = pos[indexLeft].add(m.multiply(pos[indexRight]));
         }
     }
 }
