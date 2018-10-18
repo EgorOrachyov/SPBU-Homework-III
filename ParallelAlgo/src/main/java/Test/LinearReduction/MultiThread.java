@@ -29,11 +29,11 @@
  * THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package Test.LongSum;
+package Test.LinearReduction;
 
-import Application.LongAdd.Add;
-import Application.LongAdd.AddMultithread;
-import Application.LongAdd.DecimalValue;
+import Application.LinearReduction.Data;
+import Application.LinearReduction.Load;
+import Application.LinearReduction.SolverMultithread;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;
 
@@ -41,79 +41,59 @@ import java.util.concurrent.TimeUnit;
 
 @Fork(1)
 @Warmup(iterations = 2, time = 5)
-@Measurement(iterations = 2, time = 5)
+@Measurement(iterations = 2, time = 10)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @BenchmarkMode(Mode.AverageTime)
-public class Number1 {
+public class MultiThread {
 
-    private static DecimalValue a;
-    private static DecimalValue b;
+    private static Data input1;
+    private static Data input2;
+    private static Data input3;
 
-    private static Add thread1;
-
-    private static AddMultithread thread2;
-    private static AddMultithread thread4;
-    private static AddMultithread thread8;
-    private static AddMultithread thread16;
+    private static SolverMultithread solver2;
+    private static SolverMultithread solver4;
+    private static SolverMultithread solver8;
+    private static SolverMultithread solver16;
 
     static {
-        a = new DecimalValue(
-                "231764962795743987594788284386" +
-                "486325462354682375974598743890" +
-                "327846873420080785291194691264" +
-                "919479187419847983789332667326" +
-                "723979111414442412898712898999");
-        b = new DecimalValue(
-                "124765672135467521948017614857" +
-                "143059038096587983795278682876" +
-                "723678278587465738703480984905" +
-                "809239849823148164786174678114" +
-                "719874893700818939290898398297");
 
-        thread1 = new Add();
+        input1 = Load.fromFile("Test/LinearReduction/Input/linear1");
+        input2 = Load.fromFile("Test/LinearReduction/Input/linear2");
+        input3 = Load.fromFile("Test/LinearReduction/Input/linear3");
 
-        thread2 = new AddMultithread(2);
-        thread4 = new AddMultithread(4);
-        thread8 = new AddMultithread(8);
-        thread16 = new AddMultithread(32);
+        solver2 = new SolverMultithread(2);
+        solver4 = new SolverMultithread(4);
+        solver8 = new SolverMultithread(8);
+        solver16 = new SolverMultithread(16);
+
     }
-
-    ///////////////////////////////////
-    ///                             ///
-    ///   Single thread algorithm   ///
-    ///                             ///
-    ///////////////////////////////////
-
-    @Benchmark
-    public void thread1(Blackhole bh) {
-        bh.consume(thread1.apply(a, b));
-    }
-
-    ///////////////////////////////////
-    ///                             ///
-    ///   Multi-thread algorithm    ///
-    ///                             ///
-    ///////////////////////////////////
 
     @Benchmark
     public void thread2(Blackhole bh) {
-        bh.consume(thread2.apply(a, b));
+        bh.consume(solver2.compute(input1.a, input1.b));
+        bh.consume(solver2.compute(input2.a, input2.b));
+        bh.consume(solver2.compute(input3.a, input3.b));
     }
 
     @Benchmark
     public void thread4(Blackhole bh) {
-        bh.consume(thread4.apply(a, b));
+        bh.consume(solver4.compute(input1.a, input1.b));
+        bh.consume(solver4.compute(input2.a, input2.b));
+        bh.consume(solver4.compute(input3.a, input3.b));
     }
 
     @Benchmark
     public void thread8(Blackhole bh) {
-        bh.consume(thread8.apply(a, b));
+        bh.consume(solver8.compute(input1.a, input1.b));
+        bh.consume(solver8.compute(input2.a, input2.b));
+        bh.consume(solver8.compute(input3.a, input3.b));
     }
 
     @Benchmark
     public void thread16(Blackhole bh) {
-        bh.consume(thread16.apply(a, b));
-
+        bh.consume(solver16.compute(input1.a, input1.b));
+        bh.consume(solver16.compute(input2.a, input2.b));
+        bh.consume(solver16.compute(input3.a, input3.b));
     }
 
 }

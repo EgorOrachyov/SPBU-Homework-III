@@ -98,7 +98,7 @@ public class Number2 {
     ///                             ///
     ///////////////////////////////////
 
-    //@Benchmark
+    @Benchmark
     public void thread1(Blackhole bh) {
         bh.consume(thread1.apply(a, b));
     }
@@ -109,22 +109,22 @@ public class Number2 {
     ///                             ///
     ///////////////////////////////////
 
-    //@Benchmark
+    @Benchmark
     public void thread2(Blackhole bh) {
         bh.consume(thread2.apply(a, b));
     }
 
-    //@Benchmark
+    @Benchmark
     public void thread4(Blackhole bh) {
         bh.consume(thread4.apply(a, b));
     }
 
-    //@Benchmark
+    @Benchmark
     public void thread8(Blackhole bh) {
         bh.consume(thread8.apply(a, b));
     }
 
-    //@Benchmark
+    @Benchmark
     public void thread16(Blackhole bh) {
         bh.consume(thread16.apply(a, b));
 

@@ -4,7 +4,7 @@ package Application.LinearReduction;
 public class Solver {
 
     /**
-     * Reduces a sequence of linear equations as follows:
+     * Reduces a sequence of linear1 equations as follows:
      * x0 = b[0]
      * x1 = a[1] * x0 + b[1]
      * x2 = a[2] * x1 + b[2]
@@ -20,13 +20,13 @@ public class Solver {
      */
     public static int compute(int a[], int b[]) {
         if (a.length != b.length) {
-            System.err.println("Solver: arrays should have equal num of indices");
+            System.err.println("LinearReduction: arrays should have equal num of indices");
             return 0;
         }
 
         final int length = a.length;
         if (length == 0) {
-            System.err.println("Solver: empty arrays of indices");
+            System.err.println("LinearReduction: empty arrays of indices");
             return 0;
         }
 

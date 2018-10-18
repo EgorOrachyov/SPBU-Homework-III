@@ -29,91 +29,75 @@
  * THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package Test.LongSum;
+package Test.Parentheses;
 
-import Application.LongAdd.Add;
-import Application.LongAdd.AddMultithread;
-import Application.LongAdd.DecimalValue;
+import Application.ParenthesesBalance.CheckMultithread;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 @Fork(1)
 @Warmup(iterations = 2, time = 5)
-@Measurement(iterations = 2, time = 5)
+@Measurement(iterations = 2, time = 10)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @BenchmarkMode(Mode.AverageTime)
-public class Number1 {
+public class MultiThread {
 
-    private static DecimalValue a;
-    private static DecimalValue b;
+    private static String input1;
+    private static String input2;
+    private static String input3;
 
-    private static Add thread1;
-
-    private static AddMultithread thread2;
-    private static AddMultithread thread4;
-    private static AddMultithread thread8;
-    private static AddMultithread thread16;
+    private static CheckMultithread check2;
+    private static CheckMultithread check4;
+    private static CheckMultithread check8;
+    private static CheckMultithread check16;
 
     static {
-        a = new DecimalValue(
-                "231764962795743987594788284386" +
-                "486325462354682375974598743890" +
-                "327846873420080785291194691264" +
-                "919479187419847983789332667326" +
-                "723979111414442412898712898999");
-        b = new DecimalValue(
-                "124765672135467521948017614857" +
-                "143059038096587983795278682876" +
-                "723678278587465738703480984905" +
-                "809239849823148164786174678114" +
-                "719874893700818939290898398297");
+        try (Scanner in = new Scanner(new File("Test/Parentheses/Input/string"))) {
 
-        thread1 = new Add();
+            input1 = in.next();
+            input2 = in.next();
+            input3 = in.next();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
 
-        thread2 = new AddMultithread(2);
-        thread4 = new AddMultithread(4);
-        thread8 = new AddMultithread(8);
-        thread16 = new AddMultithread(32);
+        check2 = new CheckMultithread(2);
+        check4 = new CheckMultithread(4);
+        check8 = new CheckMultithread(8);
+        check16 = new CheckMultithread(16);
     }
-
-    ///////////////////////////////////
-    ///                             ///
-    ///   Single thread algorithm   ///
-    ///                             ///
-    ///////////////////////////////////
-
-    @Benchmark
-    public void thread1(Blackhole bh) {
-        bh.consume(thread1.apply(a, b));
-    }
-
-    ///////////////////////////////////
-    ///                             ///
-    ///   Multi-thread algorithm    ///
-    ///                             ///
-    ///////////////////////////////////
 
     @Benchmark
     public void thread2(Blackhole bh) {
-        bh.consume(thread2.apply(a, b));
+        bh.consume(check2.compute(input1));
+        bh.consume(check2.compute(input2));
+        bh.consume(check2.compute(input3));
     }
 
     @Benchmark
     public void thread4(Blackhole bh) {
-        bh.consume(thread4.apply(a, b));
+        bh.consume(check4.compute(input1));
+        bh.consume(check4.compute(input2));
+        bh.consume(check4.compute(input3));
     }
 
     @Benchmark
     public void thread8(Blackhole bh) {
-        bh.consume(thread8.apply(a, b));
+        bh.consume(check8.compute(input1));
+        bh.consume(check8.compute(input2));
+        bh.consume(check8.compute(input3));
     }
 
     @Benchmark
     public void thread16(Blackhole bh) {
-        bh.consume(thread16.apply(a, b));
-
+        bh.consume(check16.compute(input1));
+        bh.consume(check16.compute(input2));
+        bh.consume(check16.compute(input3));
     }
 
 }
