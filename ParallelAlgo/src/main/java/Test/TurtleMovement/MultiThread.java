@@ -43,7 +43,7 @@ import java.util.concurrent.TimeUnit;
 
 @Fork(1)
 @Warmup(iterations = 2, time = 5)
-@Measurement(iterations = 2, time = 10)
+@Measurement(iterations = 2, time = 5)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @BenchmarkMode(Mode.AverageTime)
 public class MultiThread {

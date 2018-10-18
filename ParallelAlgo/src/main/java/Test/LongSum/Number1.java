@@ -34,6 +34,7 @@ package Test.LongSum;
 import Application.LongAdd.Add;
 import Application.LongAdd.AddMultithread;
 import Application.LongAdd.DecimalValue;
+import Application.LongAdd.Load;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;
 
@@ -47,7 +48,6 @@ import java.util.concurrent.TimeUnit;
 public class Number1 {
 
     private static DecimalValue a;
-    private static DecimalValue b;
 
     private static Add thread1;
 
@@ -57,25 +57,14 @@ public class Number1 {
     private static AddMultithread thread16;
 
     static {
-        a = new DecimalValue(
-                "231764962795743987594788284386" +
-                "486325462354682375974598743890" +
-                "327846873420080785291194691264" +
-                "919479187419847983789332667326" +
-                "723979111414442412898712898999");
-        b = new DecimalValue(
-                "124765672135467521948017614857" +
-                "143059038096587983795278682876" +
-                "723678278587465738703480984905" +
-                "809239849823148164786174678114" +
-                "719874893700818939290898398297");
+        a = Load.fromFile("Test/LongSum/Input/number1");
 
         thread1 = new Add();
 
         thread2 = new AddMultithread(2);
         thread4 = new AddMultithread(4);
         thread8 = new AddMultithread(8);
-        thread16 = new AddMultithread(32);
+        thread16 = new AddMultithread(16);
     }
 
     ///////////////////////////////////
@@ -86,7 +75,7 @@ public class Number1 {
 
     @Benchmark
     public void thread1(Blackhole bh) {
-        bh.consume(thread1.apply(a, b));
+        bh.consume(thread1.apply(a, a));
     }
 
     ///////////////////////////////////
@@ -97,22 +86,22 @@ public class Number1 {
 
     @Benchmark
     public void thread2(Blackhole bh) {
-        bh.consume(thread2.apply(a, b));
+        bh.consume(thread2.apply(a, a));
     }
 
     @Benchmark
     public void thread4(Blackhole bh) {
-        bh.consume(thread4.apply(a, b));
+        bh.consume(thread4.apply(a, a));
     }
 
     @Benchmark
     public void thread8(Blackhole bh) {
-        bh.consume(thread8.apply(a, b));
+        bh.consume(thread8.apply(a, a));
     }
 
     @Benchmark
     public void thread16(Blackhole bh) {
-        bh.consume(thread16.apply(a, b));
+        bh.consume(thread16.apply(a, a));
 
     }
 
