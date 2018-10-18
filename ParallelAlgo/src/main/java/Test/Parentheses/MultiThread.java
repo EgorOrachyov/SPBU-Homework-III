@@ -32,6 +32,7 @@
 package Test.Parentheses;
 
 import Application.ParenthesesBalance.CheckMultithread;
+import Application.ParenthesesBalance.Load;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;
 
@@ -57,14 +58,9 @@ public class MultiThread {
     private static CheckMultithread check16;
 
     static {
-        try (Scanner in = new Scanner(new File("Test/Parentheses/Input/string"))) {
-
-            input1 = in.next();
-            input2 = in.next();
-            input3 = in.next();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+        input1 = Load.fromFile("Test/Parentheses/Input/string1");
+        input2 = Load.fromFile("Test/Parentheses/Input/string2");
+        input3 = Load.fromFile("Test/Parentheses/Input/string3");
 
         check2 = new CheckMultithread(2);
         check4 = new CheckMultithread(4);

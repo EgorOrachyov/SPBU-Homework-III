@@ -24,7 +24,7 @@ public class DecimalValue {
                 else {
                     buffer = new byte[1];
                     buffer[0] = 0;
-                    System.err.println("DecimalValue: wrong string format " + value);
+                    System.err.println("DecimalValue: wrong string1 format " + value);
                     return;
                 }
             }
@@ -90,7 +90,7 @@ public class DecimalValue {
     public static boolean isCorrect(String value) {
         byte data[] = value.getBytes();
 
-        // Empty string
+        // Empty string1
         if (data.length == 0) {
             return false;
         }

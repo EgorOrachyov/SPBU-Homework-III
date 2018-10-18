@@ -18,7 +18,8 @@ public class Load {
                 tmp.add(new Vector2d(in.nextDouble(), in.nextDouble()));
             }
 
-            d = (Vector2d[]) tmp.toArray();
+            d = new Vector2d[tmp.size()];
+            tmp.toArray(d);
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();

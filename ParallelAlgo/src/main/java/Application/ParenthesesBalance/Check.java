@@ -3,7 +3,7 @@ package Application.ParenthesesBalance;
 public class Check {
 
     /**
-     * Check balance for the string built from parentheses
+     * Check balance for the string1 built from parentheses
      * @param a String
      * @return True if it is balanced
      */

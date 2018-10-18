@@ -12,7 +12,13 @@ public class Load {
 
         try (Scanner in = new Scanner(new File(fileName))) {
 
-            res = new DecimalValue(in.next());
+            StringBuilder builder = new StringBuilder(1024);
+
+            while (in.hasNext()) {
+                builder.append(in.next());
+            }
+
+            res = new DecimalValue(builder.toString());
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
