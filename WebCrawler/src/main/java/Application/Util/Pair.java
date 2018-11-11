@@ -1,20 +1,20 @@
 package Application.Util;
 
-public class Pair <T,V> {
+public class Pair <Key, Value> {
 
-    private T key;
-    private V value;
+    private Key key;
+    private Value value;
 
-    public Pair(T key, V value) {
+    public Pair(Key key, Value value) {
         this.key = key;
         this.value = value;
     }
 
-    public T getKey() {
+    public Key getKey() {
         return key;
     }
 
-    public V getValue() {
+    public Value getValue() {
         return value;
     }
 }
