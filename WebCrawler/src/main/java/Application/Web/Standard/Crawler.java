@@ -1,12 +1,11 @@
 package Application.Web.Standard;
 
-import Application.Util.ArraySaver;
+import Application.Concurrent.LinkedList;
+import Application.Util.ListSaver;
 import Application.Util.FileSaver;
 import Application.Web.ICrawler;
 
-import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -28,9 +27,9 @@ public class Crawler implements ICrawler {
     }
 
     @Override
-    public ArrayList<String> download(String page, int depth, long timeout) {
+    public LinkedList<String> download(String page, int depth, long timeout) {
 
-        ArraySaver saver = new ArraySaver();
+        ListSaver saver = new ListSaver();
         executor.execute(new ProcessPage(executor, map, page, 0, depth, saver));
 
         try {
@@ -81,8 +80,8 @@ public class Crawler implements ICrawler {
     public static void main(String ... args) {
 
         Crawler crawler = new Crawler(4);
-        ArrayList<String> result = crawler.download("http://en.wikipedia.org/", 0, 1);
-        System.out.println(result.size());
+        LinkedList<String> result = crawler.download("http://en.wikipedia.org/", 1, 1);
+        System.out.println("Total: " + result.getElementsCount());
 
     }
 

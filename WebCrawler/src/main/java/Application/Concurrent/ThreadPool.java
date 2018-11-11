@@ -38,16 +38,26 @@ public class ThreadPool implements Executor, AutoCloseable {
     }
 
     /**
-     * Close the thread pool when all the submitted tasks
-     * ara completed
+     * Close the thread pool when all the queue is empty
      */
     public void finish() {
         isFinishing = true;
     }
 
+    public void waitAndJoin() {
+        try {
+            for(Thread t : threads) {
+                t.join();
+            }
+        }
+        catch (InterruptedException e) {
+
+        }
+    }
+
     @Override
     public void execute(Runnable command) {
-        if (isRunning && !isFinishing) {
+        if (isRunning) {
             queue.add(command);
         }
     }

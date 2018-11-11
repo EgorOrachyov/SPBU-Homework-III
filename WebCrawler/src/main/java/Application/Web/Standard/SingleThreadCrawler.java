@@ -24,9 +24,9 @@ public class SingleThreadCrawler implements ICrawler {
             "Chrome/13.0.782.112 Safari/535.1";
 
     @Override
-    public ArrayList<String> download(String page, int depth, long timeout) {
+    public Application.Concurrent.LinkedList<String> download(String page, int depth, long timeout) {
 
-        ArrayList<String> data = new ArrayList<>();
+        Application.Concurrent.LinkedList<String> data = new Application.Concurrent.LinkedList<>();
         List<Pair<String,Integer>> queue = new LinkedList<>();
         HashMap<String,String> map = new HashMap<>();
 

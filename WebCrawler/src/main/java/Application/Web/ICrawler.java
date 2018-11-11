@@ -1,5 +1,7 @@
 package Application.Web;
 
+import Application.Concurrent.LinkedList;
+
 import java.util.ArrayList;
 
 public interface ICrawler {
@@ -14,7 +16,7 @@ public interface ICrawler {
      *                all pages downloaded (set in 10 to get appropriate result)
      * @return Array of pages raw data
      */
-    ArrayList<String> download(String page, int depth, long timeout);
+    LinkedList<String> download(String page, int depth, long timeout);
 
     /**
      * Downloads recursively by links URL html pages of web site from the Internet and
