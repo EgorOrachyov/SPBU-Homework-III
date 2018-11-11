@@ -59,8 +59,6 @@ public class ProcessPage implements Runnable {
                     else {
                         map.add(absUrl, absUrl);
 
-                        System.out.println("Download page " + absUrl);
-
                         threadPool.execute(
                                 new ProcessPage(
                                         threadPool, map,

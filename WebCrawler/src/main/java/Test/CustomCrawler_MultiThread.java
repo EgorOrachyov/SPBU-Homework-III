@@ -31,14 +31,56 @@
 
 package Test;
 
-import org.openjdk.jmh.annotations.Benchmark;
+import Application.Concurrent.LinkedList;
+import Application.Web.Custom.Crawler;
+import org.openjdk.jmh.annotations.*;
+import org.openjdk.jmh.infra.Blackhole;
 
-public class MyBenchmark {
+import java.util.concurrent.TimeUnit;
 
-    @Benchmark
-    public void testMethod() {
-        // This is a demo/sample template for building your JMH benchmarks. Edit as needed.
-        // Put your benchmark code here.
+@Fork(1)
+@Warmup(iterations = 1, time = 20)
+@Measurement(iterations = 0, time = 10)
+@OutputTimeUnit(TimeUnit.MILLISECONDS)
+@BenchmarkMode(Mode.AverageTime)
+public class CustomCrawler_MultiThread {
+
+    private static Crawler crawler[];
+    private static final String url = "http://www.shaderx.com";
+    private static final String path = "/Users/egororachyov/Desktop/Documents/Intellej Idea/SPBU-Homework-III/WebCrawler/src/main/Test";
+    private static final int[] threads = {2,4,8,16};
+
+    static {
+        crawler = new Crawler[threads.length];
+        for(int i = 0; i < threads.length; i++) {
+            crawler[i] = new Crawler(threads[i]);
+        }
+    }
+
+    // @Benchmark
+    public void threads_2(Blackhole bh) {
+        //LinkedList<String> result = crawler[0].download(url,1, 1);
+        crawler[0].download(url,1, path,1);
+        //bh.consume(result);
+    }
+
+    // @Benchmark
+    public void threads_4(Blackhole bh) {
+        //LinkedList<String> result = crawler[1].download(url,1, 1);
+        crawler[1].download(url, 1, path, 1);
+        //bh.consume(result);
+    }
+
+    // @Benchmark
+    public void threads_8(Blackhole bh) {
+        LinkedList<String> result = crawler[2].download(url,1, 1);
+        bh.consume(result);
+    }
+
+    // @Benchmark
+    public void threads_16(Blackhole bh) {
+        LinkedList<String> result = crawler[3].download(url,1, 1);
+        bh.consume(result);
     }
 
 }

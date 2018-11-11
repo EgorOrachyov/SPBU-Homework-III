@@ -33,7 +33,7 @@ public class Crawler implements ICrawler {
         executor.execute(new ProcessPage(executor, map, page, 0, depth, saver));
 
         try {
-            System.out.print("Print any key to immediately stop downloading: ");
+            System.out.println("Print any key to immediately stop downloading: ");
             System.in.read();
         }
         catch (IOException e) {
@@ -59,7 +59,7 @@ public class Crawler implements ICrawler {
         executor.execute(new ProcessPage(executor, map, page, 0, depth, saver));
 
         try {
-            System.out.print("Print any key to immediately stop downloading: ");
+            System.out.println("Print any key to immediately stop downloading: ");
             System.in.read();
         }
         catch (IOException e) {
@@ -80,8 +80,10 @@ public class Crawler implements ICrawler {
     public static void main(String ... args) {
 
         Crawler crawler = new Crawler(4);
-        LinkedList<String> result = crawler.download("http://en.wikipedia.org/", 1, 1);
-        System.out.println("Total: " + result.getElementsCount());
+        //LinkedList<String> result = crawler.download("http://en.wikipedia.org/", 1, 1);
+        //System.out.println("Total: " + result.getElementsCount());
+        crawler.download("http://www.shaderx.com", 1, "/Users/egororachyov/Desktop/Documents/Intellej Idea/SPBU-Homework-III/WebCrawler/src/main/Test",0);
+
 
     }
 

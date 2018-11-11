@@ -16,7 +16,6 @@ public class ListSaver implements ISaver {
     @Override
     public boolean save(String document, String name) {
         data.add(document);
-        System.out.println("Save " + name);
         return true;
     }
 

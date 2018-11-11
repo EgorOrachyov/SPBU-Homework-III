@@ -118,10 +118,8 @@ public class SingleThreadCrawler implements ICrawler {
 
     public static void main(String ... args) {
 
-
         SingleThreadCrawler crawler = new SingleThreadCrawler();
-        crawler.download("http://en.wikipedia.org/", 0, "/Users/egororachyov/Desktop/Documents/Intellej Idea/SPBU-Homework-III/WebCrawler/src/main/Test",0);
-
+        crawler.download("http://www.shaderx.com", 1, "/Users/egororachyov/Desktop/Documents/Intellej Idea/SPBU-Homework-III/WebCrawler/src/main/Test",0);
 
     }
 
