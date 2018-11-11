@@ -9,10 +9,8 @@ public abstract class IMap<Key, Value> {
      *
      * @param key key with which the specified value is to be associated
      * @param value value to be associated with the specified key
-     * @return the previous value associated with key, or
-     *         null if there was no mapping for key.
      */
-    public abstract Value add(Key key, Value value);
+    public abstract void add(Key key, Value value);
 
     /**
      * Returns the value associated with that key of null

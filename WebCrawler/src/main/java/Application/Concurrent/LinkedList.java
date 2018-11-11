@@ -5,8 +5,9 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class LinkedList<Element> extends IList<Element> {
 
-    private Node<Element> head;
-    private Node<Element> tail;
+    private Node head;
+    private Node tail;
+    private Node iterator;
     private Lock lock;
     private int elementsCount;
 
@@ -22,14 +23,14 @@ public class LinkedList<Element> extends IList<Element> {
         lock.lock();
 
         if (head == null) {
-            head = tail = new Node<>(element);
+            head = tail = new Node(element);
             lock.unlock();
         }
         else {
             lock.unlock();
 
             tail.lock();
-            Node<Element> newTail = new Node<>(element);
+            Node newTail = new Node(element);
             newTail.lock();
             tail.setNext(newTail);
             tail.unlock();
@@ -48,8 +49,8 @@ public class LinkedList<Element> extends IList<Element> {
 
         int i = 0;
         head.lock();
-        Node<Element> current = head;
-        Node<Element> next;
+        Node current = head;
+        Node next;
         while (i < index) {
             current.getNext().lock();
             next = current.getNext();
@@ -71,8 +72,8 @@ public class LinkedList<Element> extends IList<Element> {
         }
 
         head.lock();
-        Node<Element> current = head;
-        Node<Element> next;
+        Node current = head;
+        Node next;
         while (current.getNext() != null) {
 
             if (current.getData().equals(element)) {
@@ -95,11 +96,44 @@ public class LinkedList<Element> extends IList<Element> {
         return false;
     }
 
-    public Node<Element> getHead() {
+    @Override
+    public Element find(IFinder<Element> finder) {
+        if (head == null) {
+            return null;
+        }
+
+        head.lock();
+        Node current = head;
+        Node next;
+        while (current.getNext() != null) {
+
+            if (finder.found(current.getData())) {
+                Element data = current.getData();
+                current.unlock();
+                return data;
+            }
+
+            current.getNext().lock();
+            next = current.getNext();
+            current.unlock();
+            current = next;
+        }
+
+        if (finder.found(current.getData())) {
+            Element data = current.getData();
+            current.unlock();
+            return data;
+        }
+
+        current.unlock();
+        return null;
+    }
+
+    public Node getHead() {
         return head;
     }
 
-    public Node<Element> getTail() {
+    public Node getTail() {
         return tail;
     }
 
@@ -107,13 +141,13 @@ public class LinkedList<Element> extends IList<Element> {
         return elementsCount;
     }
 
-    private class Node<T> {
+    private class Node {
 
-        private Node<T> next;
-        private T data;
+        private Node next;
+        private Element data;
         private Lock lock;
 
-        Node(T data) {
+        Node(Element data) {
             this.next = null;
             this.data = data;
             this.lock = new ReentrantLock();
@@ -127,15 +161,15 @@ public class LinkedList<Element> extends IList<Element> {
             lock.unlock();
         }
 
-        void setNext(Node<T> next) {
+        void setNext(Node next) {
             this.next = next;
         }
 
-        Node<T> getNext() {
+        Node getNext() {
             return next;
         }
 
-        T getData() {
+        Element getData() {
             return data;
         }
     }

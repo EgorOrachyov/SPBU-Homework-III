@@ -27,4 +27,13 @@ public abstract class IList<Element> {
      */
     public abstract boolean contains(Element element);
 
+    /**
+     * Search the element in the list by special finder
+     * terms to get that
+     *
+     * @param finder Object used to find the needed element
+     * @return Element if it is found or otherwise null
+     */
+    public abstract Element find(IFinder<Element> finder);
+
 }
