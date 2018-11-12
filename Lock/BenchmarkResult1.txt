@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////
 //                                                 //
-//	Target Machine: Apple MacBook Pro 15 Mid 2014  //
+//  Target Machine: Apple MacBook Pro 15 Mid 2014  //
 //  CPU: Intel Core i7 4770 HQ                     //
 //       Physical cores 4                          //
 //       Logical  cores 8                          //
