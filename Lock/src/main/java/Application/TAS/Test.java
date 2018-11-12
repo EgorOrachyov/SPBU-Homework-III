@@ -8,7 +8,7 @@ public class Test {
 
         ILock lock = new TASLock();
         Data data = new Data();
-        Worker worker = new LockWorker(data, lock);
+        Worker worker = new LockWorker(data, 500000, lock);
 
         worker.run();
         worker.showResult();

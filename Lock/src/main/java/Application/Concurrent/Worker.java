@@ -7,19 +7,23 @@ import java.util.concurrent.TimeUnit;
 public class Worker {
 
     protected IData data;
+    protected int size;
 
-    public Worker(IData d) {
-        data = d;
+    public Worker(IData d, int size) {
+        this.data = d;
+        this.size = size;
     }
 
     public void run() {
 
-        ExecutorService service = Executors.newFixedThreadPool(4);
-        for(int i = 0; i < 1000000; i++) {
+        ExecutorService service = Executors.newFixedThreadPool(2);
+        for(int i = 0; i < 2; i++) {
             service.execute(new Runnable() {
                 @Override
                 public void run() {
-                    data.add(1);
+                    for(int i = 0; i < size; i++) {
+                        data.add(1);
+                    }
                 }
             });
         }

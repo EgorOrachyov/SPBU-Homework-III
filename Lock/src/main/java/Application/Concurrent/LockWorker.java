@@ -8,16 +8,21 @@ public class LockWorker extends Worker {
 
     protected ILock lock;
 
-    public LockWorker(IData d, ILock lock) {
-        super(d);
+    public LockWorker(IData d, int size, ILock lock) {
+        super(d, size);
         this.lock = lock;
     }
 
     @Override
     public void run() {
+        run(2);
+    }
 
-        ExecutorService service = Executors.newFixedThreadPool(2);
-        for(int i = 0; i < 2; i++) {
+    public void run(int threadsCount) {
+
+        size /= threadsCount;
+        ExecutorService service = Executors.newFixedThreadPool(threadsCount);
+        for(int i = 0; i < threadsCount; i++) {
             service.execute(new Task(i));
         }
 
@@ -41,7 +46,7 @@ public class LockWorker extends Worker {
 
         @Override
         public void run() {
-            for(int i = 0; i<500000; i++) {
+            for(int i = 0; i < size; i++) {
                 lock.lock(id);
                 data.add(1);
                 lock.unlock(id);

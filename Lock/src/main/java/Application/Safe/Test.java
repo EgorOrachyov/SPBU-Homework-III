@@ -11,7 +11,7 @@ public class Test {
     public static void main(String ... args) {
 
         Data data = new Data();
-        Worker worker = new Worker(data);
+        Worker worker = new Worker(data, 500000);
 
         worker.run();
         worker.showResult();
