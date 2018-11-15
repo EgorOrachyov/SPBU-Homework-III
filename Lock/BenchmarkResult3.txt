@@ -20,4 +20,3 @@ Test.TTAS.threads_2   avgt    3  0,105 ± 0,001  ms/op
 Test.TTAS.threads_4   avgt    3  0,213 ± 0,007  ms/op
 Test.TTAS.threads_8   avgt    3  0,452 ± 0,037  ms/op
 Test.TTAS.threads_16  avgt    3  0,908 ± 0,061  ms/op
-
