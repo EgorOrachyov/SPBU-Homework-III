@@ -22,6 +22,8 @@ public class LinkedList<Element> extends IList<Element> {
     public void add(Element element) {
         lock.lock();
 
+        elementsCount += 1;
+
         if (head == null) {
             head = tail = new Node(element);
             lock.unlock();
@@ -37,8 +39,6 @@ public class LinkedList<Element> extends IList<Element> {
             tail = newTail;
             newTail.unlock();
         }
-
-        elementsCount += 1;
     }
 
     @Override
