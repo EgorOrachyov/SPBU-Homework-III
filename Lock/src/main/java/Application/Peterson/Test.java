@@ -1,10 +1,6 @@
 package Application.Peterson;
 
-import Application.Concurrent.IData;
-import Application.Concurrent.ILock;
-import Application.Concurrent.PetersonLock;
-import Application.Concurrent.Worker;
-import Application.Concurrent.LockWorker;
+import Application.Concurrent.*;
 
 public class Test {
 
@@ -12,7 +8,7 @@ public class Test {
 
         ILock lock = new PetersonLock();
         Data data = new Data();
-        Worker worker = new LockWorker(data, 500000, lock);
+        Worker worker = new PetersonLockWorker(data, 500000, lock);
 
         worker.run();
         worker.showResult();

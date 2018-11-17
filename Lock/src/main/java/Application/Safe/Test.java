@@ -31,9 +31,13 @@ class Data implements IData {
 
     @Override
     public void add(int value) {
-        lock.lock();
-        i += value;
-        lock.unlock();
+        try {
+            lock.lock();
+            i += value;
+        }
+        finally {
+            lock.unlock();
+        }
     }
 
     @Override

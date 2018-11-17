@@ -36,6 +36,7 @@ import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;
 
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Lock;
 
 @Fork(1)
 @Warmup(iterations = 2, time = 8)
@@ -44,7 +45,7 @@ import java.util.concurrent.TimeUnit;
 @BenchmarkMode(Mode.AverageTime)
 public class TTAS {
 
-    private static ILock lock = new TTASLock();
+    private static Lock lock = new TTASLock();
     private static Data data = new Data();
     private static int[] size = {1000000};
     private static LockWorker[] worker;
@@ -62,7 +63,7 @@ public class TTAS {
     ///                                       //
     ////////////////////////////////////////////
 
-    @Benchmark
+    //@TASvsTTAS
     public void threads_2(Blackhole bh) {
         worker[0].run(2);
         bh.consume(worker[0]);
@@ -74,7 +75,7 @@ public class TTAS {
     ///                                       //
     ////////////////////////////////////////////
 
-    @Benchmark
+    //@TASvsTTAS
     public void threads_4(Blackhole bh) {
         worker[0].run(4);
         bh.consume(worker[0]);
@@ -86,7 +87,7 @@ public class TTAS {
     ///                                       //
     ////////////////////////////////////////////
 
-    @Benchmark
+    //@TASvsTTAS
     public void threads_8(Blackhole bh) {
         worker[0].run(8);
         bh.consume(worker[0]);
@@ -98,7 +99,7 @@ public class TTAS {
     ///                                       //
     ////////////////////////////////////////////
 
-    @Benchmark
+    //@TASvsTTAS
     public void threads_16(Blackhole bh) {
         worker[0].run(16);
         bh.consume(worker[0]);
