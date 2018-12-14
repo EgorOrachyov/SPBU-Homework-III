@@ -12,11 +12,11 @@ Test.LinearReduction.MultiThread.thread4   avgt    2    1,387          ms/op
 Test.LinearReduction.MultiThread.thread8   avgt    2    1,628          ms/op
 Test.LinearReduction.SingleThread.thread1  avgt    2    3,597          ms/op
 
-Test.LongSum.BenchmarkLongSum.thread1               avgt    2    0,005          ms/op
-Test.LongSum.BenchmarkLongSum.thread16              avgt    2    2,446          ms/op
-Test.LongSum.BenchmarkLongSum.thread2               avgt    2    0,204          ms/op
-Test.LongSum.BenchmarkLongSum.thread4               avgt    2    0,569          ms/op
-Test.LongSum.BenchmarkLongSum.thread8               avgt    2    1,142          ms/op
+Test.LongSum.BenchmarkLongSum.thread1      avgt    2    0,005          ms/op
+Test.LongSum.BenchmarkLongSum.thread16     avgt    2    2,446          ms/op
+Test.LongSum.BenchmarkLongSum.thread2      avgt    2    0,204          ms/op
+Test.LongSum.BenchmarkLongSum.thread4      avgt    2    0,569          ms/op
+Test.LongSum.BenchmarkLongSum.thread8      avgt    2    1,142          ms/op
 
 Test.LongSum.Number2.thread1               avgt    2    0,044          ms/op
 Test.LongSum.Number2.thread16              avgt    2    2,543          ms/op
