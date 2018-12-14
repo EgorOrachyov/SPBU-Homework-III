@@ -51,7 +51,7 @@ public class ParallelPrefixSumDistribute implements Task {
     }
 
     private static boolean canUnite(int left, int right) {
-        return Util.isPowerfTwo(left) && Util.isPowerfTwo(right - left);
+        return Util.isPowerOfTwo(left) && Util.isPowerOfTwo(right - left);
     }
 
     private static int delta(int left) {

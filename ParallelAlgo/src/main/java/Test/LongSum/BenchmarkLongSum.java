@@ -31,10 +31,7 @@
 
 package Test.LongSum;
 
-import Application.LongAdd.Add;
-import Application.LongAdd.AddMultithread;
-import Application.LongAdd.DecimalValue;
-import Application.LongAdd.Load;
+import Application.LongAdd.*;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;
 
@@ -45,65 +42,43 @@ import java.util.concurrent.TimeUnit;
 @Measurement(iterations = 2, time = 5)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @BenchmarkMode(Mode.AverageTime)
-public class Number3 {
+public class BenchmarkLongSum {
 
-    private static DecimalValue a;
+    @State(Scope.Benchmark)
+    private static class TestCase {
 
-    private static Add thread1;
+        @Param({"1","2","4","8","16"})
+        String threadsCount;
 
-    private static AddMultithread thread2;
-    private static AddMultithread thread4;
-    private static AddMultithread thread8;
-    private static AddMultithread thread16;
+        @Param({"1","2","3"})
+        String inputType;
 
-    static {
+        BinaryOperator adder;
+        DecimalValue input;
 
-        a = Load.fromFile("Test/LongSum/Input/number3");
+        @Setup(Level.Trial)
+        public void prepare() {
+            if (threadsCount.equals("1")) {
+                adder = new Add();
+            }
+            else {
+                adder = new AddMultithread(Integer.valueOf(threadsCount));
+            }
 
-        thread1 = new Add();
-
-        thread2 = new AddMultithread(2);
-        thread4 = new AddMultithread(4);
-        thread8 = new AddMultithread(8);
-        thread16 = new AddMultithread(16);
-    }
-
-    ///////////////////////////////////
-    ///                             ///
-    ///   Single thread algorithm   ///
-    ///                             ///
-    ///////////////////////////////////
-
-    @Benchmark
-    public void thread1(Blackhole bh) {
-        bh.consume(thread1.apply(a, a));
-    }
-
-    ///////////////////////////////////
-    ///                             ///
-    ///   Multi-thread algorithm    ///
-    ///                             ///
-    ///////////////////////////////////
-
-    @Benchmark
-    public void thread2(Blackhole bh) {
-        bh.consume(thread2.apply(a, a));
+            if (inputType.equals("1")) {
+                input = Load.fromFile("Test/LongSum/Input/number1");
+            }
+            else if (inputType.equals("2")) {
+                input = Load.fromFile("Test/LongSum/Input/number2");
+            }
+            else if (inputType.equals("3")) {
+                input = Load.fromFile("Test/LongSum/Input/number3");
+            }
+        }
     }
 
     @Benchmark
-    public void thread4(Blackhole bh) {
-        bh.consume(thread4.apply(a, a));
+    public void test(Blackhole bh, TestCase tc) {
+        bh.consume(tc.adder.apply(tc.input, tc.input));
     }
-
-    @Benchmark
-    public void thread8(Blackhole bh) {
-        bh.consume(thread8.apply(a, a));
-    }
-
-    @Benchmark
-    public void thread16(Blackhole bh) {
-        bh.consume(thread16.apply(a, a));
-
-    }
-
 }

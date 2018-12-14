@@ -31,9 +31,7 @@
 
 package Test.TurtleMovement;
 
-
 import Application.TurtleMovement.Load;
-import Application.TurtleMovement.Transform;
 import Application.TurtleMovement.TransformMultithread;
 import Application.TurtleMovement.Vector2d;
 import org.openjdk.jmh.annotations.*;
@@ -48,54 +46,36 @@ import java.util.concurrent.TimeUnit;
 @BenchmarkMode(Mode.AverageTime)
 public class MultiThread {
 
-    private static Vector2d[] input1;
-    private static Vector2d[] input2;
-    private static Vector2d[] input3;
+    @State(Scope.Benchmark)
+    private static class TestCase {
 
-    private static TransformMultithread transform2;
-    private static TransformMultithread transform4;
-    private static TransformMultithread transform8;
-    private static TransformMultithread transform16;
+        @Param({"2","4","8","16"})
+        String threadsCount;
 
-    static {
+        @Param({"1","2","3"})
+        String inputType;
 
-        input1 = Load.fromFile("Test/TurtleMovement/Input/way1");
-        input2 = Load.fromFile("Test/TurtleMovement/Input/way2");
-        input3 = Load.fromFile("Test/TurtleMovement/Input/way3");
+        TransformMultithread transform;
+        Vector2d[] input;
 
-        transform2 = new TransformMultithread(2);
-        transform4 = new TransformMultithread(4);
-        transform8 = new TransformMultithread(8);
-        transform16 = new TransformMultithread(16);
-        
+        @Setup(Level.Trial)
+        public void prepare() {
+            transform = new TransformMultithread(Integer.valueOf(threadsCount));
+
+            if (inputType.equals("1")) {
+                input = Load.fromFile("Test/TurtleMovement/Input/way1");
+            }
+            else if (inputType.equals("2")) {
+                input = Load.fromFile("Test/TurtleMovement/Input/way2");
+            }
+            else if (inputType.equals("3")) {
+                input = Load.fromFile("Test/TurtleMovement/Input/way3");
+            }
+        }
     }
 
     @Benchmark
-    public void thread2(Blackhole bh) {
-        bh.consume(transform2.move(input1));
-        bh.consume(transform2.move(input2));
-        bh.consume(transform2.move(input3));
+    public void test(Blackhole bh, TestCase tc) {
+        bh.consume(tc.transform.move(tc.input));
     }
-
-    @Benchmark
-    public void thread4(Blackhole bh) {
-        bh.consume(transform4.move(input1));
-        bh.consume(transform4.move(input2));
-        bh.consume(transform4.move(input3));
-    }
-
-    @Benchmark
-    public void thread8(Blackhole bh) {
-        bh.consume(transform8.move(input1));
-        bh.consume(transform8.move(input2));
-        bh.consume(transform8.move(input3));
-    }
-
-    @Benchmark
-    public void thread16(Blackhole bh) {
-        bh.consume(transform16.move(input1));
-        bh.consume(transform16.move(input2));
-        bh.consume(transform16.move(input3));
-    }
-
 }

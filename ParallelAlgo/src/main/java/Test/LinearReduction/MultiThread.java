@@ -46,54 +46,37 @@ import java.util.concurrent.TimeUnit;
 @BenchmarkMode(Mode.AverageTime)
 public class MultiThread {
 
-    private static Data input1;
-    private static Data input2;
-    private static Data input3;
+    @State(Scope.Benchmark)
+    private static class TestCase {
 
-    private static SolverMultithread solver2;
-    private static SolverMultithread solver4;
-    private static SolverMultithread solver8;
-    private static SolverMultithread solver16;
+        @Param({"2","4","8","16"})
+        String threadsCount;
 
-    static {
+        @Param({"1","2","3"})
+        String inputType;
 
-        input1 = Load.fromFile("Test/LinearReduction/Input/linear1");
-        input2 = Load.fromFile("Test/LinearReduction/Input/linear2");
-        input3 = Load.fromFile("Test/LinearReduction/Input/linear3");
+        SolverMultithread solver;
+        Data input;
 
-        solver2 = new SolverMultithread(2);
-        solver4 = new SolverMultithread(4);
-        solver8 = new SolverMultithread(8);
-        solver16 = new SolverMultithread(16);
+        @Setup(Level.Trial)
+        public void prepare() {
+            solver = new SolverMultithread(Integer.valueOf(threadsCount));
 
+            if (inputType.equals("1")) {
+                input = Load.fromFile("Test/LinearReduction/Input/linear1");
+            }
+            else if (inputType.equals("2")) {
+                input = Load.fromFile("Test/LinearReduction/Input/linear2");
+            }
+            else if (inputType.equals("3")) {
+                input = Load.fromFile("Test/LinearReduction/Input/linear3");
+            }
+        }
     }
 
     @Benchmark
-    public void thread2(Blackhole bh) {
-        bh.consume(solver2.compute(input1.a, input1.b));
-        bh.consume(solver2.compute(input2.a, input2.b));
-        bh.consume(solver2.compute(input3.a, input3.b));
-    }
-
-    @Benchmark
-    public void thread4(Blackhole bh) {
-        bh.consume(solver4.compute(input1.a, input1.b));
-        bh.consume(solver4.compute(input2.a, input2.b));
-        bh.consume(solver4.compute(input3.a, input3.b));
-    }
-
-    @Benchmark
-    public void thread8(Blackhole bh) {
-        bh.consume(solver8.compute(input1.a, input1.b));
-        bh.consume(solver8.compute(input2.a, input2.b));
-        bh.consume(solver8.compute(input3.a, input3.b));
-    }
-
-    @Benchmark
-    public void thread16(Blackhole bh) {
-        bh.consume(solver16.compute(input1.a, input1.b));
-        bh.consume(solver16.compute(input2.a, input2.b));
-        bh.consume(solver16.compute(input3.a, input3.b));
+    public void test(Blackhole bh, TestCase tc) {
+        bh.consume(tc.solver.compute(tc.input.a, tc.input.b));
     }
 
 }

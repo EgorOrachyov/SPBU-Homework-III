@@ -46,23 +46,34 @@ import java.util.concurrent.TimeUnit;
 @BenchmarkMode(Mode.AverageTime)
 public class SingleThread {
 
-    private static Data input1;
-    private static Data input2;
-    private static Data input3;
+    @State(Scope.Benchmark)
+    private static class TestCase {
 
-    static {
+        @Param({"1","2","3"})
+        String inputType;
 
-        input1 = Load.fromFile("Test/LinearReduction/Input/linear1");
-        input2 = Load.fromFile("Test/LinearReduction/Input/linear2");
-        input3 = Load.fromFile("Test/LinearReduction/Input/linear3");
+        Solver solver;
+        Data input;
 
+        @Setup(Level.Trial)
+        public void prepare() {
+            solver = new Solver();
+
+            if (inputType.equals("1")) {
+                input = Load.fromFile("Test/LinearReduction/Input/linear1");
+            }
+            else if (inputType.equals("2")) {
+                input = Load.fromFile("Test/LinearReduction/Input/linear2");
+            }
+            else if (inputType.equals("3")) {
+                input = Load.fromFile("Test/LinearReduction/Input/linear3");
+            }
+        }
     }
 
     @Benchmark
-    public void thread1(Blackhole bh) {
-        bh.consume(Solver.compute(input1.a, input1.b));
-        bh.consume(Solver.compute(input2.a, input2.b));
-        bh.consume(Solver.compute(input3.a, input3.b));
+    public void test(Blackhole bh, TestCase tc) {
+        bh.consume(Solver.compute(tc.input.a, tc.input.b));
     }
 
 }

@@ -46,23 +46,33 @@ import java.util.concurrent.TimeUnit;
 @BenchmarkMode(Mode.AverageTime)
 public class SingleThread {
 
-    private static Vector2d[] input1;
-    private static Vector2d[] input2;
-    private static Vector2d[] input3;
+    @State(Scope.Benchmark)
+    private static class TestCase {
 
-    static {
+        @Param({"2","4","8","16"})
+        String threadsCount;
 
-        input1 = Load.fromFile("Test/TurtleMovement/Input/way1");
-        input2 = Load.fromFile("Test/TurtleMovement/Input/way2");
-        input3 = Load.fromFile("Test/TurtleMovement/Input/way3");
+        @Param({"1","2","3"})
+        String inputType;
 
+        Vector2d[] input;
+
+        @Setup(Level.Trial)
+        public void prepare() {
+            if (inputType.equals("1")) {
+                input = Load.fromFile("Test/TurtleMovement/Input/way1");
+            }
+            else if (inputType.equals("2")) {
+                input = Load.fromFile("Test/TurtleMovement/Input/way2");
+            }
+            else if (inputType.equals("3")) {
+                input = Load.fromFile("Test/TurtleMovement/Input/way3");
+            }
+        }
     }
 
     @Benchmark
-    public void thread1(Blackhole bh) {
-        bh.consume(Transform.move(input1));
-        bh.consume(Transform.move(input2));
-        bh.consume(Transform.move(input3));
+    public void test(Blackhole bh, TestCase tc) {
+        bh.consume(Transform.move(tc.input));
     }
-
 }

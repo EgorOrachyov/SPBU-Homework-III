@@ -48,21 +48,31 @@ import java.util.concurrent.TimeUnit;
 @BenchmarkMode(Mode.AverageTime)
 public class SingleThread {
 
-    private static String input1;
-    private static String input2;
-    private static String input3;
+    @State(Scope.Benchmark)
+    private static class TestCase {
 
-    static {
-        input1 = Load.fromFile("Test/Parentheses/Input/string1");
-        input2 = Load.fromFile("Test/Parentheses/Input/string2");
-        input3 = Load.fromFile("Test/Parentheses/Input/string3");
+        @Param({"1","2","3"})
+        String inputType;
+
+        String input;
+
+        @Setup(Level.Trial)
+        public void prepare() {
+            if (inputType.equals("1")) {
+                input = Load.fromFile("Test/Parentheses/Input/string1");
+            }
+            else if (inputType.equals("2")) {
+                input = Load.fromFile("Test/Parentheses/Input/string2");
+            }
+            else if (inputType.equals("3")) {
+                input = Load.fromFile("Test/Parentheses/Input/string3");
+            }
+        }
     }
 
     @Benchmark
-    public void thread1(Blackhole bh) {
-        bh.consume(Check.compute(input1));
-        bh.consume(Check.compute(input2));
-        bh.consume(Check.compute(input3));
+    public void test(Blackhole bh, TestCase tc) {
+        bh.consume(Check.compute(tc.input));
     }
 
 }

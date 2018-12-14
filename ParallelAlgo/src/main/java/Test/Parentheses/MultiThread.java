@@ -36,9 +36,6 @@ import Application.ParenthesesBalance.Load;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 @Fork(1)
@@ -48,52 +45,36 @@ import java.util.concurrent.TimeUnit;
 @BenchmarkMode(Mode.AverageTime)
 public class MultiThread {
 
-    private static String input1;
-    private static String input2;
-    private static String input3;
+    @State(Scope.Benchmark)
+    private static class TestCase {
 
-    private static CheckMultithread check2;
-    private static CheckMultithread check4;
-    private static CheckMultithread check8;
-    private static CheckMultithread check16;
+        @Param({"2","4","8","16"})
+        String threadsCount;
 
-    static {
-        input1 = Load.fromFile("Test/Parentheses/Input/string1");
-        input2 = Load.fromFile("Test/Parentheses/Input/string2");
-        input3 = Load.fromFile("Test/Parentheses/Input/string3");
+        @Param({"1","2","3"})
+        String inputType;
 
-        check2 = new CheckMultithread(2);
-        check4 = new CheckMultithread(4);
-        check8 = new CheckMultithread(8);
-        check16 = new CheckMultithread(16);
+        CheckMultithread check;
+        String input;
+
+        @Setup(Level.Trial)
+        public void prepare() {
+            check = new CheckMultithread(Integer.valueOf(threadsCount));
+
+            if (inputType.equals("1")) {
+                input = Load.fromFile("Test/Parentheses/Input/string1");
+            }
+            else if (inputType.equals("2")) {
+                input = Load.fromFile("Test/Parentheses/Input/string2");
+            }
+            else if (inputType.equals("3")) {
+                input = Load.fromFile("Test/Parentheses/Input/string3");
+            }
+        }
     }
 
     @Benchmark
-    public void thread2(Blackhole bh) {
-        bh.consume(check2.compute(input1));
-        bh.consume(check2.compute(input2));
-        bh.consume(check2.compute(input3));
+    public void test(Blackhole bh, TestCase tc) {
+        bh.consume(tc.check.compute(tc.input));
     }
-
-    @Benchmark
-    public void thread4(Blackhole bh) {
-        bh.consume(check4.compute(input1));
-        bh.consume(check4.compute(input2));
-        bh.consume(check4.compute(input3));
-    }
-
-    @Benchmark
-    public void thread8(Blackhole bh) {
-        bh.consume(check8.compute(input1));
-        bh.consume(check8.compute(input2));
-        bh.consume(check8.compute(input3));
-    }
-
-    @Benchmark
-    public void thread16(Blackhole bh) {
-        bh.consume(check16.compute(input1));
-        bh.consume(check16.compute(input2));
-        bh.consume(check16.compute(input3));
-    }
-
 }

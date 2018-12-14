@@ -128,7 +128,7 @@ Result "Test.LinearReduction.SingleThread.thread1":
 # Timeout: 10 min per iteration
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Average time, time/op
-# Benchmark: Test.LongSum.Number1.thread1
+# Benchmark: Test.LongSum.BenchmarkLongSum.thread1
 
 # Run progress: 16,67% complete, ETA 00:10:32
 # Fork: 1 of 1
@@ -138,7 +138,7 @@ Iteration   1: 0,005 ms/op
 Iteration   2: 0,005 ms/op
 
 
-Result "Test.LongSum.Number1.thread1":
+Result "Test.LongSum.BenchmarkLongSum.thread1":
   0,005 ms/op
 
 
@@ -151,7 +151,7 @@ Result "Test.LongSum.Number1.thread1":
 # Timeout: 10 min per iteration
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Average time, time/op
-# Benchmark: Test.LongSum.Number1.thread16
+# Benchmark: Test.LongSum.BenchmarkLongSum.thread16
 
 # Run progress: 20,00% complete, ETA 00:09:47
 # Fork: 1 of 1
@@ -161,7 +161,7 @@ Iteration   1: 2,429 ms/op
 Iteration   2: 2,463 ms/op
 
 
-Result "Test.LongSum.Number1.thread16":
+Result "Test.LongSum.BenchmarkLongSum.thread16":
   2,446 ms/op
 
 
@@ -174,7 +174,7 @@ Result "Test.LongSum.Number1.thread16":
 # Timeout: 10 min per iteration
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Average time, time/op
-# Benchmark: Test.LongSum.Number1.thread2
+# Benchmark: Test.LongSum.BenchmarkLongSum.thread2
 
 # Run progress: 23,33% complete, ETA 00:09:10
 # Fork: 1 of 1
@@ -184,7 +184,7 @@ Iteration   1: 0,201 ms/op
 Iteration   2: 0,208 ms/op
 
 
-Result "Test.LongSum.Number1.thread2":
+Result "Test.LongSum.BenchmarkLongSum.thread2":
   0,204 ms/op
 
 
@@ -197,7 +197,7 @@ Result "Test.LongSum.Number1.thread2":
 # Timeout: 10 min per iteration
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Average time, time/op
-# Benchmark: Test.LongSum.Number1.thread4
+# Benchmark: Test.LongSum.BenchmarkLongSum.thread4
 
 # Run progress: 26,67% complete, ETA 00:08:36
 # Fork: 1 of 1
@@ -207,7 +207,7 @@ Iteration   1: 0,577 ms/op
 Iteration   2: 0,562 ms/op
 
 
-Result "Test.LongSum.Number1.thread4":
+Result "Test.LongSum.BenchmarkLongSum.thread4":
   0,569 ms/op
 
 
@@ -220,7 +220,7 @@ Result "Test.LongSum.Number1.thread4":
 # Timeout: 10 min per iteration
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Average time, time/op
-# Benchmark: Test.LongSum.Number1.thread8
+# Benchmark: Test.LongSum.BenchmarkLongSum.thread8
 
 # Run progress: 30,00% complete, ETA 00:08:06
 # Fork: 1 of 1
@@ -230,7 +230,7 @@ Iteration   1: 1,139 ms/op
 Iteration   2: 1,146 ms/op
 
 
-Result "Test.LongSum.Number1.thread8":
+Result "Test.LongSum.BenchmarkLongSum.thread8":
   1,142 ms/op
 
 
@@ -708,11 +708,11 @@ Test.LinearReduction.MultiThread.thread2   avgt    2    2,217          ms/op
 Test.LinearReduction.MultiThread.thread4   avgt    2    1,387          ms/op
 Test.LinearReduction.MultiThread.thread8   avgt    2    1,628          ms/op
 Test.LinearReduction.SingleThread.thread1  avgt    2    3,597          ms/op
-Test.LongSum.Number1.thread1               avgt    2    0,005          ms/op
-Test.LongSum.Number1.thread16              avgt    2    2,446          ms/op
-Test.LongSum.Number1.thread2               avgt    2    0,204          ms/op
-Test.LongSum.Number1.thread4               avgt    2    0,569          ms/op
-Test.LongSum.Number1.thread8               avgt    2    1,142          ms/op
+Test.LongSum.BenchmarkLongSum.thread1               avgt    2    0,005          ms/op
+Test.LongSum.BenchmarkLongSum.thread16              avgt    2    2,446          ms/op
+Test.LongSum.BenchmarkLongSum.thread2               avgt    2    0,204          ms/op
+Test.LongSum.BenchmarkLongSum.thread4               avgt    2    0,569          ms/op
+Test.LongSum.BenchmarkLongSum.thread8               avgt    2    1,142          ms/op
 Test.LongSum.Number2.thread1               avgt    2    0,044          ms/op
 Test.LongSum.Number2.thread16              avgt    2    2,543          ms/op
 Test.LongSum.Number2.thread2               avgt    2    0,233          ms/op
