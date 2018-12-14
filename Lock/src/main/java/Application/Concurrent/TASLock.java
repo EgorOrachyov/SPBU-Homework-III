@@ -10,7 +10,8 @@ public class TASLock implements Lock {
 
     private AtomicBoolean locked;
 
-    public TASLock() {
+    public TASLock()
+    {
         locked = new AtomicBoolean(false);
     }
 
