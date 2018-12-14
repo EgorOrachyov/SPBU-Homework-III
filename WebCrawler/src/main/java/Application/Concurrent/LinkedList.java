@@ -1,5 +1,6 @@
 package Application.Concurrent;
 
+import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -9,7 +10,7 @@ public class LinkedList<Element> extends IList<Element> {
     private Node tail;
     private Node iterator;
     private Lock lock;
-    private int elementsCount;
+    private volatile int elementsCount;
 
     public LinkedList() {
         head = null;
@@ -20,25 +21,31 @@ public class LinkedList<Element> extends IList<Element> {
 
     @Override
     public void add(Element element) {
-        lock.lock();
-
-        elementsCount += 1;
-
-        if (head == null) {
-            head = tail = new Node(element);
+        try {
+            lock.lock();
+            elementsCount += 1;
+            if (head == null) {
+                head = tail = new Node(element);
+                return;
+            }
+        }
+        finally {
             lock.unlock();
         }
-        else {
-            lock.unlock();
 
+        Node oldTail = tail;
+
+        try {
             tail.lock();
+            oldTail = tail;
             Node newTail = new Node(element);
-            newTail.lock();
             tail.setNext(newTail);
-            tail.unlock();
             tail = newTail;
-            newTail.unlock();
         }
+        finally {
+            oldTail.unlock();
+        }
+
     }
 
     @Override

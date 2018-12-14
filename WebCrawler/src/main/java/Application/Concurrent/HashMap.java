@@ -6,7 +6,7 @@ import java.util.concurrent.locks.ReentrantLock;
 public class HashMap<Key,Value> extends IMap<Key,Value> {
 
     private int range;
-    private int elementsCount;
+    private volatile int elementsCount;
     private LinkedList<Element>[] map;
     private Lock lock;
 
@@ -35,22 +35,26 @@ public class HashMap<Key,Value> extends IMap<Key,Value> {
         int index = Math.abs(key.hashCode()) % range;
         LinkedList<Element> list = map[index];
 
-        lock.lock();
-        Element e = list.find(new IFinder<Element>() {
-            @Override
-            protected boolean found(Element suspected) {
-                return (suspected.getKey().equals(key));
+        try {
+            lock.lock();
+            Element e = list.find(new IFinder<Element>() {
+                @Override
+                protected boolean found(Element suspected) {
+                    return (suspected.getKey().equals(key));
+                }
+            });
+
+            if (e != null) {
+                e.setValue(value);
             }
-        });
-
-        if (e != null) {
-            e.setValue(value);
+            else {
+                list.add(new Element(key, value));
+                elementsCount += 1;
+            }
         }
-        else {
-            list.add(new Element(key, value));
+        finally {
+            lock.unlock();
         }
-
-        lock.unlock();
     }
 
     @Override
