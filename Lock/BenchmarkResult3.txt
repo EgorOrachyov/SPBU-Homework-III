@@ -1,0 +1,22 @@
+/////////////////////////////////////////////////////
+//                                                 //
+//  Target Machine: Apple MacBook Pro 15 Mid 2014  //
+//  CPU: Intel Core i7 4770 HQ                     //
+//       Physical cores 4                          //
+//       Logical  cores 8                          //
+//  RAM: DDR3 16 GiB                               //
+//  Test: Atomic counter to 1000000                //
+//                                                 //
+/////////////////////////////////////////////////////
+
+Benchmark             Mode  Cnt  Score   Error  Units
+
+Test.TAS.threads_2    avgt    3  0,108 ± 0,007  ms/op
+Test.TAS.threads_4    avgt    3  0,217 ± 0,006  ms/op
+Test.TAS.threads_8    avgt    3  0,448 ± 0,012  ms/op
+Test.TAS.threads_16   avgt    3  0,908 ± 0,012  ms/op
+
+Test.TTAS.threads_2   avgt    3  0,105 ± 0,001  ms/op
+Test.TTAS.threads_4   avgt    3  0,213 ± 0,007  ms/op
+Test.TTAS.threads_8   avgt    3  0,452 ± 0,037  ms/op
+Test.TTAS.threads_16  avgt    3  0,908 ± 0,061  ms/op
