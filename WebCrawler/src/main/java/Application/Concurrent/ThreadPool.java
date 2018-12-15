@@ -24,6 +24,7 @@ public class ThreadPool implements Executor, AutoCloseable {
         threads = new Thread[threadsCount];
         for(int i = 0; i < threadsCount; i++) {
             threads[i] = new Thread(new Worker());
+            threads[i].setDaemon(true);
             threads[i].start();
         }
 

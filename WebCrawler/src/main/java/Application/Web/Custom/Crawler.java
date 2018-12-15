@@ -7,6 +7,8 @@ import Application.Util.ListSaver;
 import Application.Util.FileSaver;
 import Application.Web.ICrawler;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class Crawler implements ICrawler {
 
     public static final String USER_AGENT =
@@ -26,9 +28,8 @@ public class Crawler implements ICrawler {
     public LinkedList<String> download(String page, int depth, long timeout) {
 
         ListSaver saver = new ListSaver();
-        threadPool.execute(new ProcessPage(threadPool, map, page, 0, depth, saver));
+        threadPool.execute(new ProcessPage(threadPool, map, page, 0, depth, saver, null, 0));
 
-        threadPool.finish();
         threadPool.waitAndJoin();
 
         return saver.getData();
@@ -38,16 +39,32 @@ public class Crawler implements ICrawler {
     public void download(String page, int depth, String save, long timeout) {
 
         FileSaver saver = new FileSaver(save);
-        threadPool.execute(new ProcessPage(threadPool, map, page, 0, depth, saver));
+        threadPool.execute(new ProcessPage(threadPool, map, page, 0, depth, saver, null, 0));
+
+        threadPool.waitAndJoin();
+    }
+
+    @Override
+    public LinkedList<String> downloadCount(String page, int depth, int pageCount) {
+        AtomicInteger counter = new AtomicInteger(0);
+        ListSaver saver = new ListSaver();
+        threadPool.execute(new ProcessPage(threadPool, map, page, 0, depth, saver, counter, pageCount));
+
+        while (counter.get() < pageCount) {
+
+        }
 
         threadPool.finish();
-        threadPool.waitAndJoin();
+        threadPool.shutdown();
+
+        return saver.getData();
     }
 
     public static void main(String ... args) {
 
         Crawler crawler = new Crawler(4);
-        LinkedList<String> result = crawler.download("http://en.wikipedia.org/", 1, 1);
+        //LinkedList<String> result = crawler.download("http://www.shaderx.com", 1, 1);
+        LinkedList<String> result = crawler.downloadCount("http://en.wikipedia.org/", 1, 264);
         System.out.println("Total: " + result.getElementsCount());
         //crawler.download("http://www.shaderx.com", 1, "/Users/egororachyov/Desktop/Documents/Intellej Idea/SPBU-Homework-III/WebCrawler/src/main/Test",0);
 

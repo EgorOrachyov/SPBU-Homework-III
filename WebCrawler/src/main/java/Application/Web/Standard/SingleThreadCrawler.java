@@ -116,9 +116,15 @@ public class SingleThreadCrawler implements ICrawler {
 
     }
 
+    @Override
+    public Application.Concurrent.LinkedList<String> downloadCount(String page, int depth, int pageCount) {
+        return null;
+    }
+
     public static void main(String ... args) {
 
         SingleThreadCrawler crawler = new SingleThreadCrawler();
+        //Application.Concurrent.LinkedList<String> result = crawler.download("http://www.shaderx.com", 1, 1);
         Application.Concurrent.LinkedList<String> result = crawler.download("http://en.wikipedia.org/", 1, 1);
         System.out.println("Total: " + result.getElementsCount());
         //crawler.download("http://www.shaderx.com", 1, "/Users/egororachyov/Desktop/Documents/Intellej Idea/SPBU-Homework-III/WebCrawler/src/main/Test",0);

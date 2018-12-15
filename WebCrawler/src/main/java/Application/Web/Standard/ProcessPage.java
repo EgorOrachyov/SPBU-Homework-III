@@ -11,6 +11,7 @@ import org.jsoup.select.Elements;
 
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.ExecutorService;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class ProcessPage implements Runnable {
 
@@ -20,13 +21,17 @@ public class ProcessPage implements Runnable {
     private Integer depth;
     private Integer maxDepth;
     private ISaver saver;
+    private AtomicInteger counter;
+    private int pageCount;
 
     public ProcessPage(ExecutorService executorService,
                        ConcurrentMap<String,String> map,
                        String link,
                        Integer depth,
                        Integer maxDepth,
-                       ISaver saver) {
+                       ISaver saver,
+                       AtomicInteger counter,
+                       int pageCount) {
 
         this.executorService = executorService;
         this.map = map;
@@ -34,10 +39,18 @@ public class ProcessPage implements Runnable {
         this.depth = depth;
         this.maxDepth = maxDepth;
         this.saver = saver;
+        this.counter = counter;
+        this.pageCount = pageCount;
     }
 
     @Override
     public void run() {
+        if (counter != null) {
+            if (counter.getAndIncrement() > pageCount) {
+                return;
+            }
+        }
+
         try {
             final Connection connection = Jsoup.connect(link).userAgent(Crawler.USER_AGENT);
             final Document document = connection.get();
@@ -63,7 +76,8 @@ public class ProcessPage implements Runnable {
                                 new ProcessPage(
                                         executorService, map,
                                         absUrl, newDepth,
-                                        maxDepth, saver
+                                        maxDepth, saver,
+                                        counter, pageCount
                                 )
                         );
                     }

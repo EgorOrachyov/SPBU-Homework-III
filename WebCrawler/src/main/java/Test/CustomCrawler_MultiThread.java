@@ -33,6 +33,7 @@ package Test;
 
 import Application.Concurrent.LinkedList;
 import Application.Web.Custom.Crawler;
+import Application.Web.ICrawler;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;
 
@@ -45,42 +46,39 @@ import java.util.concurrent.TimeUnit;
 @BenchmarkMode(Mode.AverageTime)
 public class CustomCrawler_MultiThread {
 
-    private static Crawler crawler[];
-    private static final String url = "http://www.shaderx.com";
-    private static final String path = "/Users/egororachyov/Desktop/Documents/Intellej Idea/SPBU-Homework-III/WebCrawler/src/main/Test";
-    private static final int[] threads = {2,4,8,16};
+    @State(Scope.Benchmark)
+    public static class TestCase {
 
-    static {
-        crawler = new Crawler[threads.length];
-        for(int i = 0; i < threads.length; i++) {
-            crawler[i] = new Crawler(threads[i]);
+        @Param({"Custom","Default"})
+        String crawlerType;
+
+        @Param({"2","4","8","16"})
+        String threadsCount;
+
+        ICrawler crawler;
+
+        final String url = "http://www.shaderx.com";
+        final String path = "/Users/egororachyov/Desktop/Documents/Intellej Idea/SPBU-Homework-III/WebCrawler/src/main/Test";
+
+        @Setup(Level.Invocation)
+        public void prepare() {
+
+            int threads = Integer.valueOf(threadsCount);
+
+            if (crawlerType.equals("Custom")) {
+                crawler = new Crawler(threads);
+            }
+            else {
+                crawler = new Application.Web.Standard.Crawler(threads);
+            }
+
         }
+
     }
 
-    // @Benchmark
-    public void threads_2(Blackhole bh) {
-        //LinkedList<String> result = crawler[0].download(url,1, 1);
-        crawler[0].download(url,1, path,1);
-        //bh.consume(result);
-    }
-
-    // @Benchmark
-    public void threads_4(Blackhole bh) {
-        //LinkedList<String> result = crawler[1].download(url,1, 1);
-        crawler[1].download(url, 1, path, 1);
-        //bh.consume(result);
-    }
-
-    // @Benchmark
-    public void threads_8(Blackhole bh) {
-        LinkedList<String> result = crawler[2].download(url,1, 1);
-        bh.consume(result);
-    }
-
-    // @Benchmark
-    public void threads_16(Blackhole bh) {
-        LinkedList<String> result = crawler[3].download(url,1, 1);
-        bh.consume(result);
+    @Benchmark
+    public void benchmark(Blackhole bh, TestCase tc) {
+        bh.consume(tc.crawler.download(tc.url, 1, 10));
     }
 
 }
