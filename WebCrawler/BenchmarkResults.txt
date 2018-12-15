@@ -1,0 +1,103 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                                   //
+//  Target Machine: Apple MacBook Pro 15 Mid 2014                                                                    //
+//  CPU:   Intel Core i7 4770 HQ                                                                                     //
+//         Physical cores 4                                                                                          //
+//         Logical  cores 8                                                                                          //
+//  RAM:   DDR3 16 GiB                                                                                               //
+//  Test:  Custom Multi-Thread, Standard Multi-Thread, Single-Thread Web Crawlers                                    //
+//  Page:  "http://en.wikipedia.org/"                                                                                //
+//                                                                                                                   //
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Benchmark                                      (crawlerType)  (threadsCount)    Mode  Cnt      Score       Error  Units
+
+Test.MultiThread.benchmark                            Custom               2  sample    3  20009,626 ±  2827,436  ms/op
+Test.MultiThread.benchmark:benchmark·p0.00            Custom               2  sample       19830,669              ms/op
+Test.MultiThread.benchmark:benchmark·p0.50            Custom               2  sample       20099,105              ms/op
+Test.MultiThread.benchmark:benchmark·p0.90            Custom               2  sample       20099,105              ms/op
+Test.MultiThread.benchmark:benchmark·p0.95            Custom               2  sample       20099,105              ms/op
+Test.MultiThread.benchmark:benchmark·p0.99            Custom               2  sample       20099,105              ms/op
+Test.MultiThread.benchmark:benchmark·p0.999           Custom               2  sample       20099,105              ms/op
+Test.MultiThread.benchmark:benchmark·p0.9999          Custom               2  sample       20099,105              ms/op
+Test.MultiThread.benchmark:benchmark·p1.00            Custom               2  sample       20099,105              ms/op
+
+Test.MultiThread.benchmark                            Custom               4  sample    4  10108,273 ±  1932,288  ms/op
+Test.MultiThread.benchmark:benchmark·p0.00            Custom               4  sample        9663,676              ms/op
+Test.MultiThread.benchmark:benchmark·p0.50            Custom               4  sample       10242,490              ms/op
+Test.MultiThread.benchmark:benchmark·p0.90            Custom               4  sample       10284,433              ms/op
+Test.MultiThread.benchmark:benchmark·p0.95            Custom               4  sample       10284,433              ms/op
+Test.MultiThread.benchmark:benchmark·p0.99            Custom               4  sample       10284,433              ms/op
+Test.MultiThread.benchmark:benchmark·p0.999           Custom               4  sample       10284,433              ms/op
+Test.MultiThread.benchmark:benchmark·p0.9999          Custom               4  sample       10284,433              ms/op
+Test.MultiThread.benchmark:benchmark·p1.00            Custom               4  sample       10284,433              ms/op
+
+Test.MultiThread.benchmark                            Custom               8  sample    9   4126,729 ±   269,600  ms/op
+Test.MultiThread.benchmark:benchmark·p0.00            Custom               8  sample        3984,589              ms/op
+Test.MultiThread.benchmark:benchmark·p0.50            Custom               8  sample        4089,446              ms/op
+Test.MultiThread.benchmark:benchmark·p0.90            Custom               8  sample        4504,682              ms/op
+Test.MultiThread.benchmark:benchmark·p0.95            Custom               8  sample        4504,682              ms/op
+Test.MultiThread.benchmark:benchmark·p0.99            Custom               8  sample        4504,682              ms/op
+Test.MultiThread.benchmark:benchmark·p0.999           Custom               8  sample        4504,682              ms/op
+Test.MultiThread.benchmark:benchmark·p0.9999          Custom               8  sample        4504,682              ms/op
+Test.MultiThread.benchmark:benchmark·p1.00            Custom               8  sample        4504,682              ms/op
+
+Test.MultiThread.benchmark                            Custom              16  sample   12   2513,087 ±   111,821  ms/op
+Test.MultiThread.benchmark:benchmark·p0.00            Custom              16  sample        2378,170              ms/op
+Test.MultiThread.benchmark:benchmark·p0.50            Custom              16  sample        2512,388              ms/op
+Test.MultiThread.benchmark:benchmark·p0.90            Custom              16  sample        2642,412              ms/op
+Test.MultiThread.benchmark:benchmark·p0.95            Custom              16  sample        2654,994              ms/op
+Test.MultiThread.benchmark:benchmark·p0.99            Custom              16  sample        2654,994              ms/op
+Test.MultiThread.benchmark:benchmark·p0.999           Custom              16  sample        2654,994              ms/op
+Test.MultiThread.benchmark:benchmark·p0.9999          Custom              16  sample        2654,994              ms/op
+Test.MultiThread.benchmark:benchmark·p1.00            Custom              16  sample        2654,994              ms/op
+
+Test.MultiThread.benchmark                           Default               2  sample    3  20367,540 ±  5336,668  ms/op
+Test.MultiThread.benchmark:benchmark·p0.00           Default               2  sample       20166,214              ms/op
+Test.MultiThread.benchmark:benchmark·p0.50           Default               2  sample       20233,322              ms/op
+Test.MultiThread.benchmark:benchmark·p0.90           Default               2  sample       20703,085              ms/op
+Test.MultiThread.benchmark:benchmark·p0.95           Default               2  sample       20703,085              ms/op
+Test.MultiThread.benchmark:benchmark·p0.99           Default               2  sample       20703,085              ms/op
+Test.MultiThread.benchmark:benchmark·p0.999          Default               2  sample       20703,085              ms/op
+Test.MultiThread.benchmark:benchmark·p0.9999         Default               2  sample       20703,085              ms/op
+Test.MultiThread.benchmark:benchmark·p1.00           Default               2  sample       20703,085              ms/op
+
+Test.MultiThread.benchmark                           Default               4  sample    3  10921,968 ± 19452,270  ms/op
+Test.MultiThread.benchmark:benchmark·p0.00           Default               4  sample       10200,547              ms/op
+Test.MultiThread.benchmark:benchmark·p0.50           Default               4  sample       10418,651              ms/op
+Test.MultiThread.benchmark:benchmark·p0.90           Default               4  sample       12146,704              ms/op
+Test.MultiThread.benchmark:benchmark·p0.95           Default               4  sample       12146,704              ms/op
+Test.MultiThread.benchmark:benchmark·p0.99           Default               4  sample       12146,704              ms/op
+Test.MultiThread.benchmark:benchmark·p0.999          Default               4  sample       12146,704              ms/op
+Test.MultiThread.benchmark:benchmark·p0.9999         Default               4  sample       12146,704              ms/op
+Test.MultiThread.benchmark:benchmark·p1.00           Default               4  sample       12146,704              ms/op
+
+Test.MultiThread.benchmark                           Default               8  sample    7   4885,166 ±  1585,818  ms/op
+Test.MultiThread.benchmark:benchmark·p0.00           Default               8  sample        4102,029              ms/op
+Test.MultiThread.benchmark:benchmark·p0.50           Default               8  sample        4781,507              ms/op
+Test.MultiThread.benchmark:benchmark·p0.90           Default               8  sample        5620,367              ms/op
+Test.MultiThread.benchmark:benchmark·p0.95           Default               8  sample        5620,367              ms/op
+Test.MultiThread.benchmark:benchmark·p0.99           Default               8  sample        5620,367              ms/op
+Test.MultiThread.benchmark:benchmark·p0.999          Default               8  sample        5620,367              ms/op
+Test.MultiThread.benchmark:benchmark·p0.9999         Default               8  sample        5620,367              ms/op
+Test.MultiThread.benchmark:benchmark·p1.00           Default               8  sample        5620,367              ms/op
+
+Test.MultiThread.benchmark                           Default              16  sample   12   2635,421 ±   149,431  ms/op
+Test.MultiThread.benchmark:benchmark·p0.00           Default              16  sample        2491,417              ms/op
+Test.MultiThread.benchmark:benchmark·p0.50           Default              16  sample        2619,343              ms/op
+Test.MultiThread.benchmark:benchmark·p0.90           Default              16  sample        2868,904              ms/op
+Test.MultiThread.benchmark:benchmark·p0.95           Default              16  sample        2931,818              ms/op
+Test.MultiThread.benchmark:benchmark·p0.99           Default              16  sample        2931,818              ms/op
+Test.MultiThread.benchmark:benchmark·p0.999          Default              16  sample        2931,818              ms/op
+Test.MultiThread.benchmark:benchmark·p0.9999         Default              16  sample        2931,818              ms/op
+Test.MultiThread.benchmark:benchmark·p1.00           Default              16  sample        2931,818              ms/op
+
+Test.SingleThread.benchmark                              N/A             N/A  sample    3  39996,883 ±  6361,730  ms/op
+Test.SingleThread.benchmark:benchmark·p0.00              N/A             N/A  sample       39795,556              ms/op
+Test.SingleThread.benchmark:benchmark·p0.50              N/A             N/A  sample       39795,556              ms/op
+Test.SingleThread.benchmark:benchmark·p0.90              N/A             N/A  sample       40399,536              ms/op
+Test.SingleThread.benchmark:benchmark·p0.95              N/A             N/A  sample       40399,536              ms/op
+Test.SingleThread.benchmark:benchmark·p0.99              N/A             N/A  sample       40399,536              ms/op
+Test.SingleThread.benchmark:benchmark·p0.999             N/A             N/A  sample       40399,536              ms/op
+Test.SingleThread.benchmark:benchmark·p0.9999            N/A             N/A  sample       40399,536              ms/op
+Test.SingleThread.benchmark:benchmark·p1.00              N/A             N/A  sample       40399,536              ms/op

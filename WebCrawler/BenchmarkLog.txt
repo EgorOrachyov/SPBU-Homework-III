@@ -1,0 +1,825 @@
+/Library/Java/JavaVirtualMachines/jdk-9.0.1.jdk/Contents/Home/bin/java -Dfile.encoding=UTF-8 -jar "/Users/egororachyov/Desktop/Documents/Intellej Idea/SPBU-Homework-III/WebCrawler/target/benchmarks.jar"
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.openjdk.jmh.util.Utils (file:/Users/egororachyov/Desktop/Documents/Intellej%20Idea/SPBU-Homework-III/WebCrawler/target/benchmarks.jar) to field java.io.PrintStream.charOut
+WARNING: Please consider reporting this to the maintainers of org.openjdk.jmh.util.Utils
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+# JMH version: 1.21
+# VM version: JDK 9.0.1, Java HotSpot(TM) 64-Bit Server VM, 9.0.1+11
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk-9.0.1.jdk/Contents/Home/bin/java
+# VM options: -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: Test.MultiThread.benchmark
+# Parameters: (crawlerType = Custom, threadsCount = 2)
+
+# Run progress: 0,00% complete, ETA 00:07:30
+# Fork: 1 of 1
+# Warmup Iteration   1: 25333,596 ms/op
+# Warmup Iteration   2: 19763,560 ms/op
+Iteration   1: 20099,105 ms/op
+                 benchmark·p0.00:   20099,105 ms/op
+                 benchmark·p0.50:   20099,105 ms/op
+                 benchmark·p0.90:   20099,105 ms/op
+                 benchmark·p0.95:   20099,105 ms/op
+                 benchmark·p0.99:   20099,105 ms/op
+                 benchmark·p0.999:  20099,105 ms/op
+                 benchmark·p0.9999: 20099,105 ms/op
+                 benchmark·p1.00:   20099,105 ms/op
+
+Iteration   2: 20099,105 ms/op
+                 benchmark·p0.00:   20099,105 ms/op
+                 benchmark·p0.50:   20099,105 ms/op
+                 benchmark·p0.90:   20099,105 ms/op
+                 benchmark·p0.95:   20099,105 ms/op
+                 benchmark·p0.99:   20099,105 ms/op
+                 benchmark·p0.999:  20099,105 ms/op
+                 benchmark·p0.9999: 20099,105 ms/op
+                 benchmark·p1.00:   20099,105 ms/op
+
+Iteration   3: 19830,669 ms/op
+                 benchmark·p0.00:   19830,669 ms/op
+                 benchmark·p0.50:   19830,669 ms/op
+                 benchmark·p0.90:   19830,669 ms/op
+                 benchmark·p0.95:   19830,669 ms/op
+                 benchmark·p0.99:   19830,669 ms/op
+                 benchmark·p0.999:  19830,669 ms/op
+                 benchmark·p0.9999: 19830,669 ms/op
+                 benchmark·p1.00:   19830,669 ms/op
+
+
+
+Result "Test.MultiThread.benchmark":
+  N = 3
+  mean =  20009,626 ±(99.9%) 2827,436 ms/op
+
+  Histogram, ms/op:
+    [19800,000, 19825,000) = 0
+    [19825,000, 19850,000) = 1
+    [19850,000, 19875,000) = 0
+    [19875,000, 19900,000) = 0
+    [19900,000, 19925,000) = 0
+    [19925,000, 19950,000) = 0
+    [19950,000, 19975,000) = 0
+    [19975,000, 20000,000) = 0
+    [20000,000, 20025,000) = 0
+    [20025,000, 20050,000) = 0
+    [20050,000, 20075,000) = 0
+
+  Percentiles, ms/op:
+      p(0,0000) =  19830,669 ms/op
+     p(50,0000) =  20099,105 ms/op
+     p(90,0000) =  20099,105 ms/op
+     p(95,0000) =  20099,105 ms/op
+     p(99,0000) =  20099,105 ms/op
+     p(99,9000) =  20099,105 ms/op
+     p(99,9900) =  20099,105 ms/op
+     p(99,9990) =  20099,105 ms/op
+     p(99,9999) =  20099,105 ms/op
+    p(100,0000) =  20099,105 ms/op
+
+
+# JMH version: 1.21
+# VM version: JDK 9.0.1, Java HotSpot(TM) 64-Bit Server VM, 9.0.1+11
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk-9.0.1.jdk/Contents/Home/bin/java
+# VM options: -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: Test.MultiThread.benchmark
+# Parameters: (crawlerType = Custom, threadsCount = 4)
+
+# Run progress: 11,11% complete, ETA 00:14:07
+# Fork: 1 of 1
+# Warmup Iteration   1: 12566,135 ms/op
+# Warmup Iteration   2: 9906,946 ms/op
+Iteration   1: 9932,112 ms/op
+                 benchmark·p0.00:   9663,676 ms/op
+                 benchmark·p0.50:   9932,112 ms/op
+                 benchmark·p0.90:   10200,547 ms/op
+                 benchmark·p0.95:   10200,547 ms/op
+                 benchmark·p0.99:   10200,547 ms/op
+                 benchmark·p0.999:  10200,547 ms/op
+                 benchmark·p0.9999: 10200,547 ms/op
+                 benchmark·p1.00:   10200,547 ms/op
+
+Iteration   2: 10284,433 ms/op
+                 benchmark·p0.00:   10284,433 ms/op
+                 benchmark·p0.50:   10284,433 ms/op
+                 benchmark·p0.90:   10284,433 ms/op
+                 benchmark·p0.95:   10284,433 ms/op
+                 benchmark·p0.99:   10284,433 ms/op
+                 benchmark·p0.999:  10284,433 ms/op
+                 benchmark·p0.9999: 10284,433 ms/op
+                 benchmark·p1.00:   10284,433 ms/op
+
+Iteration   3: 10284,433 ms/op
+                 benchmark·p0.00:   10284,433 ms/op
+                 benchmark·p0.50:   10284,433 ms/op
+                 benchmark·p0.90:   10284,433 ms/op
+                 benchmark·p0.95:   10284,433 ms/op
+                 benchmark·p0.99:   10284,433 ms/op
+                 benchmark·p0.999:  10284,433 ms/op
+                 benchmark·p0.9999: 10284,433 ms/op
+                 benchmark·p1.00:   10284,433 ms/op
+
+
+
+Result "Test.MultiThread.benchmark":
+  N = 4
+  mean =  10108,273 ±(99.9%) 1932,288 ms/op
+
+  Histogram, ms/op:
+    [ 9600,000,  9650,000) = 0
+    [ 9650,000,  9700,000) = 1
+    [ 9700,000,  9750,000) = 0
+    [ 9750,000,  9800,000) = 0
+    [ 9800,000,  9850,000) = 0
+    [ 9850,000,  9900,000) = 0
+    [ 9900,000,  9950,000) = 0
+    [ 9950,000, 10000,000) = 0
+    [10000,000, 10050,000) = 0
+    [10050,000, 10100,000) = 0
+    [10100,000, 10150,000) = 0
+    [10150,000, 10200,000) = 0
+    [10200,000, 10250,000) = 1
+
+  Percentiles, ms/op:
+      p(0,0000) =   9663,676 ms/op
+     p(50,0000) =  10242,490 ms/op
+     p(90,0000) =  10284,433 ms/op
+     p(95,0000) =  10284,433 ms/op
+     p(99,0000) =  10284,433 ms/op
+     p(99,9000) =  10284,433 ms/op
+     p(99,9900) =  10284,433 ms/op
+     p(99,9990) =  10284,433 ms/op
+     p(99,9999) =  10284,433 ms/op
+    p(100,0000) =  10284,433 ms/op
+
+
+# JMH version: 1.21
+# VM version: JDK 9.0.1, Java HotSpot(TM) 64-Bit Server VM, 9.0.1+11
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk-9.0.1.jdk/Contents/Home/bin/java
+# VM options: -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: Test.MultiThread.benchmark
+# Parameters: (crawlerType = Custom, threadsCount = 8)
+
+# Run progress: 22,22% complete, ETA 00:10:28
+# Fork: 1 of 1
+# Warmup Iteration   1: 6132,072 ms/op
+# Warmup Iteration   2: 4185,915 ±(99.9%) 2258,304 ms/op
+Iteration   1: Exception in thread "Thread-60" java.lang.IllegalMonitorStateException
+	at java.base/java.util.concurrent.locks.ReentrantLock$Sync.tryRelease(ReentrantLock.java:149)
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer.release(AbstractQueuedSynchronizer.java:1288)
+	at java.base/java.util.concurrent.locks.ReentrantLock.unlock(ReentrantLock.java:439)
+	at Application.Concurrent.LinkedList$Node.unlock(LinkedList.java:182)
+	at Application.Concurrent.LinkedList.add(LinkedList.java:60)
+	at Application.Util.ListSaver.save(ListSaver.java:18)
+	at Application.Web.Custom.ProcessPage.run(ProcessPage.java:88)
+	at Application.Concurrent.ThreadPool$Worker.run(ThreadPool.java:84)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+4219,470 ±(99.9%) 4810,407 ms/op
+                 benchmark·p0.00:   3984,589 ms/op
+                 benchmark·p0.50:   4169,138 ms/op
+                 benchmark·p0.90:   4504,682 ms/op
+                 benchmark·p0.95:   4504,682 ms/op
+                 benchmark·p0.99:   4504,682 ms/op
+                 benchmark·p0.999:  4504,682 ms/op
+                 benchmark·p0.9999: 4504,682 ms/op
+                 benchmark·p1.00:   4504,682 ms/op
+
+Iteration   2: 4071,271 ±(99.9%) 1504,023 ms/op
+                 benchmark·p0.00:   4009,755 ms/op
+                 benchmark·p0.50:   4039,115 ms/op
+                 benchmark·p0.90:   4164,944 ms/op
+                 benchmark·p0.95:   4164,944 ms/op
+                 benchmark·p0.99:   4164,944 ms/op
+                 benchmark·p0.999:  4164,944 ms/op
+                 benchmark·p0.9999: 4164,944 ms/op
+                 benchmark·p1.00:   4164,944 ms/op
+
+Iteration   3: 4089,446 ±(99.9%) 1530,394 ms/op
+                 benchmark·p0.00:   4005,560 ms/op
+                 benchmark·p0.50:   4089,446 ms/op
+                 benchmark·p0.90:   4173,332 ms/op
+                 benchmark·p0.95:   4173,332 ms/op
+                 benchmark·p0.99:   4173,332 ms/op
+                 benchmark·p0.999:  4173,332 ms/op
+                 benchmark·p0.9999: 4173,332 ms/op
+                 benchmark·p1.00:   4173,332 ms/op
+
+
+
+Result "Test.MultiThread.benchmark":
+  N = 9
+  mean =   4126,729 ±(99.9%) 269,600 ms/op
+
+  Histogram, ms/op:
+    [3900,000, 3950,000) = 0
+    [3950,000, 4000,000) = 1
+    [4000,000, 4050,000) = 3
+    [4050,000, 4100,000) = 1
+    [4100,000, 4150,000) = 0
+    [4150,000, 4200,000) = 3
+    [4200,000, 4250,000) = 0
+    [4250,000, 4300,000) = 0
+    [4300,000, 4350,000) = 0
+    [4350,000, 4400,000) = 0
+    [4400,000, 4450,000) = 0
+    [4450,000, 4500,000) = 0
+    [4500,000, 4550,000) = 1
+
+  Percentiles, ms/op:
+      p(0,0000) =   3984,589 ms/op
+     p(50,0000) =   4089,446 ms/op
+     p(90,0000) =   4504,682 ms/op
+     p(95,0000) =   4504,682 ms/op
+     p(99,0000) =   4504,682 ms/op
+     p(99,9000) =   4504,682 ms/op
+     p(99,9900) =   4504,682 ms/op
+     p(99,9990) =   4504,682 ms/op
+     p(99,9999) =   4504,682 ms/op
+    p(100,0000) =   4504,682 ms/op
+
+
+# JMH version: 1.21
+# VM version: JDK 9.0.1, Java HotSpot(TM) 64-Bit Server VM, 9.0.1+11
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk-9.0.1.jdk/Contents/Home/bin/java
+# VM options: -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: Test.MultiThread.benchmark
+# Parameters: (crawlerType = Custom, threadsCount = 16)
+
+# Run progress: 33,33% complete, ETA 00:08:04
+# Fork: 1 of 1
+# Warmup Iteration   1: 3560,964 ±(99.9%) 26002,184 ms/op
+# Warmup Iteration   2: 2500,854 ±(99.9%) 716,196 ms/op
+Iteration   1: 2522,874 ±(99.9%) 600,982 ms/op
+                 benchmark·p0.00:   2453,668 ms/op
+                 benchmark·p0.50:   2491,417 ms/op
+                 benchmark·p0.90:   2654,994 ms/op
+                 benchmark·p0.95:   2654,994 ms/op
+                 benchmark·p0.99:   2654,994 ms/op
+                 benchmark·p0.999:  2654,994 ms/op
+                 benchmark·p0.9999: 2654,994 ms/op
+                 benchmark·p1.00:   2654,994 ms/op
+
+Iteration   2: 2459,959 ±(99.9%) 599,758 ms/op
+                 benchmark·p0.00:   2378,170 ms/op
+                 benchmark·p0.50:   2453,668 ms/op
+                 benchmark·p0.90:   2554,331 ms/op
+                 benchmark·p0.95:   2554,331 ms/op
+                 benchmark·p0.99:   2554,331 ms/op
+                 benchmark·p0.999:  2554,331 ms/op
+                 benchmark·p0.9999: 2554,331 ms/op
+                 benchmark·p1.00:   2554,331 ms/op
+
+Iteration   3: 2556,428 ±(99.9%) 423,082 ms/op
+                 benchmark·p0.00:   2495,611 ms/op
+                 benchmark·p0.50:   2558,525 ms/op
+                 benchmark·p0.90:   2613,051 ms/op
+                 benchmark·p0.95:   2613,051 ms/op
+                 benchmark·p0.99:   2613,051 ms/op
+                 benchmark·p0.999:  2613,051 ms/op
+                 benchmark·p0.9999: 2613,051 ms/op
+                 benchmark·p1.00:   2613,051 ms/op
+
+
+
+Result "Test.MultiThread.benchmark":
+  N = 12
+  mean =   2513,087 ±(99.9%) 111,821 ms/op
+
+  Histogram, ms/op:
+    [2300,000, 2325,000) = 0
+    [2325,000, 2350,000) = 0
+    [2350,000, 2375,000) = 0
+    [2375,000, 2400,000) = 2
+    [2400,000, 2425,000) = 0
+    [2425,000, 2450,000) = 0
+    [2450,000, 2475,000) = 2
+    [2475,000, 2500,000) = 1
+    [2500,000, 2525,000) = 3
+    [2525,000, 2550,000) = 0
+    [2550,000, 2575,000) = 1
+    [2575,000, 2600,000) = 0
+    [2600,000, 2625,000) = 2
+    [2625,000, 2650,000) = 0
+    [2650,000, 2675,000) = 1
+
+  Percentiles, ms/op:
+      p(0,0000) =   2378,170 ms/op
+     p(50,0000) =   2512,388 ms/op
+     p(90,0000) =   2642,412 ms/op
+     p(95,0000) =   2654,994 ms/op
+     p(99,0000) =   2654,994 ms/op
+     p(99,9000) =   2654,994 ms/op
+     p(99,9900) =   2654,994 ms/op
+     p(99,9990) =   2654,994 ms/op
+     p(99,9999) =   2654,994 ms/op
+    p(100,0000) =   2654,994 ms/op
+
+
+# JMH version: 1.21
+# VM version: JDK 9.0.1, Java HotSpot(TM) 64-Bit Server VM, 9.0.1+11
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk-9.0.1.jdk/Contents/Home/bin/java
+# VM options: -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: Test.MultiThread.benchmark
+# Parameters: (crawlerType = Default, threadsCount = 2)
+
+# Run progress: 44,44% complete, ETA 00:06:09
+# Fork: 1 of 1
+# Warmup Iteration   1: 22984,786 ms/op
+# Warmup Iteration   2: 20166,214 ms/op
+Iteration   1: 20703,085 ms/op
+                 benchmark·p0.00:   20703,085 ms/op
+                 benchmark·p0.50:   20703,085 ms/op
+                 benchmark·p0.90:   20703,085 ms/op
+                 benchmark·p0.95:   20703,085 ms/op
+                 benchmark·p0.99:   20703,085 ms/op
+                 benchmark·p0.999:  20703,085 ms/op
+                 benchmark·p0.9999: 20703,085 ms/op
+                 benchmark·p1.00:   20703,085 ms/op
+
+Iteration   2: 20233,322 ms/op
+                 benchmark·p0.00:   20233,322 ms/op
+                 benchmark·p0.50:   20233,322 ms/op
+                 benchmark·p0.90:   20233,322 ms/op
+                 benchmark·p0.95:   20233,322 ms/op
+                 benchmark·p0.99:   20233,322 ms/op
+                 benchmark·p0.999:  20233,322 ms/op
+                 benchmark·p0.9999: 20233,322 ms/op
+                 benchmark·p1.00:   20233,322 ms/op
+
+Iteration   3: 20166,214 ms/op
+                 benchmark·p0.00:   20166,214 ms/op
+                 benchmark·p0.50:   20166,214 ms/op
+                 benchmark·p0.90:   20166,214 ms/op
+                 benchmark·p0.95:   20166,214 ms/op
+                 benchmark·p0.99:   20166,214 ms/op
+                 benchmark·p0.999:  20166,214 ms/op
+                 benchmark·p0.9999: 20166,214 ms/op
+                 benchmark·p1.00:   20166,214 ms/op
+
+
+
+Result "Test.MultiThread.benchmark":
+  N = 3
+  mean =  20367,540 ±(99.9%) 5336,668 ms/op
+
+  Histogram, ms/op:
+    [20100,000, 20150,000) = 0
+    [20150,000, 20200,000) = 1
+    [20200,000, 20250,000) = 1
+    [20250,000, 20300,000) = 0
+    [20300,000, 20350,000) = 0
+    [20350,000, 20400,000) = 0
+    [20400,000, 20450,000) = 0
+    [20450,000, 20500,000) = 0
+    [20500,000, 20550,000) = 0
+    [20550,000, 20600,000) = 0
+    [20600,000, 20650,000) = 0
+    [20650,000, 20700,000) = 0
+    [20700,000, 20750,000) = 1
+
+  Percentiles, ms/op:
+      p(0,0000) =  20166,214 ms/op
+     p(50,0000) =  20233,322 ms/op
+     p(90,0000) =  20703,085 ms/op
+     p(95,0000) =  20703,085 ms/op
+     p(99,0000) =  20703,085 ms/op
+     p(99,9000) =  20703,085 ms/op
+     p(99,9900) =  20703,085 ms/op
+     p(99,9990) =  20703,085 ms/op
+     p(99,9999) =  20703,085 ms/op
+    p(100,0000) =  20703,085 ms/op
+
+
+# JMH version: 1.21
+# VM version: JDK 9.0.1, Java HotSpot(TM) 64-Bit Server VM, 9.0.1+11
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk-9.0.1.jdk/Contents/Home/bin/java
+# VM options: -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: Test.MultiThread.benchmark
+# Parameters: (crawlerType = Default, threadsCount = 4)
+
+# Run progress: 55,56% complete, ETA 00:05:20
+# Fork: 1 of 1
+# Warmup Iteration   1: 12918,456 ms/op
+# Warmup Iteration   2: 13623,099 ms/op
+Iteration   1: 10418,651 ms/op
+                 benchmark·p0.00:   10418,651 ms/op
+                 benchmark·p0.50:   10418,651 ms/op
+                 benchmark·p0.90:   10418,651 ms/op
+                 benchmark·p0.95:   10418,651 ms/op
+                 benchmark·p0.99:   10418,651 ms/op
+                 benchmark·p0.999:  10418,651 ms/op
+                 benchmark·p0.9999: 10418,651 ms/op
+                 benchmark·p1.00:   10418,651 ms/op
+
+Iteration   2: 12146,704 ms/op
+                 benchmark·p0.00:   12146,704 ms/op
+                 benchmark·p0.50:   12146,704 ms/op
+                 benchmark·p0.90:   12146,704 ms/op
+                 benchmark·p0.95:   12146,704 ms/op
+                 benchmark·p0.99:   12146,704 ms/op
+                 benchmark·p0.999:  12146,704 ms/op
+                 benchmark·p0.9999: 12146,704 ms/op
+                 benchmark·p1.00:   12146,704 ms/op
+
+Iteration   3: 10200,547 ms/op
+                 benchmark·p0.00:   10200,547 ms/op
+                 benchmark·p0.50:   10200,547 ms/op
+                 benchmark·p0.90:   10200,547 ms/op
+                 benchmark·p0.95:   10200,547 ms/op
+                 benchmark·p0.99:   10200,547 ms/op
+                 benchmark·p0.999:  10200,547 ms/op
+                 benchmark·p0.9999: 10200,547 ms/op
+                 benchmark·p1.00:   10200,547 ms/op
+
+
+
+Result "Test.MultiThread.benchmark":
+  N = 3
+  mean =  10921,968 ±(99.9%) 19452,270 ms/op
+
+  Histogram, ms/op:
+    [10000,000, 10250,000) = 1
+    [10250,000, 10500,000) = 1
+    [10500,000, 10750,000) = 0
+    [10750,000, 11000,000) = 0
+    [11000,000, 11250,000) = 0
+    [11250,000, 11500,000) = 0
+    [11500,000, 11750,000) = 0
+    [11750,000, 12000,000) = 0
+    [12000,000, 12250,000) = 1
+    [12250,000, 12500,000) = 0
+    [12500,000, 12750,000) = 0
+
+  Percentiles, ms/op:
+      p(0,0000) =  10200,547 ms/op
+     p(50,0000) =  10418,651 ms/op
+     p(90,0000) =  12146,704 ms/op
+     p(95,0000) =  12146,704 ms/op
+     p(99,0000) =  12146,704 ms/op
+     p(99,9000) =  12146,704 ms/op
+     p(99,9900) =  12146,704 ms/op
+     p(99,9990) =  12146,704 ms/op
+     p(99,9999) =  12146,704 ms/op
+    p(100,0000) =  12146,704 ms/op
+
+
+# JMH version: 1.21
+# VM version: JDK 9.0.1, Java HotSpot(TM) 64-Bit Server VM, 9.0.1+11
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk-9.0.1.jdk/Contents/Home/bin/java
+# VM options: -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: Test.MultiThread.benchmark
+# Parameters: (crawlerType = Default, threadsCount = 8)
+
+# Run progress: 66,67% complete, ETA 00:03:50
+# Fork: 1 of 1
+# Warmup Iteration   1: 6572,474 ms/op
+# Warmup Iteration   2: 5708,448 ms/op
+Iteration   1: 5611,979 ms/op
+                 benchmark·p0.00:   5603,590 ms/op
+                 benchmark·p0.50:   5611,979 ms/op
+                 benchmark·p0.90:   5620,367 ms/op
+                 benchmark·p0.95:   5620,367 ms/op
+                 benchmark·p0.99:   5620,367 ms/op
+                 benchmark·p0.999:  5620,367 ms/op
+                 benchmark·p0.9999: 5620,367 ms/op
+                 benchmark·p1.00:   5620,367 ms/op
+
+Iteration   2: 5179,965 ms/op
+                 benchmark·p0.00:   4781,507 ms/op
+                 benchmark·p0.50:   5179,965 ms/op
+                 benchmark·p0.90:   5578,424 ms/op
+                 benchmark·p0.95:   5578,424 ms/op
+                 benchmark·p0.99:   5578,424 ms/op
+                 benchmark·p0.999:  5578,424 ms/op
+                 benchmark·p0.9999: 5578,424 ms/op
+                 benchmark·p1.00:   5578,424 ms/op
+
+Iteration   3: 4204,091 ±(99.9%) 2415,326 ms/op
+                 benchmark·p0.00:   4102,029 ms/op
+                 benchmark·p0.50:   4156,555 ms/op
+                 benchmark·p0.90:   4353,688 ms/op
+                 benchmark·p0.95:   4353,688 ms/op
+                 benchmark·p0.99:   4353,688 ms/op
+                 benchmark·p0.999:  4353,688 ms/op
+                 benchmark·p0.9999: 4353,688 ms/op
+                 benchmark·p1.00:   4353,688 ms/op
+
+
+
+Result "Test.MultiThread.benchmark":
+  N = 7
+  mean =   4885,166 ±(99.9%) 1585,818 ms/op
+
+  Histogram, ms/op:
+    [4000,000, 4125,000) = 1
+    [4125,000, 4250,000) = 1
+    [4250,000, 4375,000) = 1
+    [4375,000, 4500,000) = 0
+    [4500,000, 4625,000) = 0
+    [4625,000, 4750,000) = 0
+    [4750,000, 4875,000) = 1
+    [4875,000, 5000,000) = 0
+    [5000,000, 5125,000) = 0
+    [5125,000, 5250,000) = 0
+    [5250,000, 5375,000) = 0
+    [5375,000, 5500,000) = 0
+    [5500,000, 5625,000) = 3
+    [5625,000, 5750,000) = 0
+    [5750,000, 5875,000) = 0
+
+  Percentiles, ms/op:
+      p(0,0000) =   4102,029 ms/op
+     p(50,0000) =   4781,507 ms/op
+     p(90,0000) =   5620,367 ms/op
+     p(95,0000) =   5620,367 ms/op
+     p(99,0000) =   5620,367 ms/op
+     p(99,9000) =   5620,367 ms/op
+     p(99,9900) =   5620,367 ms/op
+     p(99,9990) =   5620,367 ms/op
+     p(99,9999) =   5620,367 ms/op
+    p(100,0000) =   5620,367 ms/op
+
+
+# JMH version: 1.21
+# VM version: JDK 9.0.1, Java HotSpot(TM) 64-Bit Server VM, 9.0.1+11
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk-9.0.1.jdk/Contents/Home/bin/java
+# VM options: -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: Test.MultiThread.benchmark
+# Parameters: (crawlerType = Default, threadsCount = 16)
+
+# Run progress: 77,78% complete, ETA 00:02:28
+# Fork: 1 of 1
+# Warmup Iteration   1: 3937,053 ±(99.9%) 24543,792 ms/op
+# Warmup Iteration   2: 2490,578 ±(99.9%) 284,914 ms/op
+Iteration   1: 2543,845 ±(99.9%) 386,800 ms/op
+                 benchmark·p0.00:   2491,417 ms/op
+                 benchmark·p0.50:   2529,165 ms/op
+                 benchmark·p0.90:   2625,634 ms/op
+                 benchmark·p0.95:   2625,634 ms/op
+                 benchmark·p0.99:   2625,634 ms/op
+                 benchmark·p0.999:  2625,634 ms/op
+                 benchmark·p0.9999: 2625,634 ms/op
+                 benchmark·p1.00:   2625,634 ms/op
+
+Iteration   2: 2723,152 ±(99.9%) 979,829 ms/op
+                 benchmark·p0.00:   2575,303 ms/op
+                 benchmark·p0.50:   2692,743 ms/op
+                 benchmark·p0.90:   2931,818 ms/op
+                 benchmark·p0.95:   2931,818 ms/op
+                 benchmark·p0.99:   2931,818 ms/op
+                 benchmark·p0.999:  2931,818 ms/op
+                 benchmark·p0.9999: 2931,818 ms/op
+                 benchmark·p1.00:   2931,818 ms/op
+
+Iteration   3: 2639,266 ±(99.9%) 279,377 ms/op
+                 benchmark·p0.00:   2592,080 ms/op
+                 benchmark·p0.50:   2644,509 ms/op
+                 benchmark·p0.90:   2675,966 ms/op
+                 benchmark·p0.95:   2675,966 ms/op
+                 benchmark·p0.99:   2675,966 ms/op
+                 benchmark·p0.999:  2675,966 ms/op
+                 benchmark·p0.9999: 2675,966 ms/op
+                 benchmark·p1.00:   2675,966 ms/op
+
+
+
+Result "Test.MultiThread.benchmark":
+  N = 12
+  mean =   2635,421 ±(99.9%) 149,431 ms/op
+
+  Histogram, ms/op:
+    [2400,000, 2450,000) = 0
+    [2450,000, 2500,000) = 1
+    [2500,000, 2550,000) = 1
+    [2550,000, 2600,000) = 3
+    [2600,000, 2650,000) = 2
+    [2650,000, 2700,000) = 3
+    [2700,000, 2750,000) = 1
+    [2750,000, 2800,000) = 0
+    [2800,000, 2850,000) = 0
+    [2850,000, 2900,000) = 0
+    [2900,000, 2950,000) = 1
+
+  Percentiles, ms/op:
+      p(0,0000) =   2491,417 ms/op
+     p(50,0000) =   2619,343 ms/op
+     p(90,0000) =   2868,904 ms/op
+     p(95,0000) =   2931,818 ms/op
+     p(99,0000) =   2931,818 ms/op
+     p(99,9000) =   2931,818 ms/op
+     p(99,9900) =   2931,818 ms/op
+     p(99,9990) =   2931,818 ms/op
+     p(99,9999) =   2931,818 ms/op
+    p(100,0000) =   2931,818 ms/op
+
+
+# JMH version: 1.21
+# VM version: JDK 9.0.1, Java HotSpot(TM) 64-Bit Server VM, 9.0.1+11
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk-9.0.1.jdk/Contents/Home/bin/java
+# VM options: -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: Test.SingleThread.benchmark
+
+# Run progress: 88,89% complete, ETA 00:01:12
+# Fork: 1 of 1
+# Warmup Iteration   1: 47714,402 ms/op
+# Warmup Iteration   2: 38721,815 ms/op
+Iteration   1: 40399,536 ms/op
+                 benchmark·p0.00:   40399,536 ms/op
+                 benchmark·p0.50:   40399,536 ms/op
+                 benchmark·p0.90:   40399,536 ms/op
+                 benchmark·p0.95:   40399,536 ms/op
+                 benchmark·p0.99:   40399,536 ms/op
+                 benchmark·p0.999:  40399,536 ms/op
+                 benchmark·p0.9999: 40399,536 ms/op
+                 benchmark·p1.00:   40399,536 ms/op
+
+Iteration   2: 39795,556 ms/op
+                 benchmark·p0.00:   39795,556 ms/op
+                 benchmark·p0.50:   39795,556 ms/op
+                 benchmark·p0.90:   39795,556 ms/op
+                 benchmark·p0.95:   39795,556 ms/op
+                 benchmark·p0.99:   39795,556 ms/op
+                 benchmark·p0.999:  39795,556 ms/op
+                 benchmark·p0.9999: 39795,556 ms/op
+                 benchmark·p1.00:   39795,556 ms/op
+
+Iteration   3: 39795,556 ms/op
+                 benchmark·p0.00:   39795,556 ms/op
+                 benchmark·p0.50:   39795,556 ms/op
+                 benchmark·p0.90:   39795,556 ms/op
+                 benchmark·p0.95:   39795,556 ms/op
+                 benchmark·p0.99:   39795,556 ms/op
+                 benchmark·p0.999:  39795,556 ms/op
+                 benchmark·p0.9999: 39795,556 ms/op
+                 benchmark·p1.00:   39795,556 ms/op
+
+
+
+Result "Test.SingleThread.benchmark":
+  N = 3
+  mean =  39996,883 ±(99.9%) 6361,730 ms/op
+
+  Histogram, ms/op:
+    [39700,000, 39750,000) = 0
+    [39750,000, 39800,000) = 2
+    [39800,000, 39850,000) = 0
+    [39850,000, 39900,000) = 0
+    [39900,000, 39950,000) = 0
+    [39950,000, 40000,000) = 0
+    [40000,000, 40050,000) = 0
+    [40050,000, 40100,000) = 0
+    [40100,000, 40150,000) = 0
+    [40150,000, 40200,000) = 0
+    [40200,000, 40250,000) = 0
+    [40250,000, 40300,000) = 0
+    [40300,000, 40350,000) = 0
+
+  Percentiles, ms/op:
+      p(0,0000) =  39795,556 ms/op
+     p(50,0000) =  39795,556 ms/op
+     p(90,0000) =  40399,536 ms/op
+     p(95,0000) =  40399,536 ms/op
+     p(99,0000) =  40399,536 ms/op
+     p(99,9000) =  40399,536 ms/op
+     p(99,9900) =  40399,536 ms/op
+     p(99,9990) =  40399,536 ms/op
+     p(99,9999) =  40399,536 ms/op
+    p(100,0000) =  40399,536 ms/op
+
+
+# Run complete. Total time: 00:13:05
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                      (crawlerType)  (threadsCount)    Mode  Cnt      Score       Error  Units
+Test.MultiThread.benchmark                            Custom               2  sample    3  20009,626 ±  2827,436  ms/op
+Test.MultiThread.benchmark:benchmark·p0.00            Custom               2  sample       19830,669              ms/op
+Test.MultiThread.benchmark:benchmark·p0.50            Custom               2  sample       20099,105              ms/op
+Test.MultiThread.benchmark:benchmark·p0.90            Custom               2  sample       20099,105              ms/op
+Test.MultiThread.benchmark:benchmark·p0.95            Custom               2  sample       20099,105              ms/op
+Test.MultiThread.benchmark:benchmark·p0.99            Custom               2  sample       20099,105              ms/op
+Test.MultiThread.benchmark:benchmark·p0.999           Custom               2  sample       20099,105              ms/op
+Test.MultiThread.benchmark:benchmark·p0.9999          Custom               2  sample       20099,105              ms/op
+Test.MultiThread.benchmark:benchmark·p1.00            Custom               2  sample       20099,105              ms/op
+Test.MultiThread.benchmark                            Custom               4  sample    4  10108,273 ±  1932,288  ms/op
+Test.MultiThread.benchmark:benchmark·p0.00            Custom               4  sample        9663,676              ms/op
+Test.MultiThread.benchmark:benchmark·p0.50            Custom               4  sample       10242,490              ms/op
+Test.MultiThread.benchmark:benchmark·p0.90            Custom               4  sample       10284,433              ms/op
+Test.MultiThread.benchmark:benchmark·p0.95            Custom               4  sample       10284,433              ms/op
+Test.MultiThread.benchmark:benchmark·p0.99            Custom               4  sample       10284,433              ms/op
+Test.MultiThread.benchmark:benchmark·p0.999           Custom               4  sample       10284,433              ms/op
+Test.MultiThread.benchmark:benchmark·p0.9999          Custom               4  sample       10284,433              ms/op
+Test.MultiThread.benchmark:benchmark·p1.00            Custom               4  sample       10284,433              ms/op
+Test.MultiThread.benchmark                            Custom               8  sample    9   4126,729 ±   269,600  ms/op
+Test.MultiThread.benchmark:benchmark·p0.00            Custom               8  sample        3984,589              ms/op
+Test.MultiThread.benchmark:benchmark·p0.50            Custom               8  sample        4089,446              ms/op
+Test.MultiThread.benchmark:benchmark·p0.90            Custom               8  sample        4504,682              ms/op
+Test.MultiThread.benchmark:benchmark·p0.95            Custom               8  sample        4504,682              ms/op
+Test.MultiThread.benchmark:benchmark·p0.99            Custom               8  sample        4504,682              ms/op
+Test.MultiThread.benchmark:benchmark·p0.999           Custom               8  sample        4504,682              ms/op
+Test.MultiThread.benchmark:benchmark·p0.9999          Custom               8  sample        4504,682              ms/op
+Test.MultiThread.benchmark:benchmark·p1.00            Custom               8  sample        4504,682              ms/op
+Test.MultiThread.benchmark                            Custom              16  sample   12   2513,087 ±   111,821  ms/op
+Test.MultiThread.benchmark:benchmark·p0.00            Custom              16  sample        2378,170              ms/op
+Test.MultiThread.benchmark:benchmark·p0.50            Custom              16  sample        2512,388              ms/op
+Test.MultiThread.benchmark:benchmark·p0.90            Custom              16  sample        2642,412              ms/op
+Test.MultiThread.benchmark:benchmark·p0.95            Custom              16  sample        2654,994              ms/op
+Test.MultiThread.benchmark:benchmark·p0.99            Custom              16  sample        2654,994              ms/op
+Test.MultiThread.benchmark:benchmark·p0.999           Custom              16  sample        2654,994              ms/op
+Test.MultiThread.benchmark:benchmark·p0.9999          Custom              16  sample        2654,994              ms/op
+Test.MultiThread.benchmark:benchmark·p1.00            Custom              16  sample        2654,994              ms/op
+Test.MultiThread.benchmark                           Default               2  sample    3  20367,540 ±  5336,668  ms/op
+Test.MultiThread.benchmark:benchmark·p0.00           Default               2  sample       20166,214              ms/op
+Test.MultiThread.benchmark:benchmark·p0.50           Default               2  sample       20233,322              ms/op
+Test.MultiThread.benchmark:benchmark·p0.90           Default               2  sample       20703,085              ms/op
+Test.MultiThread.benchmark:benchmark·p0.95           Default               2  sample       20703,085              ms/op
+Test.MultiThread.benchmark:benchmark·p0.99           Default               2  sample       20703,085              ms/op
+Test.MultiThread.benchmark:benchmark·p0.999          Default               2  sample       20703,085              ms/op
+Test.MultiThread.benchmark:benchmark·p0.9999         Default               2  sample       20703,085              ms/op
+Test.MultiThread.benchmark:benchmark·p1.00           Default               2  sample       20703,085              ms/op
+Test.MultiThread.benchmark                           Default               4  sample    3  10921,968 ± 19452,270  ms/op
+Test.MultiThread.benchmark:benchmark·p0.00           Default               4  sample       10200,547              ms/op
+Test.MultiThread.benchmark:benchmark·p0.50           Default               4  sample       10418,651              ms/op
+Test.MultiThread.benchmark:benchmark·p0.90           Default               4  sample       12146,704              ms/op
+Test.MultiThread.benchmark:benchmark·p0.95           Default               4  sample       12146,704              ms/op
+Test.MultiThread.benchmark:benchmark·p0.99           Default               4  sample       12146,704              ms/op
+Test.MultiThread.benchmark:benchmark·p0.999          Default               4  sample       12146,704              ms/op
+Test.MultiThread.benchmark:benchmark·p0.9999         Default               4  sample       12146,704              ms/op
+Test.MultiThread.benchmark:benchmark·p1.00           Default               4  sample       12146,704              ms/op
+Test.MultiThread.benchmark                           Default               8  sample    7   4885,166 ±  1585,818  ms/op
+Test.MultiThread.benchmark:benchmark·p0.00           Default               8  sample        4102,029              ms/op
+Test.MultiThread.benchmark:benchmark·p0.50           Default               8  sample        4781,507              ms/op
+Test.MultiThread.benchmark:benchmark·p0.90           Default               8  sample        5620,367              ms/op
+Test.MultiThread.benchmark:benchmark·p0.95           Default               8  sample        5620,367              ms/op
+Test.MultiThread.benchmark:benchmark·p0.99           Default               8  sample        5620,367              ms/op
+Test.MultiThread.benchmark:benchmark·p0.999          Default               8  sample        5620,367              ms/op
+Test.MultiThread.benchmark:benchmark·p0.9999         Default               8  sample        5620,367              ms/op
+Test.MultiThread.benchmark:benchmark·p1.00           Default               8  sample        5620,367              ms/op
+Test.MultiThread.benchmark                           Default              16  sample   12   2635,421 ±   149,431  ms/op
+Test.MultiThread.benchmark:benchmark·p0.00           Default              16  sample        2491,417              ms/op
+Test.MultiThread.benchmark:benchmark·p0.50           Default              16  sample        2619,343              ms/op
+Test.MultiThread.benchmark:benchmark·p0.90           Default              16  sample        2868,904              ms/op
+Test.MultiThread.benchmark:benchmark·p0.95           Default              16  sample        2931,818              ms/op
+Test.MultiThread.benchmark:benchmark·p0.99           Default              16  sample        2931,818              ms/op
+Test.MultiThread.benchmark:benchmark·p0.999          Default              16  sample        2931,818              ms/op
+Test.MultiThread.benchmark:benchmark·p0.9999         Default              16  sample        2931,818              ms/op
+Test.MultiThread.benchmark:benchmark·p1.00           Default              16  sample        2931,818              ms/op
+Test.SingleThread.benchmark                              N/A             N/A  sample    3  39996,883 ±  6361,730  ms/op
+Test.SingleThread.benchmark:benchmark·p0.00              N/A             N/A  sample       39795,556              ms/op
+Test.SingleThread.benchmark:benchmark·p0.50              N/A             N/A  sample       39795,556              ms/op
+Test.SingleThread.benchmark:benchmark·p0.90              N/A             N/A  sample       40399,536              ms/op
+Test.SingleThread.benchmark:benchmark·p0.95              N/A             N/A  sample       40399,536              ms/op
+Test.SingleThread.benchmark:benchmark·p0.99              N/A             N/A  sample       40399,536              ms/op
+Test.SingleThread.benchmark:benchmark·p0.999             N/A             N/A  sample       40399,536              ms/op
+Test.SingleThread.benchmark:benchmark·p0.9999            N/A             N/A  sample       40399,536              ms/op
+Test.SingleThread.benchmark:benchmark·p1.00              N/A             N/A  sample       40399,536              ms/op
+
+Process finished with exit code 0
