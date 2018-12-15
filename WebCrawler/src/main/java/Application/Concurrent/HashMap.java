@@ -3,6 +3,29 @@ package Application.Concurrent;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * Concurrent blocking hash map (hash table - in terms of task used as a hash set)
+ * based upon blocking Linked List
+ *
+ * Does not allow delete elements
+ * Does not allow resize (rebuild) table
+ * Provides independent access to lists for threads:
+ *
+ *            ____________
+ *            | List 1   | -> [thread 1]
+ *            |__________|
+ *            | List 2   | -> [thread 2]
+ *            |__________|
+ * Table  ->  | ...      |
+ *            |__________|
+ *            | List N   | -> [thread M]
+ *            |__________|
+ *
+ * Bottleneck in getting list
+ *
+ * @param <Key>   Value, which will be hashed, to get list
+ * @param <Value> Unique value stored in table (for different values keys can be equal)
+ */
 public class HashMap<Key,Value> extends IMap<Key,Value> {
 
     private int range;

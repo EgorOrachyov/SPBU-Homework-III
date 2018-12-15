@@ -1,9 +1,23 @@
 package Application.Concurrent;
 
-import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * Concurrent linked (1 link) blocking list
+ * Employs simple algorithm for blocking list or tail to add an element,
+ * and blocks two nodes in list to iterate through this
+ * Does not allows to delete elements from the list
+ * Locks used in each node
+ *        __________    ______________    ______________
+ * ... -> | Node i | -> | Node i + 1 | -> | Node i + 2 | -> ...
+ *        | Lock   |    | Lock       |    | Unlock     |
+ *        |________|    |____________|    |____________|
+ *
+ *  Lock i and i + 1 node to iterate
+ *
+ * @param <Element> Object to store in the list
+ */
 public class LinkedList<Element> extends IList<Element> {
 
     private Node head;

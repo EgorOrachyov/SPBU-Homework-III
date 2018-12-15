@@ -118,14 +118,59 @@ public class SingleThreadCrawler implements ICrawler {
 
     @Override
     public Application.Concurrent.LinkedList<String> downloadCount(String page, int depth, int pageCount) {
-        return null;
+
+        int currentCount = 0;
+
+        Application.Concurrent.LinkedList<String> data = new Application.Concurrent.LinkedList<>();
+        List<Pair<String,Integer>> queue = new LinkedList<>();
+        HashMap<String,String> map = new HashMap<>();
+
+        queue.add(new Pair<>(page, 0));
+
+        while (!queue.isEmpty() && (currentCount < pageCount)) {
+            Pair<String,Integer> next = queue.remove(0);
+            pageCount += 1;
+
+            final Integer newDepth = next.getValue() + 1;
+
+            try {
+                final Connection connection = Jsoup.connect(next.getKey()).userAgent(USER_AGENT);
+                final Document document = connection.get();
+
+                if (newDepth <= depth) {
+                    Elements links = document.getElementsByTag("a");
+                    for (Element link : links) {
+                        final String absUrl = link.absUrl("href");
+
+                        if (absUrl.length() == 0) {
+                            // skip
+                        }
+                        else if (map.containsKey(absUrl)) {
+                            // skip
+                        }
+                        else {
+                            map.put(absUrl, absUrl);
+                            queue.add(new Pair<>(absUrl, newDepth));
+                        }
+                    }
+                }
+
+                data.add(document.outerHtml());
+            }
+            catch (IOException e) {
+                System.err.println("JSoup: Cannot get document via link " + next.getKey());
+                e.printStackTrace();
+            }
+        }
+
+        return data;
     }
 
     public static void main(String ... args) {
 
         SingleThreadCrawler crawler = new SingleThreadCrawler();
         //Application.Concurrent.LinkedList<String> result = crawler.download("http://www.shaderx.com", 1, 1);
-        Application.Concurrent.LinkedList<String> result = crawler.download("http://en.wikipedia.org/", 1, 1);
+        Application.Concurrent.LinkedList<String> result = crawler.downloadCount("http://en.wikipedia.org/", 1, 260);
         System.out.println("Total: " + result.getElementsCount());
         //crawler.download("http://www.shaderx.com", 1, "/Users/egororachyov/Desktop/Documents/Intellej Idea/SPBU-Homework-III/WebCrawler/src/main/Test",0);
 
