@@ -31,7 +31,6 @@
 
 package Test;
 
-import Application.Concurrent.LinkedList;
 import Application.Web.Custom.Crawler;
 import Application.Web.ICrawler;
 import org.openjdk.jmh.annotations.*;
@@ -40,11 +39,11 @@ import org.openjdk.jmh.infra.Blackhole;
 import java.util.concurrent.TimeUnit;
 
 @Fork(1)
-@Warmup(iterations = 1, time = 20)
-@Measurement(iterations = 0, time = 10)
+@Warmup(iterations = 2, time = 10)
+@Measurement(iterations = 3, time = 10)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
-@BenchmarkMode(Mode.AverageTime)
-public class CustomCrawler_MultiThread {
+@BenchmarkMode(Mode.SampleTime)
+public class MultiThread {
 
     @State(Scope.Benchmark)
     public static class TestCase {
@@ -57,7 +56,10 @@ public class CustomCrawler_MultiThread {
 
         ICrawler crawler;
 
-        final String url = "http://www.shaderx.com";
+        final int depth = 1;
+        final int pageCount = 260;
+
+        final String url  = "http://en.wikipedia.org/";
         final String path = "/Users/egororachyov/Desktop/Documents/Intellej Idea/SPBU-Homework-III/WebCrawler/src/main/Test";
 
         @Setup(Level.Invocation)
@@ -78,7 +80,7 @@ public class CustomCrawler_MultiThread {
 
     @Benchmark
     public void benchmark(Blackhole bh, TestCase tc) {
-        bh.consume(tc.crawler.download(tc.url, 1, 10));
+        bh.consume(tc.crawler.downloadCount(tc.url, tc.depth, tc.pageCount));
     }
 
 }
