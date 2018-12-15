@@ -1,4 +1,0 @@
-1. Open console in the folder of the project (BlurProfiling)
-2. Enter in console: mvn clean install
-3. After compilation write: java -jar ./target/benchmark.jar
-4. The last command will run tests and results will be shown in the console
