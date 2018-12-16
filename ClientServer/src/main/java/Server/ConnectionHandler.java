@@ -32,7 +32,9 @@ public class ConnectionHandler implements Runnable {
             outputStream = new DataOutputStream(socket.getOutputStream());
 
             in = new Scanner(inputStream);
-            out = new PrintWriter(outputStream);
+            out = new PrintWriter(outputStream, true);
+
+            out.println("Connected");
         }
         catch (IOException e) {
             e.printStackTrace();
@@ -60,15 +62,32 @@ public class ConnectionHandler implements Runnable {
         }
         else {
             try {
+                System.out.println("Work");
+
                 if (inputStream.available() > 0) {
-                    String command = in.nextLine();
+                    int command = inputStream.readInt();
 
-                    if (command.equals("FILTER")) {
-                        int width = Integer.valueOf(in.nextLine());
-                        int height = Integer.valueOf(in.nextLine());
-                        String buffer = in.nextLine();
-                        Image source = new Image(width, height, buffer);
+                    System.out.println("Read input");
 
+                    if (command == 1) {
+
+                        System.out.println("FILTER");
+
+                        int width = inputStream.readInt();      System.out.println("width " + width);
+                        int height = inputStream.readInt();     System.out.println("height " + height);
+
+                        int[] data = new int[width * height]; System.out.println(width * height);
+                        for (int i = 0; i < width * height; i++) {
+                            data[i] = inputStream.readInt();
+                            if (i % width == 0)
+                                System.out.println("<- " + i);
+                        }
+
+                        Image source = new Image(width, height, data);
+                        System.out.println("source");
+
+                        source.saveImage("/Users/egororachyov/Desktop/Documents/Intellej Idea/SPBU-Homework-III/ClientServer/src/main/java/Debug/Images/server.png");
+                        System.out.println("Get image");
                         // send new task
                     }
                 }

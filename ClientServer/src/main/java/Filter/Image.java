@@ -23,27 +23,35 @@ public class Image {
         data.setRGB(0, 0, width, height, bytes, 0, width);
     }
 
-    public Image(int width, int height, String buffer) {
-        this(width, height);
+    public Image(String filename) throws IOException {
+        data = ImageIO.read(new File(filename));
+    }
 
-        byte[] raw = buffer.getBytes();
+    public void fromString(String[] buffer) {
+        System.out.println("fromString image");
+
+        int width = getWidth();
+        int height = getHeight();
+
         int[] bytes = new int[width * height];
 
         int k = 0;
-        for (int i = 0; i < width * height * 4; i +=4 ) {
-            int v = raw[i    ] << Color.BIT_OFFSET_24 |
-                    raw[i + 1] << Color.BIT_OFFSET_16 |
-                    raw[i + 2] << Color.BIT_OFFSET_8  |
-                    raw[i + 3] ;
-            bytes[k] = v;
-            k += 1;
+        for (int y = 0; y < height; ++y) {
+            byte[] raw = buffer[y].getBytes();
+
+            System.out.println("Process raw " + y);
+
+            for (int i = y * width * 4; i < (y + 1) * width * 4; i += 4) {
+                int v = raw[i    ] << Color.BIT_OFFSET_24 |
+                        raw[i + 1] << Color.BIT_OFFSET_16 |
+                        raw[i + 2] << Color.BIT_OFFSET_8  |
+                        raw[i + 3] ;
+                bytes[k] = v;
+                k += 1;
+            }
         }
 
         data.setRGB(0, 0, width, height, bytes, 0, width);
-    }
-
-    public Image(String filename) throws IOException {
-        data = ImageIO.read(new File(filename));
     }
 
     public void saveImage(String filename, String format) throws IOException {
@@ -72,6 +80,37 @@ public class Image {
                 0,
                 data.getWidth()
         );
+    }
+
+    public String[] serializeString() {
+        final int[] raw = serialize();
+
+        String[] result = new String[getHeight()];
+
+        for (int y = 0; y < getHeight(); ++y) {
+
+            StringBuilder builder = new StringBuilder(getWidth());
+
+            System.out.println("Process raw " + y);
+
+            for (int x = y * getWidth(); x < (y + 1) * getWidth(); ++x) {
+                char a, b, g, r;
+
+                a = (char) ( (raw[x] & 0xFF000000) >>> Color.BIT_OFFSET_24 );
+                b = (char) ( (raw[x] & 0xFF0000)   >>> Color.BIT_OFFSET_16 );
+                g = (char) ( (raw[x] & 0xFF00)     >>> Color.BIT_OFFSET_8  );
+                r = (char) ( (raw[x] & 0xFF)                               );
+
+                builder.append(a);
+                builder.append(b);
+                builder.append(g);
+                builder.append(r);
+            }
+
+            result[y] = builder.toString();
+        }
+
+        return result;
     }
 
     public int getWidth() {
