@@ -23,6 +23,25 @@ public class Image {
         data.setRGB(0, 0, width, height, bytes, 0, width);
     }
 
+    public Image(int width, int height, String buffer) {
+        this(width, height);
+
+        byte[] raw = buffer.getBytes();
+        int[] bytes = new int[width * height];
+
+        int k = 0;
+        for (int i = 0; i < width * height * 4; i +=4 ) {
+            int v = raw[i    ] << Color.BIT_OFFSET_24 |
+                    raw[i + 1] << Color.BIT_OFFSET_16 |
+                    raw[i + 2] << Color.BIT_OFFSET_8  |
+                    raw[i + 3] ;
+            bytes[k] = v;
+            k += 1;
+        }
+
+        data.setRGB(0, 0, width, height, bytes, 0, width);
+    }
+
     public Image(String filename) throws IOException {
         data = ImageIO.read(new File(filename));
     }

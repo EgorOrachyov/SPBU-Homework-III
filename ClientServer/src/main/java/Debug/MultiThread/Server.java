@@ -15,20 +15,20 @@ public class Server {
                 PrintWriter out = new PrintWriter(System.out, true);
         ) {
 
-            long numberOrClients = 0;
+            long numberOfClients = 0;
             ScheduledExecutorService executorService = Executors.newScheduledThreadPool(2);
 
             while (true) {
 
                 Socket incoming = serverSocket.accept();
 
-                out.println("Connect client with id " + numberOrClients);
+                out.println("Connect client with id " + numberOfClients);
 
-                ClientConnection handler = new ClientConnection(incoming, numberOrClients);
+                ClientConnection handler = new ClientConnection(incoming, numberOfClients);
                 ScheduledFuture<?> future = executorService.scheduleAtFixedRate(handler, 2000, 1000, TimeUnit.MILLISECONDS);
                 handler.setFuture(future);
 
-                numberOrClients += 1;
+                numberOfClients += 1;
 
             }
 

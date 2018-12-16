@@ -2,9 +2,9 @@ package Filter;
 
 public class Color {
 
-    private static final int BIT_OFFSET_24 = 24;
-    private static final int BIT_OFFSET_16 = 16;
-    private static final int BIT_OFFSET_8  = 8;
+    public static final int BIT_OFFSET_24 = 24;
+    public static final int BIT_OFFSET_16 = 16;
+    public static final int BIT_OFFSET_8  = 8;
 
     private int r;
     private int g;
