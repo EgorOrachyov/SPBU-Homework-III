@@ -11,6 +11,10 @@ public class Color {
     private int b;
     private int a;
 
+    public Color() {
+        r = g = b = a = 0;
+    }
+
     public Color(int red, int green, int blue, int alpha) {
         r = red;
         g = green;
@@ -34,6 +38,28 @@ public class Color {
                 (g << BIT_OFFSET_16) |
                 (b << BIT_OFFSET_8)  |
                 (a);
+    }
+
+    public static Color fromABGR(int ABGR) {
+        int r, g, b, a;
+
+        r = (ABGR & 0xFF)                         ;
+        g = (ABGR & 0xFF00)     >>> BIT_OFFSET_8  ;
+        b = (ABGR & 0xFF0000)   >>> BIT_OFFSET_16 ;
+        a = (ABGR & 0xFF000000) >>> BIT_OFFSET_24 ;
+
+        return new Color(r, g, b, a);
+    }
+
+    public static Color fromRGBA(int RGBA) {
+        int a, b, g, r;
+
+        a = (RGBA & 0xFF)                         ;
+        b = (RGBA & 0xFF00)     >>> BIT_OFFSET_8  ;
+        g = (RGBA & 0xFF0000)   >>> BIT_OFFSET_16 ;
+        r = (RGBA & 0xFF000000) >>> BIT_OFFSET_24 ;
+
+        return new Color(r, g, b, a);
     }
 
     public Color add(Color c) {
@@ -69,11 +95,25 @@ public class Color {
         a = (int)(f * a);
     }
 
+    public void multiplyToThisIgnoreAlpha(float f) {
+        r = (int)(f * r);
+        g = (int)(f * g);
+        b = (int)(f * b);
+    }
+
     public void assign(Color c) {
         r = c.r;
         g = c.g;
         b = c.b;
         a = c.a;
+    }
+
+    public float lengthRGB() {
+        return (float) Math.sqrt(r * r + g * g + b * b);
+    }
+
+    public float lenghtRGBA() {
+        return (float) Math.sqrt(r * r + g * g + b * b + a * a);
     }
 
 }

@@ -39,6 +39,10 @@ public class Image {
         return data;
     }
 
+    public void setBytes(int[] bytes) {
+        data.setRGB(0, 0, getWidth(), getHeight(), bytes, 0, getWidth());
+    }
+
     public int[] serialize() {
         return data.getRGB(
                 0,

@@ -15,20 +15,21 @@ public class FilterEngine {
      *               source image
      */
     public static void apply(Image source, Image result, FilterBehavior behavior) {
+        int data[] = result.serialize();
 
         int width = source.getWidth();
         int height = source.getHeight();
 
-        behavior.prepareProcess(source,result);
+        behavior.prepareProcess(source);
 
         for(int y = 0; y < height; ++y) {
             for (int x = 0; x < width; ++x) {
-                behavior.processPixel(x, y);
+                data[y * width + x] = behavior.processPixel(x, y);
             }
         }
 
         behavior.finishProcess();
-
+        result.setBytes(data);
     }
 
     /**
@@ -39,11 +40,9 @@ public class FilterEngine {
      * @return Result filtered image the same size as source image
      */
     public static Image apply(Image source, FilterBehavior behavior) {
-
         Image result = new Image(source.getWidth(), source.getHeight());
         apply(source, result, behavior);
         return result;
-
     }
 
 }

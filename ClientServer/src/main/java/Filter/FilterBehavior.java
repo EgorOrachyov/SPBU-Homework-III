@@ -17,10 +17,9 @@ public interface FilterBehavior {
      * Setup filter source and results images to get
      * access to stored data
      * @param source Image to filter
-     * @param result Image to save result
      * @return True if setup is succeed
      */
-    boolean prepareProcess(Image source, Image result);
+    boolean prepareProcess(Image source);
 
     /**
      * Finishes image processing
@@ -31,7 +30,7 @@ public interface FilterBehavior {
     /**
      * @return Defined filter name
      */
-    String getFilterName();
+    String getName();
 
     /**
      * @return Some brief description of the filter
