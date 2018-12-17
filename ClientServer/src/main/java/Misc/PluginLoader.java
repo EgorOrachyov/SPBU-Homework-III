@@ -92,4 +92,11 @@ public class PluginLoader<T> {
         return elements.iterator();
     }
 
+    public int getNumberOfLoadedFilters() {
+        return elements.size();
+    }
+
+    public ArrayList<Class> getElements() {
+        return elements;
+    }
 }

@@ -8,18 +8,15 @@ import java.util.concurrent.ScheduledFuture;
 
 public class ConnectionFactory implements Runnable {
 
-    private ConnectionPool connectionPool;
     private TaskPool taskPool;
+    private ConnectionPool connectionPool;
     private Configuration configuration;
     private ServerSocket serverSocket;
 
     public ConnectionFactory(Configuration configuration) {
         this.configuration = configuration;
-        this.connectionPool = new ConnectionPool(
-                configuration.getConnectionPoolInitialDelay(),
-                configuration.getConnectionPoolRatePeriod(),
-                configuration.getConnectionPoolThreadsCount()
-        );
+        this.connectionPool = configuration.getConnectionPool();
+        this.taskPool = configuration.getTaskPool();
 
         try {
             serverSocket = new ServerSocket(configuration.getPort());
@@ -38,7 +35,9 @@ public class ConnectionFactory implements Runnable {
 
         // Send runnable to handle input from console to
         // have control on Server
-        connectionPool.submitTask(new InputHandler());
+        Thread thread = new Thread(new InputHandler());
+        thread.setDaemon(true);
+        thread.start();
 
         try {
             System.out.println("-------------- Server Works -------------");
@@ -85,9 +84,10 @@ public class ConnectionFactory implements Runnable {
         }
         System.out.println("All connections closed");
 
+        taskPool.shutdown();
         connectionPool.shutdown();
+        System.out.println("Task pool shutdown");
         System.out.println("Connection pool shutdown");
-
     }
 
     /**

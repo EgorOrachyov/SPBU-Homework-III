@@ -1,10 +1,5 @@
 package Debug.MultiThread;
 
-import Filter.Image;
-import Misc.Message;
-import Misc.Transfer;
-import org.openjdk.jmh.annotations.Measurement;
-
 import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
@@ -14,8 +9,6 @@ public class Client {
     public static void main(String ... args) {
 
         System.out.println("=== Run client ===");
-
-        boolean flag = false;
 
         try (
                 Socket socket = new Socket("localhost", 8813);
@@ -33,24 +26,18 @@ public class Client {
             consoleOut.println("Setup connection to server");
 
             boolean done = false;
-            while (!done) {
+            while (!done && in.hasNextLine()) {
 
-                //String line = in.nextLine();
-                //consoleOut.println("Server: " + line);
+                String line = in.nextLine();
 
-                if (!flag) {
-                    flag = true;
-                    outputStream.writeInt(Message.FILTER);
-                    Image image = new Image("/Users/egororachyov/Desktop/Documents/Intellej Idea/SPBU-Homework-III/ClientServer/src/main/java/Debug/Images/test1.png");
-                    Transfer.send(outputStream, image);
-                }
+                consoleOut.println("Server: " + line);
+                consoleOut.println("Enter Message: ");
 
-                //consoleOut.println("Enter Message: ");
-                //String input = consoleIn.nextLine();
+                String input = consoleIn.nextLine();
 
-                //out.println(input);
+                out.println(input);
 
-                //if (input.equals("QUIT")) done = true;
+                if (input.equals("QUIT")) done = true;
 
             }
 

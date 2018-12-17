@@ -16,7 +16,13 @@ public enum Message {
     PROGRESS(2),
 
     /** Send client to get result of filter applying from server */
-    RESULT  (3);
+    RESULT  (3),
+
+    /** Get-sendFilters variants of available filters */
+    FILTERS (4),
+
+    /** Says server (from client) to stop processing current image */
+    CANCEL  (5);
 
     private int id;
 
@@ -31,9 +37,11 @@ public enum Message {
     public static Message fromId(int id) {
         switch (id) {
 
-            case 1: return  FILTER;
-            case 2: return  PROGRESS;
-            case 3: return  RESULT;
+            case 1: return  FILTER   ;
+            case 2: return  PROGRESS ;
+            case 3: return  RESULT   ;
+            case 4: return  FILTERS  ;
+            case 5: return  CANCEL   ;
 
             default: return EXIT;
 

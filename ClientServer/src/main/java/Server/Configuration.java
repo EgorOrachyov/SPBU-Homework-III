@@ -1,5 +1,11 @@
 package Server;
 
+import Filter.FilterBehavior;
+import Misc.PluginLoader;
+
+import java.util.ArrayList;
+import java.util.concurrent.ScheduledExecutorService;
+
 public class Configuration {
 
     private volatile int port;
@@ -8,20 +14,36 @@ public class Configuration {
     private volatile int maxNumOfClients = -1;
     private volatile boolean isNumOfClientsLimited = false;
 
+    private volatile int timeOut;
     private volatile boolean isServerShutDown;
 
-    private long connectionPoolInitialDelay;
-    private long connectionPoolRatePeriod;
-    private int  connectionPoolThreadsCount;
+    private ConnectionPool connectionPool;
+    private TaskPool taskPool;
 
     private String filtersBehaviors;
+    private ArrayList<Class> filters;
+
+    public void setTimeOut(int timeOut) {
+        this.timeOut = timeOut;
+    }
+
+    public int getTimeOut() {
+        return timeOut;
+    }
 
     public void setFiltersBehaviors(String filtersBehaviors) {
+        PluginLoader<FilterBehavior> loader = new PluginLoader<>(filtersBehaviors);
+
+        this.filters = loader.getElements();
         this.filtersBehaviors = filtersBehaviors;
     }
 
     public String getFiltersBehaviors() {
         return filtersBehaviors;
+    }
+
+    public ArrayList<Class> getFilters() {
+        return filters;
     }
 
     public void setPort(int port) {
@@ -44,6 +66,10 @@ public class Configuration {
         return numOfClients;
     }
 
+    public void setMaxNumOfClients(int maxNumOfClients) {
+        this.maxNumOfClients = maxNumOfClients;
+    }
+
     public int getMaxNumOfClients() {
         return maxNumOfClients;
     }
@@ -61,21 +87,18 @@ public class Configuration {
     }
 
     public void setConnectionPoolProperties(long initialDelay, long period, int threadsCount) {
-        connectionPoolInitialDelay = initialDelay;
-        connectionPoolRatePeriod = period;
-        connectionPoolThreadsCount = threadsCount;
+        connectionPool = new ConnectionPool(initialDelay, period, threadsCount);
     }
 
-    public int getConnectionPoolThreadsCount() {
-        return connectionPoolThreadsCount;
+    public ConnectionPool getConnectionPool() {
+        return connectionPool;
     }
 
-    public long getConnectionPoolInitialDelay() {
-        return connectionPoolInitialDelay;
+    public void setTaskPoolProperties(int threadsCount) {
+        taskPool = new TaskPool(threadsCount);
     }
 
-    public long getConnectionPoolRatePeriod() {
-        return connectionPoolRatePeriod;
+    public TaskPool getTaskPool() {
+        return taskPool;
     }
-
 }

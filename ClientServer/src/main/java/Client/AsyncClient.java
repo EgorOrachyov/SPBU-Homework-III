@@ -1,19 +1,20 @@
 package Client;
 
+import Filter.FilterInfo;
+import Filter.Image;
 import Misc.Message;
 import Misc.Transfer;
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
-import sun.jvm.hotspot.runtime.Threads;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
+import java.util.ArrayList;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 /**
  * Async Client working in the daemon thread
- * Allows to send task in some king of task queue,
+ * Allows to sendFilters task in some king of task queue,
  * Send images for filtering, get filtered images,
  * monitor current progress in filtering and so on...
  *
@@ -29,7 +30,17 @@ public class AsyncClient {
     private DataInputStream inputStream;
     private DataOutputStream outputStream;
 
-    // private ConcurrentLinkedQueue<>
+    private ArrayList<FilterInfo> filters;
+    private ConcurrentLinkedQueue<FilterTask> completedTasks;
+
+    private final Object lock;
+    private volatile FilterTask currentTask;
+    private volatile int currentTaskProgress;
+
+    private volatile boolean done = false;
+    private volatile boolean newTask = false;
+    private volatile boolean processTask = false;
+    private volatile boolean cancelTask = false;
 
     public AsyncClient(String host, int port) {
         this(host, port, true);
@@ -38,6 +49,8 @@ public class AsyncClient {
     public AsyncClient(String host, int port, boolean runInSeparateThread) {
         this.host = host;
         this.port = port;
+        this.lock = new Object();
+        this.completedTasks = new ConcurrentLinkedQueue<>();
 
         try {
             Socket socket = new Socket(host, port);
@@ -52,8 +65,8 @@ public class AsyncClient {
             }
         }
         catch (IOException e) {
-            e.printStackTrace();
-            System.out.println("Server is not available: try to connect later");
+            //e.printStackTrace();
+            System.out.println("Server is not available: try to connect later...");
         }
     }
 
@@ -62,29 +75,57 @@ public class AsyncClient {
         @Override
         public void run() {
 
-            boolean done = false;
-
             while (!done) {
 
                 try {
 
                     if (inputStream.available() > 0) {
 
-                        Message action = Transfer.answer(inputStream);
+                        Message action = Transfer.receive(inputStream);
 
                         if (action == Message.PROGRESS) {
-
+                            currentTaskProgress = inputStream.readInt();
                         }
                         else if (action == Message.RESULT) {
+                            Image result = Transfer.receiveImage(inputStream);
+                            FilterTask task;
 
+                            synchronized (lock) {
+                                task = currentTask;
+                                newTask = false;
+                                processTask = false;
+                                cancelTask = false;
+                                currentTask = null;
+                                currentTaskProgress = 0;
+                            }
+
+                            completedTasks.add(new FilterTask(result, task.getFilterId()));
                         }
                         else if (action == Message.EXIT) {
                             done = true;
                         }
+                        else if (action == Message.FILTERS) {
+                            filters = Transfer.receiveFilters(inputStream);
+                        }
 
                     }
 
+                    synchronized (lock) {
 
+                        if (cancelTask) {
+                            Transfer.send(outputStream, Message.CANCEL);
+                            cancelTask = false;
+                            currentTaskProgress = 0;
+                        }
+
+                        if (newTask && currentTask != null && !processTask) {
+                            processTask = true;
+                            Transfer.send(outputStream, Message.FILTER);
+                            outputStream.writeInt(currentTask.getFilterId());
+                            Transfer.sendImage(outputStream, currentTask.getSource());
+                        }
+
+                    }
 
                 }
                 catch (IOException e) {
@@ -94,8 +135,13 @@ public class AsyncClient {
 
             }
 
+            System.out.println("Close client side. Finish session...");
+
             try {
-                socket.close();
+                Transfer.send(outputStream, Message.EXIT);
+
+                if (socket != null) socket.close();
+
                 inputStream.close();
                 outputStream.close();
             }
@@ -106,4 +152,64 @@ public class AsyncClient {
         }
     }
 
+    public int getCurrentTaskProgress() {
+        return currentTaskProgress;
+    }
+
+    public FilterTask getCurrentTask() {
+        return currentTask;
+    }
+
+    public void done(boolean finishWork) {
+        this.done = finishWork;
+    }
+
+    public ArrayList<FilterInfo> getFilters() {
+        return filters;
+    }
+
+    public ConcurrentLinkedQueue<FilterTask> getCompletedTasks() {
+        return completedTasks;
+    }
+
+    public void submitTask(FilterTask task) {
+        synchronized (lock) {
+            if (processTask) {
+                cancelTask = true;
+                processTask = false;
+            }
+
+            newTask = true;
+            currentTask = task;
+            currentTaskProgress = 0;
+        }
+    }
+
+    public static void main(String ... args) {
+
+        try {
+            AsyncClient client = new AsyncClient("localhost", 8813, true);
+            client.submitTask(new FilterTask(new Image("src/main/java/Debug/Images/test2.jpg"), 0));
+
+            try {
+                Thread.sleep(60000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            ConcurrentLinkedQueue<FilterTask> result = client.getCompletedTasks();
+            FilterTask task = result.poll();
+
+            if (task != null) {
+                task.getSource().saveImage("src/main/java/Debug/Images/server3.png");
+            }
+            else {
+                System.out.println("Task was not done");
+            }
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
 }

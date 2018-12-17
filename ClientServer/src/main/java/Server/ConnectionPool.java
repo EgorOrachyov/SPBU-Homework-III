@@ -27,10 +27,6 @@ public class ConnectionPool {
         return executor.scheduleAtFixedRate(handler, initialDelay, period, TimeUnit.MILLISECONDS);
     }
 
-    public ScheduledFuture<?> submitTask(Runnable task) {
-        return executor.scheduleAtFixedRate(task, initialDelay, period, TimeUnit.MILLISECONDS);
-    }
-
     public void shutdown() {
         executor.shutdown();
     }
