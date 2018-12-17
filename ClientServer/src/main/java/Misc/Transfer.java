@@ -5,8 +5,17 @@ import Filter.Image;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 
 public class Transfer {
+
+    public static void ask(DataOutputStream stream, Message action) throws IOException {
+        stream.writeInt(action.getId());
+    }
+
+    public static Message answer(DataInputStream stream) throws IOException {
+        return Message.fromId(stream.readInt());
+    }
 
     /**
      * Sends image's width, height and internal data via output stream

@@ -4,18 +4,40 @@ package Misc;
  * Information exchange between client and server
  * Connection interface
  */
-public class Message {
+public enum Message {
 
     /** Disconnect client and server */
-    public static final int EXIT     = 0;
+    EXIT    (0),
 
     /** Say serves to receive image and blur it */
-    public static final int FILTER   = 1;
+    FILTER  (1),
 
     /** Send client progress of current filter applying */
-    public static final int PROGRESS = 2;
+    PROGRESS(2),
 
     /** Send client to get result of filter applying from server */
-    public static final int RESULT   = 3;
+    RESULT  (3);
 
+    private int id;
+
+    Message(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public static Message fromId(int id) {
+        switch (id) {
+
+            case 1: return  FILTER;
+            case 2: return  PROGRESS;
+            case 3: return  RESULT;
+
+            default: return EXIT;
+
+        }
+    }
+    
 }

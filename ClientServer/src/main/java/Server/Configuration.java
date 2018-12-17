@@ -14,6 +14,16 @@ public class Configuration {
     private long connectionPoolRatePeriod;
     private int  connectionPoolThreadsCount;
 
+    private String filtersBehaviors;
+
+    public void setFiltersBehaviors(String filtersBehaviors) {
+        this.filtersBehaviors = filtersBehaviors;
+    }
+
+    public String getFiltersBehaviors() {
+        return filtersBehaviors;
+    }
+
     public void setPort(int port) {
         this.port = port;
     }
