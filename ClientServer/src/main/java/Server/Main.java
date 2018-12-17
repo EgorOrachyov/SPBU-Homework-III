@@ -1,5 +1,10 @@
 package Server;
 
+import Filter.FilterBehavior;
+import Misc.PluginLoader;
+
+import java.util.Iterator;
+
 public class Main {
 
     public static void main(String ... args) {
@@ -10,6 +15,8 @@ public class Main {
 
         ConnectionFactory connectionFactory = new ConnectionFactory(configuration);
         connectionFactory.run();
+        
+
 
     }
 

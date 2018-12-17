@@ -1,6 +1,9 @@
 package Debug.MultiThread;
 
 import Filter.Image;
+import Misc.Message;
+import Misc.Transfer;
+import org.openjdk.jmh.annotations.Measurement;
 
 import java.io.*;
 import java.net.Socket;
@@ -37,19 +40,9 @@ public class Client {
 
                 if (!flag) {
                     flag = true;
-                    Image image = new Image("/Users/egororachyov/Desktop/Documents/Intellej Idea/SPBU-Homework-III/ClientServer/src/main/java/Debug/Images/test2.jpg");
-                    outputStream.writeInt(1);
-                    outputStream.writeInt(image.getWidth());               System.out.println("Width " + image.getWidth());
-                    outputStream.writeInt(image.getHeight());              System.out.println("Height " + image.getHeight());
-
-                    int[] data = image.serialize();
-                    for (int i = 0; i < image.getHeight() * image.getWidth(); i++) {
-                        outputStream.writeInt(data[i]);
-                        if (i % image.getWidth() == 0)
-                            System.out.println("-> " + i);
-                    }
-
-                    System.out.println("Send " + (image.getWidth() * image.getHeight()));
+                    outputStream.writeInt(Message.FILTER);
+                    Image image = new Image("/Users/egororachyov/Desktop/Documents/Intellej Idea/SPBU-Homework-III/ClientServer/src/main/java/Debug/Images/test1.png");
+                    Transfer.send(outputStream, image);
                 }
 
                 //consoleOut.println("Enter Message: ");
