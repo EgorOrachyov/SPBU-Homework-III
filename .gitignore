@@ -2,5 +2,5 @@
 /**/.idea
 /**/*.iml
 /**/out
-/ParallelAlgo/target
+/**/target
 .DS_Store

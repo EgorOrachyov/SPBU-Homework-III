@@ -1,0 +1,26 @@
+////////////////////////////////////////////////////////////////////////
+//                                                                    //
+//  Target Machine: Apple MacBook Pro 15 Mid 2014                     //
+//  CPU:   Intel Core i7 4770 HQ                                      //
+//         Physical cores 4                                           //
+//         Logical  cores 8                                           //
+//  RAM:   DDR3 16 GiB                                                //
+//  Test:  Atomic counter                                             //
+//                                                                    //
+////////////////////////////////////////////////////////////////////////
+
+Benchmark                  (lockName)   Mode  Cnt  Score   Error   Units
+
+Test.TASvsTTAS.threads_2          TAS  thrpt    5  8,441 ± 0,743  ops/ms
+Test.TASvsTTAS.threads_4          TAS  thrpt    5  3,584 ± 0,426  ops/ms
+Test.TASvsTTAS.threads_8          TAS  thrpt    5  4,078 ± 0,537  ops/ms
+Test.TASvsTTAS.threads_16         TAS  thrpt    5  1,429 ± 0,158  ops/ms
+Test.TASvsTTAS.threads_32         TAS  thrpt    5  0,921 ± 0,278  ops/ms
+Test.TASvsTTAS.threads_64         TAS  thrpt    5  0,378 ± 0,236  ops/ms
+
+Test.TASvsTTAS.threads_2         TTAS  thrpt    5  9,023 ± 0,705  ops/ms
+Test.TASvsTTAS.threads_4         TTAS  thrpt    5  4,433 ± 0,058  ops/ms
+Test.TASvsTTAS.threads_8         TTAS  thrpt    5  4,065 ± 0,050  ops/ms
+Test.TASvsTTAS.threads_16        TTAS  thrpt    5  2,155 ± 0,240  ops/ms
+Test.TASvsTTAS.threads_32        TTAS  thrpt    5  1,296 ± 0,251  ops/ms
+Test.TASvsTTAS.threads_64        TTAS  thrpt    5  0,608 ± 0,329  ops/ms
