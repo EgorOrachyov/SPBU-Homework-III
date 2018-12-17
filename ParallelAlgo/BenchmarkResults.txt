@@ -1,0 +1,43 @@
+/*
+ 	Target Machine: Apple MacBook Pro 15 Mid 2014
+ 	CPU: Intel Core i7 4770 HQ
+ 	RAM: DDR3 16 GiB
+*/
+
+Benchmark                                  Mode  Cnt    Score   Error  Units
+
+Test.LinearReduction.MultiThread.thread16  avgt    2    2,702          ms/op
+Test.LinearReduction.MultiThread.thread2   avgt    2    2,217          ms/op
+Test.LinearReduction.MultiThread.thread4   avgt    2    1,387          ms/op
+Test.LinearReduction.MultiThread.thread8   avgt    2    1,628          ms/op
+Test.LinearReduction.SingleThread.thread1  avgt    2    3,597          ms/op
+
+Test.LongSum.BenchmarkLongSum.thread1      avgt    2    0,005          ms/op
+Test.LongSum.BenchmarkLongSum.thread16     avgt    2    2,446          ms/op
+Test.LongSum.BenchmarkLongSum.thread2      avgt    2    0,204          ms/op
+Test.LongSum.BenchmarkLongSum.thread4      avgt    2    0,569          ms/op
+Test.LongSum.BenchmarkLongSum.thread8      avgt    2    1,142          ms/op
+
+Test.LongSum.Number2.thread1               avgt    2    0,044          ms/op
+Test.LongSum.Number2.thread16              avgt    2    2,543          ms/op
+Test.LongSum.Number2.thread2               avgt    2    0,233          ms/op
+Test.LongSum.Number2.thread4               avgt    2    0,553          ms/op
+Test.LongSum.Number2.thread8               avgt    2    1,168          ms/op
+
+Test.LongSum.Number3.thread1               avgt    2   80,882          ms/op
+Test.LongSum.Number3.thread16              avgt    2   70,143          ms/op
+Test.LongSum.Number3.thread2               avgt    2   96,001          ms/op
+Test.LongSum.Number3.thread4               avgt    2   57,045          ms/op
+Test.LongSum.Number3.thread8               avgt    2   56,720          ms/op
+
+Test.Parentheses.MultiThread.thread16      avgt    2   15,079          ms/op
+Test.Parentheses.MultiThread.thread2       avgt    2   15,168          ms/op
+Test.Parentheses.MultiThread.thread4       avgt    2   13,563          ms/op
+Test.Parentheses.MultiThread.thread8       avgt    2   13,999          ms/op
+Test.Parentheses.SingleThread.thread1      avgt    2   19,204          ms/op
+
+Test.TurtleMovement.MultiThread.thread16   avgt    2   11,211          ms/op
+Test.TurtleMovement.MultiThread.thread2    avgt    2   41,352          ms/op
+Test.TurtleMovement.MultiThread.thread4    avgt    2   16,697          ms/op
+Test.TurtleMovement.MultiThread.thread8    avgt    2   10,506          ms/op
+Test.TurtleMovement.SingleThread.thread1   avgt    2  111,779          ms/op
