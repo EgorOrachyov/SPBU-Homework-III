@@ -115,8 +115,11 @@ public class ConnectionHandler implements Runnable {
                     else {
                         Transfer.send(outputStream, Message.PROGRESS);
                         outputStream.writeInt(task.getProgress().get());
+                        System.out.println("Send progress: " + task.getProgress().get());
                     }
                 }
+
+                System.out.println("Check time");
 
                 if (time++ > configuration.getTimeOut()) {
                     done = true;

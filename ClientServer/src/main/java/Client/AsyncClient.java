@@ -155,6 +155,10 @@ public class AsyncClient {
         return currentTaskProgress;
     }
 
+    public boolean isProcessTask() {
+        return processTask;
+    }
+
     public FilterTask getCurrentTask() {
         return currentTask;
     }
@@ -194,9 +198,7 @@ public class AsyncClient {
 
         try {
             AsyncClient client = new AsyncClient("localhost", 8813, true);
-            client.submitTask(new FilterTask(new Image("src/main/java/Debug/Images/test2.jpg"), 0));
-            client.submitTask(new FilterTask(new Image("src/main/java/Debug/Images/test2.jpg"), 0));
-            client.submitTask(new FilterTask(new Image("src/main/java/Debug/Images/test2.jpg"), 0));
+            client.submitTask(new FilterTask(new Image("src/main/java/Debug/Images/test2.jpg"), 1));
 
             try {
                 Thread.sleep(1000);
@@ -206,18 +208,20 @@ public class AsyncClient {
 
             //client.cancelTask();
 
-            try {
-                Thread.sleep(10000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+            while (client.isProcessTask()) {
+                System.out.println(client.getCurrentTaskProgress());
             }
 
             ConcurrentLinkedQueue<FilterTask> result = client.getCompletedTasks();
-            FilterTask task = result.poll();
+            FilterTask task;
+
+            do {
+                task = result.poll();
+            } while (task == null);
 
             if (task != null) {
                 System.out.println("Task was done");
-                task.getSource().saveImage("src/main/java/Debug/Images/server3.png");
+                //task.getSource().saveImage("src/main/java/Debug/Images/server3.png");
             }
             else {
                 System.out.println("Task was not done");

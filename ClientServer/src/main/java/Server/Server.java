@@ -9,7 +9,7 @@ public class Server {
         configuration.setTimeOut(1000);
         configuration.setPort(8813);
         configuration.setTaskPoolProperties(2);
-        configuration.setConnectionPoolProperties(2000, 1000, 2);
+        configuration.setConnectionPoolProperties(2000, 10, 2);
 
         ConnectionFactory connectionFactory = new ConnectionFactory(configuration);
         connectionFactory.run();

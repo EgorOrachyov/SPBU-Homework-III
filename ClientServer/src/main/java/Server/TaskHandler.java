@@ -49,7 +49,8 @@ public class TaskHandler implements Runnable {
 
             for (int y = 0; y < height; ++y) {
 
-                progress.set(100 * (y / height));
+                System.out.println("Progress at task: " + ((int)(100.0f * ((float) y / (float) height))));
+                progress.set((int)(100.0f * ((float) y / (float) height)));
 
                 for (int x = 0; x < width; ++x) {
                     data[y * width + x] = behavior.processPixel(x, y);
