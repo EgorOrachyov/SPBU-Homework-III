@@ -7,6 +7,7 @@ import Misc.Transfer;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOError;
 import java.io.IOException;
 import java.net.Socket;
 import java.util.ArrayList;
@@ -42,11 +43,11 @@ public class AsyncClient {
     private volatile boolean processTask = false;
     private volatile boolean cancelTask = false;
 
-    public AsyncClient(String host, int port) {
+    public AsyncClient(String host, int port) throws IOException {
         this(host, port, true);
     }
 
-    public AsyncClient(String host, int port, boolean runInSeparateThread) {
+    public AsyncClient(String host, int port, boolean runInSeparateThread) throws IOException {
         this.host = host;
         this.port = port;
         this.lock = new Object();
@@ -65,8 +66,8 @@ public class AsyncClient {
             }
         }
         catch (IOException e) {
-            //e.printStackTrace();
             System.out.println("Server is not available: try to connect later...");
+            throw new IOException("Server is not available: try to connect later...");
         }
     }
 
@@ -209,7 +210,7 @@ public class AsyncClient {
             //client.cancelTask();
 
             while (client.isProcessTask()) {
-                System.out.println(client.getCurrentTaskProgress());
+                //System.out.println(client.getCurrentTaskProgress());
             }
 
             ConcurrentLinkedQueue<FilterTask> result = client.getCompletedTasks();

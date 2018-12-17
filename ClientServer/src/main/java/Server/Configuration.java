@@ -78,6 +78,10 @@ public class Configuration {
         return isNumOfClientsLimited;
     }
 
+    public void setNumOfClientsLimited(boolean numOfClientsLimited) {
+        isNumOfClientsLimited = numOfClientsLimited;
+    }
+
     public boolean isServerShutDown() {
         return isServerShutDown;
     }

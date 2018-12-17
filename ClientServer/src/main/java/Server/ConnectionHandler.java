@@ -119,7 +119,7 @@ public class ConnectionHandler implements Runnable {
                     }
                 }
 
-                System.out.println("Check time");
+                System.out.println("Check time...");
 
                 if (time++ > configuration.getTimeOut()) {
                     done = true;

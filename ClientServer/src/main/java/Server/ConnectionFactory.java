@@ -63,6 +63,7 @@ public class ConnectionFactory implements Runnable {
                     connectionHandler.setFuture(future);
                 }
                 else {
+                    connection.close();
                     System.out.println("Reject connection " + connection.toString());
                 }
             }

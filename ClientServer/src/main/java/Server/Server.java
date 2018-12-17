@@ -8,6 +8,8 @@ public class Server {
         configuration.setFiltersBehaviors("src/main/java/Plugins/Filter.FilterBehavior");
         configuration.setTimeOut(1000);
         configuration.setPort(8813);
+        configuration.setMaxNumOfClients(1);
+        configuration.setNumOfClientsLimited(true);
         configuration.setTaskPoolProperties(2);
         configuration.setConnectionPoolProperties(2000, 10, 2);
 
