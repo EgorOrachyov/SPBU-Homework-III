@@ -42,8 +42,6 @@ public class ConnectionFactory implements Runnable {
         try {
             System.out.println("-------------- Server Works -------------");
 
-            boolean done = false;
-
             while (!configuration.isServerShutDown()) {
 
                 System.out.println("Waiting for connection...");
