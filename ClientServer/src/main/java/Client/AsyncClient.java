@@ -126,7 +126,6 @@ public class AsyncClient {
                         }
 
                     }
-
                 }
                 catch (IOException e) {
                     e.printStackTrace();
@@ -172,6 +171,12 @@ public class AsyncClient {
         return completedTasks;
     }
 
+    public void cancelTask() {
+        synchronized (lock) {
+            cancelTask = true;
+        }
+    }
+
     public void submitTask(FilterTask task) {
         synchronized (lock) {
             if (processTask) {
@@ -190,9 +195,19 @@ public class AsyncClient {
         try {
             AsyncClient client = new AsyncClient("localhost", 8813, true);
             client.submitTask(new FilterTask(new Image("src/main/java/Debug/Images/test2.jpg"), 0));
+            client.submitTask(new FilterTask(new Image("src/main/java/Debug/Images/test2.jpg"), 0));
+            client.submitTask(new FilterTask(new Image("src/main/java/Debug/Images/test2.jpg"), 0));
 
             try {
-                Thread.sleep(60000);
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            //client.cancelTask();
+
+            try {
+                Thread.sleep(10000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -201,11 +216,14 @@ public class AsyncClient {
             FilterTask task = result.poll();
 
             if (task != null) {
+                System.out.println("Task was done");
                 task.getSource().saveImage("src/main/java/Debug/Images/server3.png");
             }
             else {
                 System.out.println("Task was not done");
             }
+
+            client.done(true);
         }
         catch (IOException e) {
             e.printStackTrace();

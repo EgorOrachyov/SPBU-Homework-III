@@ -97,6 +97,7 @@ public class ConnectionHandler implements Runnable {
                     }
                     else if (action == Message.CANCEL) {
                         task = null;
+                        System.out.println("Cancel task");
                     }
 
                 }
