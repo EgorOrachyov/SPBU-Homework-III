@@ -66,20 +66,17 @@ public class ProcessPage implements Runnable {
                     if (absUrl.length() == 0) {
                         // empty links are not valid
                     }
-                    else if (map.containsKey(absUrl)) {
-                        // skip it
-                    }
                     else {
-                        map.put(absUrl, absUrl);
-
-                        executorService.execute(
-                                new ProcessPage(
-                                        executorService, map,
-                                        absUrl, newDepth,
-                                        maxDepth, saver,
-                                        counter, pageCount
-                                )
-                        );
+                        if (map.put(absUrl, absUrl) == null) {
+                            executorService.execute(
+                                    new ProcessPage(
+                                            executorService, map,
+                                            absUrl, newDepth,
+                                            maxDepth, saver,
+                                            counter, pageCount
+                                    )
+                            );
+                        }
                     }
                 }
             }

@@ -66,20 +66,17 @@ public class ProcessPage implements Runnable {
                     if (absUrl.length() == 0) {
                         // empty links are not valid
                     }
-                    else if (map.contains(absUrl)) {
-                        // skip it
-                    }
                     else {
-                        map.add(absUrl, absUrl);
-
-                        threadPool.execute(
-                                new ProcessPage(
-                                        threadPool, map,
-                                        absUrl, newDepth,
-                                        maxDepth, saver,
-                                        counter, pageCount
-                                )
-                        );
+                        if (map.add(absUrl, absUrl) == null) {
+                            threadPool.execute(
+                                    new ProcessPage(
+                                            threadPool, map,
+                                            absUrl, newDepth,
+                                            maxDepth, saver,
+                                            counter, pageCount
+                                    )
+                            );
+                        }
                     }
                 }
             }

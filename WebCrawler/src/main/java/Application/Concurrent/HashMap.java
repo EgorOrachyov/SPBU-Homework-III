@@ -54,9 +54,11 @@ public class HashMap<Key,Value> extends IMap<Key,Value> {
     }
 
     @Override
-    public void add(Key key, Value value) {
+    public Value add(Key key, Value value) {
         int index = Math.abs(key.hashCode()) % range;
         LinkedList<Element> list = map[index];
+
+        Value prevValue = null;
 
         try {
             lock.lock();
@@ -69,6 +71,7 @@ public class HashMap<Key,Value> extends IMap<Key,Value> {
 
             if (e != null) {
                 e.setValue(value);
+                prevValue = e.value;
             }
             else {
                 list.add(new Element(key, value));
@@ -78,6 +81,8 @@ public class HashMap<Key,Value> extends IMap<Key,Value> {
         finally {
             lock.unlock();
         }
+
+        return prevValue;
     }
 
     @Override

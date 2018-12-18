@@ -7,6 +7,7 @@ import Application.Util.ListSaver;
 import Application.Util.FileSaver;
 import Application.Web.ICrawler;
 
+import java.io.IOException;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Crawler implements ICrawler {
@@ -30,6 +31,15 @@ public class Crawler implements ICrawler {
         ListSaver saver = new ListSaver();
         threadPool.execute(new ProcessPage(threadPool, map, page, 0, depth, saver, null, 0));
 
+        try {
+            System.out.println("Print any key to immediately stop downloading: ");
+            System.in.read();
+        }
+        catch (IOException e) {
+            // Ignore any input exceptions (does not matter)
+        }
+
+        threadPool.shutdown();
         threadPool.waitAndJoin();
 
         return saver.getData();
@@ -63,10 +73,9 @@ public class Crawler implements ICrawler {
     public static void main(String ... args) {
 
         Crawler crawler = new Crawler(4);
-        //LinkedList<String> result = crawler.download("http://www.shaderx.com", 1, 1);
-        LinkedList<String> result = crawler.downloadCount("http://en.wikipedia.org/", 1, 264);
+        LinkedList<String> result = crawler.download("http://www.shaderx.com", 1, 1);
+        //LinkedList<String> result = crawler.downloadCount("http://en.wikipedia.org/", 1, 264);
         System.out.println("Total: " + result.getElementsCount());
-        //crawler.download("http://www.shaderx.com", 1, "/Users/egororachyov/Desktop/Documents/Intellej Idea/SPBU-Homework-III/WebCrawler/src/main/Test",0);
 
     }
 
