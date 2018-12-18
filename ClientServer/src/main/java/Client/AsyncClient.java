@@ -10,6 +10,7 @@ import java.io.DataOutputStream;
 import java.io.IOError;
 import java.io.IOException;
 import java.net.Socket;
+import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
@@ -21,10 +22,11 @@ import java.util.concurrent.ConcurrentLinkedQueue;
  *
  * @note Should be independent for any king of UI
  */
-public class AsyncClient {
+public class AsyncClient implements Runnable {
 
     private final String host;
     private final int port;
+    private final boolean runAsync;
 
     private Socket socket;
 
@@ -52,6 +54,7 @@ public class AsyncClient {
         this.port = port;
         this.lock = new Object();
         this.completedTasks = new ConcurrentLinkedQueue<>();
+        this.runAsync = runInSeparateThread;
 
         try {
             Socket socket = new Socket(host, port);
@@ -160,6 +163,10 @@ public class AsyncClient {
         return processTask;
     }
 
+    public boolean isClientAsync() {
+        return runAsync;
+    }
+
     public FilterTask getCurrentTask() {
         return currentTask;
     }
@@ -192,6 +199,14 @@ public class AsyncClient {
             newTask = true;
             currentTask = task;
             currentTaskProgress = 0;
+        }
+    }
+
+    @Override
+    public void run() {
+        if (!runAsync) {
+            ConnectionHandler connectionHandler = new ConnectionHandler();
+            connectionHandler.run();
         }
     }
 
