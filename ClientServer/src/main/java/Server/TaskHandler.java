@@ -49,7 +49,7 @@ public class TaskHandler implements Runnable {
 
             for (int y = 0; y < height; ++y) {
 
-                System.out.println("Progress at task: " + ((int)(100.0f * ((float) y / (float) height))));
+                //System.out.println("Progress at task: " + ((int)(100.0f * ((float) y / (float) height))));
                 progress.set((int)(100.0f * ((float) y / (float) height)));
 
                 for (int x = 0; x < width; ++x) {

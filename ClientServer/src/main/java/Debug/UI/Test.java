@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
 import Filter.Image;
+import UI.ConnectionSetup;
 import UI.ImageSaver;
 import UI.ImageViewer;
 
@@ -48,7 +49,8 @@ public class Test extends JFrame {
         try {
             Image image = new Image("src/main/java/Debug/Images/test2.jpg");
             ///new ImageViewer(image);
-            new ImageSaver(image);
+            //new ImageSaver(image);
+            new ConnectionSetup();
         }
         catch (IOException e) {
             e.printStackTrace();

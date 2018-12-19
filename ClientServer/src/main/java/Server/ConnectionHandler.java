@@ -62,7 +62,7 @@ public class ConnectionHandler implements Runnable {
         }
         else {
             try {
-                System.out.println("Work...");
+                //System.out.println("Work...");
 
                 if (inputStream.available() > 0) {
 
@@ -115,11 +115,11 @@ public class ConnectionHandler implements Runnable {
                     else {
                         Transfer.send(outputStream, Message.PROGRESS);
                         outputStream.writeInt(task.getProgress().get());
-                        System.out.println("Send progress: " + task.getProgress().get());
+                        //System.out.println("Send progress: " + task.getProgress().get());
                     }
                 }
 
-                System.out.println("Check time...");
+                //System.out.println("Check time...");
 
                 if (time++ > configuration.getTimeOut()) {
                     done = true;

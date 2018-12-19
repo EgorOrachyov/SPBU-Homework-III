@@ -11,7 +11,6 @@ public class ImageViewer extends JFrame {
         add(new JLabel(new ImageIcon(toView.getData())));
 
         setTitle("View");
-        setResizable(false);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setSize(toView.getWidth(), toView.getHeight());
         setLocationRelativeTo(null);

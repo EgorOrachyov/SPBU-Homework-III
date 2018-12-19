@@ -73,6 +73,7 @@ public class ImageSaver extends JFrame {
 
             try {
                 result.saveImage(fileName);
+                dispose();
             }
             catch (IOException exception) {
                 path.setText("Wrong format of file...");
@@ -96,6 +97,7 @@ public class ImageSaver extends JFrame {
         public void actionPerformed(ActionEvent e) {
             dispose();
         }
+
     }
 
 }
