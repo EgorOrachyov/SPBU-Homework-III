@@ -11,7 +11,7 @@ public class Client {
         System.out.println("=== Run client ===");
 
         try (
-                Socket socket = new Socket("localhost", 8813);
+                Socket socket = new Socket("localhost", 3345);
 
                 DataInputStream inputStream = new DataInputStream(socket.getInputStream());
                 DataOutputStream outputStream = new DataOutputStream(socket.getOutputStream());

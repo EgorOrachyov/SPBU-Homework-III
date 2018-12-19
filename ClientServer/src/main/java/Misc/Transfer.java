@@ -4,9 +4,7 @@ import Filter.FilterBehavior;
 import Filter.FilterInfo;
 import Filter.Image;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 public class Transfer {
@@ -55,6 +53,7 @@ public class Transfer {
                 // suppress
             }
         }
+
     }
 
     /**
@@ -94,9 +93,19 @@ public class Transfer {
 
         final int[] data = source.serialize();
 
+        byte[] m = new byte[width * height * 4];
+
+        int k = 0;
         for (int i = 0; i < width * height; ++i) {
-            stream.writeInt(data[i]);
+            m[k    ] = (byte)((data[i] & 0xFF000000) >>> 24);
+            m[k + 1] = (byte)((data[i] & 0x00FF0000) >>> 16);
+            m[k + 2] = (byte)((data[i] & 0x0000FF00) >>>  8);
+            m[k + 3] = (byte)((data[i]             )       );
+
+            k += 4;
         }
+
+        stream.write(m, 0, width * height * 4);
     }
 
     /**

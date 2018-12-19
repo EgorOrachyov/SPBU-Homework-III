@@ -54,7 +54,7 @@ public class Menu extends JFrame {
         JLabel pathNote = new JLabel("Path");
         pathNote.setBounds(10, 50, 50, 20);
 
-        path = new JTextField("Enter path to the image...");
+        path = new JTextField("src/main/java/Debug/Images/test2.jpg");
         path.setBounds(70, 50, 370, 20);
 
         JLabel filtersNote = new JLabel("Filters");
@@ -299,6 +299,21 @@ public class Menu extends JFrame {
                                 "<html>" +
                                     "Progress: <br>" +
                                     "Image is not loaded" +
+                                "</html>"
+                        );
+                    }
+
+                    if (client.isDone()) {
+                        send.setEnabled(false);
+                        preview.setEnabled(false);
+                        clean.setEnabled(false);
+                        cancel.setEnabled(false);
+                        progress.setEnabled(false);
+
+                        processing.setText(
+                                "<html>" +
+                                    "Progress: <br>" +
+                                    "Connection with server is lost" +
                                 "</html>"
                         );
                     }

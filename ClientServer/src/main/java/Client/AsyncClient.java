@@ -151,7 +151,6 @@ public class AsyncClient implements Runnable {
             catch (IOException e) {
                 e.printStackTrace();
             }
-
         }
     }
 
@@ -173,6 +172,10 @@ public class AsyncClient implements Runnable {
 
     public void done(boolean finishWork) {
         this.done = finishWork;
+    }
+
+    public boolean isDone() {
+        return done;
     }
 
     public ArrayList<FilterInfo> getFilters() {
@@ -213,7 +216,7 @@ public class AsyncClient implements Runnable {
     public static void main(String ... args) {
 
         try {
-            AsyncClient client = new AsyncClient("localhost", 8813, true);
+            AsyncClient client = new AsyncClient("localhost", 40000, true);
             client.submitTask(new FilterTask(new Image("src/main/java/Debug/Images/test2.jpg"), 1));
 
             try {

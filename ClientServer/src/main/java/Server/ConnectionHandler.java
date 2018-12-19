@@ -76,7 +76,7 @@ public class ConnectionHandler implements Runnable {
                         final int filterId = inputStream.readInt();
                         final Image source = Transfer.receiveImage(inputStream);
 
-                        System.out.println("Receive image | size: " + (source.getWidth() * source.getHeight()) + " | filterId: " + filterId);
+                        //System.out.println("Receive image | size: " + (source.getWidth() * source.getHeight()) + " | filterId: " + filterId);
 
                         if (filterId < configuration.getFilters().size()) {
                             try {
@@ -90,14 +90,14 @@ public class ConnectionHandler implements Runnable {
                                 // suppress
                             }
 
-                            System.out.println("Start filtering");
+                            //System.out.println("Start filtering");
 
                         }
 
                     }
                     else if (action == Message.CANCEL) {
                         task = null;
-                        System.out.println("Cancel task");
+                        //System.out.println("Cancel task");
                     }
 
                 }
@@ -108,7 +108,7 @@ public class ConnectionHandler implements Runnable {
                         Transfer.sendImage(outputStream, task.getResult());
 
                         Image result = task.getResult();
-                        System.out.println("Send image | size: " + (result.getWidth() * result.getHeight()));
+                        //System.out.println("Send image | size: " + (result.getWidth() * result.getHeight()));
 
                         task = null;
                     }

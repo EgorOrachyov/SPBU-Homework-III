@@ -29,7 +29,7 @@ public class ConnectionSetup extends JFrame {
         host = new JTextField("localhost");
         host.setBounds(50, 50, 190, 20);
 
-        port = new JTextField("8813");
+        port = new JTextField("40000");
         port.setBounds(50, 80, 190, 20);
 
         JLabel labelHost = new JLabel("Host");

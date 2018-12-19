@@ -118,7 +118,5 @@ class ClientConnection implements Runnable {
                 e.printStackTrace();
             }
         }
-
-        System.out.println("Finish run for connection id [" + connectionId + "]");
     }
 }
