@@ -65,6 +65,8 @@ public class ServiceTimeWithLoad {
                 "/Users/egororachyov/Desktop/Documents/Intellej Idea/SPBU-Homework-III/ClientServer/src/main/java/Debug/Images/test4.jpg"
         };
 
+        final int FILTER_ID = 1;
+
         int clientsCount;
         int cycles;
         Image image;
@@ -109,7 +111,7 @@ public class ServiceTimeWithLoad {
         for (int i = 0; i < tc.cycles; i++) {
 
             for (AsyncClient client : tc.clients) {
-                client.submitTask(new FilterTask(tc.image, 1));
+                client.submitTask(new FilterTask(tc.image, tc.FILTER_ID));
             }
 
             for (AsyncClient client : tc.clients) {
@@ -131,7 +133,7 @@ public class ServiceTimeWithLoad {
         for (int i = 0; i < tc.cycles; i++) {
 
             for (AsyncClient client : tc.clients) {
-                client.submitTask(new FilterTask(tc.images.get(0), 1));
+                client.submitTask(new FilterTask(tc.images.get(0), tc.FILTER_ID));
             }
 
             for (AsyncClient client : tc.clients) {

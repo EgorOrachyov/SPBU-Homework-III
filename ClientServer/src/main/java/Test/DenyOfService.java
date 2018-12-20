@@ -7,10 +7,11 @@ import Filter.Image;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class DenieOfService {
+public class DenyOfService {
 
     public static void main(String ... args) {
 
+        final int FILTER_ID = 2;
         final int port = 40000;
         final String host = "localhost";
         final String imagePath = "src/main/java/Debug/Images/test3.jpg";
@@ -36,7 +37,7 @@ public class DenieOfService {
             try {
 
                 AsyncClient client = new AsyncClient(host, port);
-                client.submitTask(new FilterTask(image, 1));
+                client.submitTask(new FilterTask(image, FILTER_ID));
 
                 numberOfConnectedClients += 1;
 

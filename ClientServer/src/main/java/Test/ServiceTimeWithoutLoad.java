@@ -61,6 +61,8 @@ public class ServiceTimeWithoutLoad {
         Image image;
         AsyncClient client;
 
+        final int FILTER_ID = 1;
+
         @Setup(Level.Trial)
         public void prepare() {
             try {
@@ -82,10 +84,10 @@ public class ServiceTimeWithoutLoad {
 
     }
 
-    // @Benchmark
+    @Benchmark
     public void test(TestCase tc, Blackhole bh) {
         for (int i = 0; i < tc.cycles; i++) {
-            tc.client.submitTask(new FilterTask(tc.image, 1));
+            tc.client.submitTask(new FilterTask(tc.image, tc.FILTER_ID));
 
             FilterTask result;
 
