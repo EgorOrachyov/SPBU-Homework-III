@@ -15,6 +15,7 @@ public class Configuration {
     private volatile boolean isNumOfClientsLimited = false;
 
     private volatile int timeOut;
+    private volatile boolean isTimeOutEnabled;
     private volatile boolean isServerShutDown;
 
     private ConnectionPool connectionPool;
@@ -31,6 +32,14 @@ public class Configuration {
      */
     public void setTimeOut(int timeOut) {
         this.timeOut = timeOut;
+    }
+
+    public void setTimeOutEnabled(boolean timeOutEnabled) {
+        isTimeOutEnabled = timeOutEnabled;
+    }
+
+    public boolean isTimeOutEnabled() {
+        return isTimeOutEnabled;
     }
 
     public int getTimeOut() {

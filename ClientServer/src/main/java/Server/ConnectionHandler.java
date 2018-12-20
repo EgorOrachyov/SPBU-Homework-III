@@ -121,7 +121,7 @@ public class ConnectionHandler implements Runnable {
 
                 //System.out.println("Check time...");
 
-                if (time++ > configuration.getTimeOut()) {
+                if (time++ > configuration.getTimeOut() && configuration.isTimeOutEnabled()) {
                     done = true;
                 }
             }

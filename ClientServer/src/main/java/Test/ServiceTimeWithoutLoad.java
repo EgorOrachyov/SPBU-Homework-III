@@ -82,7 +82,7 @@ public class ServiceTimeWithoutLoad {
 
     }
 
-    @Benchmark
+    // @Benchmark
     public void test(TestCase tc, Blackhole bh) {
         for (int i = 0; i < tc.cycles; i++) {
             tc.client.submitTask(new FilterTask(tc.image, 1));
