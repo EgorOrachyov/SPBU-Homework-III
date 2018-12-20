@@ -63,7 +63,7 @@ public class Color {
     }
 
     public Color add(Color c) {
-        return new Color(r + c.r, g + c.g, b + c.b, a + c.a);
+        return new Color(r + c.r, g + c.g, b + c.b, 0xFF);
     }
 
     public void addToThis(Color c) {
@@ -74,14 +74,13 @@ public class Color {
     }
 
     public Color multiply(Color c) {
-        return new Color(r * c.r, g * c.g, b * c.b, a * c.a);
+        return new Color(r * c.r, g * c.g, b * c.b, 0xFF);
     }
 
     public void multiplyToThis(Color c) {
         r *= c.r;
         g *= c.g;
         b *= c.b;
-        a *= c.a;
     }
 
     public Color multiply(float f) {
@@ -93,12 +92,6 @@ public class Color {
         g = (int)(f * g);
         b = (int)(f * b);
         a = (int)(f * a);
-    }
-
-    public void multiplyToThisIgnoreAlpha(float f) {
-        r = (int)(f * r);
-        g = (int)(f * g);
-        b = (int)(f * b);
     }
 
     public void assign(Color c) {
