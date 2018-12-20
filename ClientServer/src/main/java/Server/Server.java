@@ -10,8 +10,8 @@ public class Server {
         configuration.setPort(40000);
         configuration.setMaxNumOfClients(1000);
         configuration.setNumOfClientsLimited(false);
-        configuration.setTaskPoolProperties(2);
-        configuration.setConnectionPoolProperties(1000, 10, 2);
+        configuration.setTaskPoolProperties(4);
+        configuration.setConnectionPoolProperties(1000, 10, 4);
 
         ConnectionFactory connectionFactory = new ConnectionFactory(configuration);
         connectionFactory.run();

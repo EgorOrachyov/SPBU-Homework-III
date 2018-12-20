@@ -23,6 +23,12 @@ public class Configuration {
     private String filtersBehaviors;
     private ArrayList<Class> filters;
 
+    /**
+     * Set number of iterations of client input reading for server side,
+     * after which server will disconnect client socket whether there is no
+     * input
+     * @param timeOut Number of iterations
+     */
     public void setTimeOut(int timeOut) {
         this.timeOut = timeOut;
     }
@@ -78,6 +84,12 @@ public class Configuration {
         return isNumOfClientsLimited;
     }
 
+    /**
+     * Set in true to limit number of connecting clients to the server.
+     * If current count of connected clients >= max num of clients then
+     * newcomers will be denied
+     * @param numOfClientsLimited True to limit
+     */
     public void setNumOfClientsLimited(boolean numOfClientsLimited) {
         isNumOfClientsLimited = numOfClientsLimited;
     }
