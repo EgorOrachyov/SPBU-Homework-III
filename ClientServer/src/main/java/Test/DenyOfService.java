@@ -14,12 +14,12 @@ public class DenyOfService {
         final int FILTER_ID = 2;
         final int port = 40000;
         final String host = "localhost";
-        final String imagePath = "src/main/java/Debug/Images/test3.jpg";
-        //final String imagePath = "src/main/java/Debug/Images/test2.jpg";
+        //final String imagePath = "src/main/java/Debug/Images/test3.jpg";
+        final String imagePath = "src/main/java/Debug/Images/test2.jpg";
 
         boolean done = false;
         int numberOfConnectedClients = 0;
-        int limitation = 1000;
+        int limitation = 20000;
 
         Image image;
         ArrayList<AsyncClient> clients = new ArrayList<>(limitation);
@@ -37,7 +37,8 @@ public class DenyOfService {
             try {
 
                 AsyncClient client = new AsyncClient(host, port);
-                client.submitTask(new FilterTask(image, FILTER_ID));
+                //client.submitTask(new FilterTask(image, FILTER_ID));
+                clients.add(client);
 
                 numberOfConnectedClients += 1;
 
@@ -50,13 +51,15 @@ public class DenyOfService {
 
         }
 
-        for (AsyncClient client : clients) {
-            FilterTask task;
-            do {
-                task = client.getCompletedTasks().poll();
-            } while (task == null && !client.isDone());
+        if (!done) {
+            for (AsyncClient client : clients) {
+                FilterTask task;
+                do {
+                    task = client.getCompletedTasks().poll();
+                } while (task == null && !client.isDone());
 
-            client.done(true);
+                client.done(true);
+            }
         }
 
         System.out.println("Max connected clients: " + numberOfConnectedClients);
