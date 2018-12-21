@@ -1,0 +1,2712 @@
+/Library/Java/JavaVirtualMachines/jdk-9.0.1.jdk/Contents/Home/bin/java "-javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=51962:/Applications/IntelliJ IDEA.app/Contents/bin" -Dfile.encoding=UTF-8 -classpath "/Users/egororachyov/Desktop/Documents/Intellej Idea/SPBU-Homework-III/ClientServer/target/classes:/Users/egororachyov/.m2/repository/org/openjdk/jmh/jmh-core/1.21/jmh-core-1.21.jar:/Users/egororachyov/.m2/repository/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6.jar:/Users/egororachyov/.m2/repository/org/apache/commons/commons-math3/3.2/commons-math3-3.2.jar:/Users/egororachyov/.m2/repository/org/jetbrains/annotations/16.0.3/annotations-16.0.3.jar" Test.DenieOfService
+Connect [1]
+Connect [2]
+Connect [3]
+Connect [4]
+Connect [5]
+Connect [6]
+Connect [7]
+Connect [8]
+Connect [9]
+Connect [10]
+Connect [11]
+Connect [12]
+Connect [13]
+Connect [14]
+Connect [15]
+Connect [16]
+Connect [17]
+Connect [18]
+Connect [19]
+Connect [20]
+Connect [21]
+Connect [22]
+Connect [23]
+Connect [24]
+Connect [25]
+Connect [26]
+Connect [27]
+Connect [28]
+Connect [29]
+Connect [30]
+Connect [31]
+Connect [32]
+Connect [33]
+Connect [34]
+Connect [35]
+Connect [36]
+Connect [37]
+Connect [38]
+Connect [39]
+Connect [40]
+Connect [41]
+Connect [42]
+Connect [43]
+Connect [44]
+Connect [45]
+Connect [46]
+Connect [47]
+Connect [48]
+Connect [49]
+Connect [50]
+Connect [51]
+Connect [52]
+Connect [53]
+Connect [54]
+Connect [55]
+Connect [56]
+Connect [57]
+Connect [58]
+Connect [59]
+Connect [60]
+Connect [61]
+Connect [62]
+Connect [63]
+Connect [64]
+Connect [65]
+Connect [66]
+Connect [67]
+Connect [68]
+Connect [69]
+Connect [70]
+Connect [71]
+Connect [72]
+Connect [73]
+Connect [74]
+Connect [75]
+Connect [76]
+Connect [77]
+Connect [78]
+Connect [79]
+Connect [80]
+Connect [81]
+Connect [82]
+Connect [83]
+Connect [84]
+Connect [85]
+Connect [86]
+Connect [87]
+Connect [88]
+Connect [89]
+Connect [90]
+Connect [91]
+Connect [92]
+Connect [93]
+Connect [94]
+Connect [95]
+Connect [96]
+Connect [97]
+Connect [98]
+Connect [99]
+Connect [100]
+Connect [101]
+Connect [102]
+Connect [103]
+Connect [104]
+Connect [105]
+Connect [106]
+Connect [107]
+Connect [108]
+Connect [109]
+Connect [110]
+Connect [111]
+Connect [112]
+Connect [113]
+Connect [114]
+Connect [115]
+Connect [116]
+Connect [117]
+Connect [118]
+Connect [119]
+Connect [120]
+Connect [121]
+Connect [122]
+Connect [123]
+Connect [124]
+Connect [125]
+Connect [126]
+Connect [127]
+Connect [128]
+Connect [129]
+Connect [130]
+Connect [131]
+Connect [132]
+Connect [133]
+Connect [134]
+Connect [135]
+Connect [136]
+Connect [137]
+Connect [138]
+Connect [139]
+Connect [140]
+Connect [141]
+Connect [142]
+Connect [143]
+Connect [144]
+Connect [145]
+Connect [146]
+Connect [147]
+Connect [148]
+Connect [149]
+Connect [150]
+Connect [151]
+Connect [152]
+Connect [153]
+Connect [154]
+Connect [155]
+Connect [156]
+Connect [157]
+Connect [158]
+Connect [159]
+Connect [160]
+Connect [161]
+Connect [162]
+Connect [163]
+Connect [164]
+Connect [165]
+Connect [166]
+Connect [167]
+Connect [168]
+Connect [169]
+Connect [170]
+Connect [171]
+Connect [172]
+Connect [173]
+Connect [174]
+Connect [175]
+Connect [176]
+Connect [177]
+Connect [178]
+Connect [179]
+Connect [180]
+Connect [181]
+Connect [182]
+Connect [183]
+Connect [184]
+Connect [185]
+Connect [186]
+Connect [187]
+Connect [188]
+Connect [189]
+Connect [190]
+Connect [191]
+Connect [192]
+Connect [193]
+Connect [194]
+Connect [195]
+Connect [196]
+Connect [197]
+Connect [198]
+Connect [199]
+Connect [200]
+Connect [201]
+Connect [202]
+Connect [203]
+Connect [204]
+Connect [205]
+Connect [206]
+Connect [207]
+Connect [208]
+Connect [209]
+Connect [210]
+Connect [211]
+Connect [212]
+Connect [213]
+Connect [214]
+Connect [215]
+Connect [216]
+Connect [217]
+Connect [218]
+Connect [219]
+Connect [220]
+Connect [221]
+Connect [222]
+Connect [223]
+Connect [224]
+Connect [225]
+Connect [226]
+Connect [227]
+Connect [228]
+Connect [229]
+Connect [230]
+Connect [231]
+Connect [232]
+Connect [233]
+Connect [234]
+Connect [235]
+Connect [236]
+Connect [237]
+Connect [238]
+Connect [239]
+Connect [240]
+Connect [241]
+Connect [242]
+Connect [243]
+Connect [244]
+Connect [245]
+Connect [246]
+Connect [247]
+Connect [248]
+Connect [249]
+Connect [250]
+Connect [251]
+Connect [252]
+Connect [253]
+Connect [254]
+Connect [255]
+Connect [256]
+Connect [257]
+Connect [258]
+Connect [259]
+Connect [260]
+Connect [261]
+Connect [262]
+Connect [263]
+Connect [264]
+Connect [265]
+Connect [266]
+Connect [267]
+Connect [268]
+Connect [269]
+Connect [270]
+Connect [271]
+Connect [272]
+Connect [273]
+Connect [274]
+Connect [275]
+Connect [276]
+Connect [277]
+Connect [278]
+Connect [279]
+Connect [280]
+Connect [281]
+Connect [282]
+Connect [283]
+Connect [284]
+Connect [285]
+Connect [286]
+Connect [287]
+Connect [288]
+Connect [289]
+Connect [290]
+Connect [291]
+Connect [292]
+Connect [293]
+Connect [294]
+Connect [295]
+Connect [296]
+Connect [297]
+Connect [298]
+Connect [299]
+Connect [300]
+Connect [301]
+Connect [302]
+Connect [303]
+Connect [304]
+Connect [305]
+Connect [306]
+Connect [307]
+Connect [308]
+Connect [309]
+Connect [310]
+Connect [311]
+Connect [312]
+Connect [313]
+Connect [314]
+Connect [315]
+Connect [316]
+Connect [317]
+Connect [318]
+Connect [319]
+Connect [320]
+Connect [321]
+Connect [322]
+Connect [323]
+Connect [324]
+Connect [325]
+Connect [326]
+Connect [327]
+Connect [328]
+Connect [329]
+Connect [330]
+Connect [331]
+Connect [332]
+Connect [333]
+Connect [334]
+Connect [335]
+Connect [336]
+Connect [337]
+Connect [338]
+Connect [339]
+Connect [340]
+Connect [341]
+Connect [342]
+Connect [343]
+Connect [344]
+Connect [345]
+Connect [346]
+Connect [347]
+Connect [348]
+Connect [349]
+Connect [350]
+Connect [351]
+Connect [352]
+Connect [353]
+Connect [354]
+Connect [355]
+Connect [356]
+Connect [357]
+Connect [358]
+Connect [359]
+Connect [360]
+Connect [361]
+Connect [362]
+Connect [363]
+Connect [364]
+Connect [365]
+Connect [366]
+Connect [367]
+Connect [368]
+Connect [369]
+Connect [370]
+Connect [371]
+Connect [372]
+Connect [373]
+Connect [374]
+Connect [375]
+Connect [376]
+Connect [377]
+Connect [378]
+Connect [379]
+Connect [380]
+Connect [381]
+Connect [382]
+Connect [383]
+Connect [384]
+Connect [385]
+Connect [386]
+Connect [387]
+Connect [388]
+Connect [389]
+Connect [390]
+Connect [391]
+Connect [392]
+Connect [393]
+Connect [394]
+Connect [395]
+Connect [396]
+Connect [397]
+Connect [398]
+Connect [399]
+Connect [400]
+Connect [401]
+Connect [402]
+Connect [403]
+Connect [404]
+Connect [405]
+Connect [406]
+Connect [407]
+Connect [408]
+Connect [409]
+Connect [410]
+Connect [411]
+Connect [412]
+Connect [413]
+Connect [414]
+Connect [415]
+Connect [416]
+Connect [417]
+Connect [418]
+Connect [419]
+Connect [420]
+Connect [421]
+Connect [422]
+Connect [423]
+Connect [424]
+Connect [425]
+Connect [426]
+Connect [427]
+Connect [428]
+Connect [429]
+Connect [430]
+Connect [431]
+Connect [432]
+Connect [433]
+Connect [434]
+Connect [435]
+Connect [436]
+Connect [437]
+Connect [438]
+Connect [439]
+Connect [440]
+Connect [441]
+Connect [442]
+Connect [443]
+Connect [444]
+Connect [445]
+Connect [446]
+Connect [447]
+Connect [448]
+Connect [449]
+Connect [450]
+Connect [451]
+Connect [452]
+Connect [453]
+Connect [454]
+Connect [455]
+Connect [456]
+Connect [457]
+Connect [458]
+Connect [459]
+Connect [460]
+Connect [461]
+Connect [462]
+Connect [463]
+Connect [464]
+Connect [465]
+Connect [466]
+Connect [467]
+Connect [468]
+Connect [469]
+Connect [470]
+Connect [471]
+Connect [472]
+Connect [473]
+Connect [474]
+Connect [475]
+Connect [476]
+Connect [477]
+Connect [478]
+Connect [479]
+Connect [480]
+Connect [481]
+Connect [482]
+Connect [483]
+Connect [484]
+Connect [485]
+Connect [486]
+Connect [487]
+Connect [488]
+Connect [489]
+Connect [490]
+Connect [491]
+Connect [492]
+Connect [493]
+Connect [494]
+Connect [495]
+Connect [496]
+Connect [497]
+Connect [498]
+Connect [499]
+Connect [500]
+Connect [501]
+Connect [502]
+Connect [503]
+Connect [504]
+Connect [505]
+Connect [506]
+Connect [507]
+Connect [508]
+Connect [509]
+Connect [510]
+Connect [511]
+Connect [512]
+Connect [513]
+Connect [514]
+Connect [515]
+Connect [516]
+Connect [517]
+Connect [518]
+Connect [519]
+Connect [520]
+Connect [521]
+Connect [522]
+Connect [523]
+Connect [524]
+Connect [525]
+Connect [526]
+Connect [527]
+Connect [528]
+Connect [529]
+Connect [530]
+Connect [531]
+Connect [532]
+Connect [533]
+Connect [534]
+Connect [535]
+Connect [536]
+Connect [537]
+Connect [538]
+Connect [539]
+Connect [540]
+Connect [541]
+Connect [542]
+Connect [543]
+Connect [544]
+Connect [545]
+Connect [546]
+Connect [547]
+Connect [548]
+Connect [549]
+Connect [550]
+Connect [551]
+Connect [552]
+Connect [553]
+Connect [554]
+Connect [555]
+Connect [556]
+Connect [557]
+Connect [558]
+Connect [559]
+Connect [560]
+Connect [561]
+Connect [562]
+Connect [563]
+Connect [564]
+Connect [565]
+Connect [566]
+Connect [567]
+Connect [568]
+Connect [569]
+Connect [570]
+Connect [571]
+Connect [572]
+Connect [573]
+Connect [574]
+Connect [575]
+Connect [576]
+Connect [577]
+Connect [578]
+Connect [579]
+Connect [580]
+Connect [581]
+Connect [582]
+Connect [583]
+Connect [584]
+Connect [585]
+Connect [586]
+Connect [587]
+Connect [588]
+Connect [589]
+Connect [590]
+Connect [591]
+Connect [592]
+Connect [593]
+Connect [594]
+Connect [595]
+Connect [596]
+Connect [597]
+Connect [598]
+Connect [599]
+Connect [600]
+Connect [601]
+Connect [602]
+Connect [603]
+Connect [604]
+Connect [605]
+Connect [606]
+Connect [607]
+Connect [608]
+Connect [609]
+Connect [610]
+Connect [611]
+Connect [612]
+Connect [613]
+Connect [614]
+Connect [615]
+Connect [616]
+Connect [617]
+Connect [618]
+Connect [619]
+Connect [620]
+Connect [621]
+Connect [622]
+Connect [623]
+Connect [624]
+Connect [625]
+Connect [626]
+Connect [627]
+Connect [628]
+Connect [629]
+Connect [630]
+Connect [631]
+Connect [632]
+Connect [633]
+Connect [634]
+Connect [635]
+Connect [636]
+Connect [637]
+Connect [638]
+Connect [639]
+Connect [640]
+Connect [641]
+Connect [642]
+Connect [643]
+Connect [644]
+Connect [645]
+Connect [646]
+Connect [647]
+Connect [648]
+Connect [649]
+Connect [650]
+Connect [651]
+Connect [652]
+Connect [653]
+Connect [654]
+Connect [655]
+Connect [656]
+Connect [657]
+Connect [658]
+Connect [659]
+Connect [660]
+Connect [661]
+Connect [662]
+Connect [663]
+Connect [664]
+Connect [665]
+Connect [666]
+Connect [667]
+Connect [668]
+Connect [669]
+Connect [670]
+Connect [671]
+Connect [672]
+Connect [673]
+Connect [674]
+Connect [675]
+Connect [676]
+Connect [677]
+Connect [678]
+Connect [679]
+Connect [680]
+Connect [681]
+Connect [682]
+Connect [683]
+Connect [684]
+Connect [685]
+Connect [686]
+Connect [687]
+Connect [688]
+Connect [689]
+Connect [690]
+Connect [691]
+Connect [692]
+Connect [693]
+Connect [694]
+Connect [695]
+Connect [696]
+Connect [697]
+Connect [698]
+Connect [699]
+Connect [700]
+Connect [701]
+Connect [702]
+Connect [703]
+Connect [704]
+Connect [705]
+Connect [706]
+Connect [707]
+Connect [708]
+Connect [709]
+Connect [710]
+Connect [711]
+Connect [712]
+Connect [713]
+Connect [714]
+Connect [715]
+Connect [716]
+Connect [717]
+Connect [718]
+Connect [719]
+Connect [720]
+Connect [721]
+Connect [722]
+Connect [723]
+Connect [724]
+Connect [725]
+Connect [726]
+Connect [727]
+Connect [728]
+Connect [729]
+Connect [730]
+Connect [731]
+Connect [732]
+Connect [733]
+Connect [734]
+Connect [735]
+Connect [736]
+Connect [737]
+Connect [738]
+Connect [739]
+Connect [740]
+Connect [741]
+Connect [742]
+Connect [743]
+Connect [744]
+Connect [745]
+Connect [746]
+Connect [747]
+Connect [748]
+Connect [749]
+Connect [750]
+Connect [751]
+Connect [752]
+Connect [753]
+Connect [754]
+Connect [755]
+Connect [756]
+Connect [757]
+Connect [758]
+Connect [759]
+Connect [760]
+Connect [761]
+Connect [762]
+Connect [763]
+Connect [764]
+Connect [765]
+Connect [766]
+Connect [767]
+Connect [768]
+Connect [769]
+Connect [770]
+Connect [771]
+Connect [772]
+Connect [773]
+Connect [774]
+Connect [775]
+Connect [776]
+Connect [777]
+Connect [778]
+Connect [779]
+Connect [780]
+Connect [781]
+Connect [782]
+Connect [783]
+Connect [784]
+Connect [785]
+Connect [786]
+Connect [787]
+Connect [788]
+Connect [789]
+Connect [790]
+Connect [791]
+Connect [792]
+Connect [793]
+Connect [794]
+Connect [795]
+Exception in thread "Thread-69" Exception in thread "Thread-33" java.lang.OutOfMemoryError: Java heap space
+	at Misc.Transfer.sendImage(Transfer.java:96)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Exception in thread "Thread-791" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-789" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-785" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-782" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-778" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-775" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-772" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-770" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-768" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-763" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-760" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-758" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-181" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-753" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-750" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-748" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-746" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-740" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-739" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-731" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-724" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-718" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-716" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-712" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-709" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-704" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-702" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-700" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-697" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-696" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-694" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-692" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-689" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-688" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-686" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-683" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-680" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-677" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-675" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-672" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-669" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-668" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-664" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-663" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-661" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-657" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-654" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-653" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-652" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-650" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-649" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-646" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-644" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-643" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-641" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-640" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-637" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-635" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-632" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-630" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-628" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-626" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-623" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-621" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-617" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-616" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-614" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-611" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-609" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-606" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-602" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-597" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-594" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-593" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-591" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-588" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-584" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-583" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-581" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-580" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-578" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-575" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-574" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-572" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-569" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-567" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-561" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-558" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-554" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-565" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-551" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-549" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-547" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-544" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-543" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-539" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-538" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-519" java.lang.OutOfMemoryError: Java heap space
+Connect [796]
+Exception in thread "Thread-516" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-481" Exception in thread "Thread-488" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-487" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-490" Exception in thread "Thread-482" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-493" Exception in thread "Thread-485" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-486" Exception in thread "Thread-479" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-489" java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-492" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-476" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-494" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-495" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-497" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-506" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-459" Exception in thread "Thread-458" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-499" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-503" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-501" Exception in thread "Thread-61" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-500" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-504" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-505" Exception in thread "Thread-496" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-160" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-450" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-59" java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-401" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-466" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-468" Exception in thread "Thread-469" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-473" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-475" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-478" java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-483" java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-409" java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-795" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-512" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-515" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-514" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-130" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-140" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-535" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-536" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-537" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-545" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-546" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-548" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-550" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-552" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-560" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-566" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-562" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-557" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-555" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-556" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-563" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-564" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-559" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-570" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-568" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-446" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-571" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-573" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-576" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-577" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-586" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-579" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-587" Exception in thread "Thread-590" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-589" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-596" Exception in thread "Thread-595" Exception in thread "Thread-599" Exception in thread "Thread-600" Exception in thread "Thread-603" Exception in thread "Thread-601" Exception in thread "Thread-604" Exception in thread "Thread-605" Exception in thread "Thread-607" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-608" Exception in thread "Thread-610" Exception in thread "Thread-756" Exception in thread "Thread-613" Exception in thread "Thread-615" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-619" Exception in thread "Thread-618" Exception in thread "Thread-620" Exception in thread "Thread-624" Exception in thread "Thread-622" Exception in thread "Thread-625" Exception in thread "Thread-627" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-631" Exception in thread "Thread-633" Exception in thread "Thread-634" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-636" Exception in thread "Thread-639" Exception in thread "Thread-638" Exception in thread "Thread-642" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-645" Exception in thread "Thread-647" Exception in thread "Thread-648" Exception in thread "Thread-651" Exception in thread "Thread-793" Exception in thread "Thread-656" Exception in thread "Thread-658" Exception in thread "Thread-659" Exception in thread "Thread-660" Exception in thread "Thread-662" Exception in thread "Thread-665" Exception in thread "Thread-666" Exception in thread "Thread-667" Exception in thread "Thread-456" Exception in thread "Thread-670" Exception in thread "Thread-671" Exception in thread "Thread-674" Exception in thread "Thread-673" Exception in thread "Thread-676" Exception in thread "Thread-679" Exception in thread "Thread-678" Exception in thread "Thread-681" Exception in thread "Thread-684" Exception in thread "Thread-685" Exception in thread "Thread-682" Exception in thread "Thread-691" Exception in thread "Thread-693" Exception in thread "Thread-695" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-698" Exception in thread "Thread-699" Exception in thread "Thread-701" Exception in thread "Thread-703" Exception in thread "Thread-706" Exception in thread "Thread-705" Exception in thread "Thread-707" Exception in thread "Thread-708" Exception in thread "Thread-713" Exception in thread "Thread-710" Exception in thread "Thread-711" Exception in thread "Thread-717" Exception in thread "Thread-714" Exception in thread "Thread-720" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-725" Exception in thread "Thread-730" Exception in thread "Thread-732" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-726" Exception in thread "Thread-733" Exception in thread "Thread-734" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-737" java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-735" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-736" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-738" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-743" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-744" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-742" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-741" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-432" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-747" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-751" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-749" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-752" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-755" Exception in thread "Thread-754" Exception in thread "Thread-757" Exception in thread "Thread-759" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-761" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-767" Exception in thread "Thread-762" Exception in thread "Thread-765" Exception in thread "Thread-764" Exception in thread "Thread-766" Exception in thread "Thread-769" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-771" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-773" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-774" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-776" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-777" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-779" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-780" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-781" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-783" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-784" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-786" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-788" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-787" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-335" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-422" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-421" java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+	at Misc.Transfer.sendImage(Transfer.java:96)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Exception in thread "Thread-429" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-381" Exception in thread "Thread-324" Exception in thread "Thread-96" Exception in thread "Thread-299" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-244" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-97" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-117" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-195" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-433" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-436" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-435" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-437" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-438" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-236" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-425" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-213" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-790" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-86" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-729" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-727" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-722" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-723" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-719" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-715" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-687" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-629" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-598" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-585" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-582" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-553" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-540" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-524" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-530" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-529" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-528" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-527" Exception in thread "Thread-526" Exception in thread "Thread-525" Exception in thread "Thread-146" Exception in thread "Thread-260" Exception in thread "Thread-513" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-210" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-510" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-207" java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-447" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-449" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-448" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-792" java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Thread-507" java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.net.SocketException: Broken pipe (Write failed)
+Close client side. Finish session...
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Close client side. Finish session...
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+Close client side. Finish session...
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+Close client side. Finish session...
+Close client side. Finish session...
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Close client side. Finish session...
+Close client side. Finish session...
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Close client side. Finish session...
+java.net.SocketException: Broken pipe (Write failed)
+Close client side. Finish session...
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+Close client side. Finish session...
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Close client side. Finish session...
+java.net.SocketException: Broken pipe (Write failed)
+Close client side. Finish session...
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Close client side. Finish session...
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Close client side. Finish session...
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Close client side. Finish session...
+java.net.SocketException: Broken pipe (Write failed)
+Close client side. Finish session...
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+Close client side. Finish session...
+Close client side. Finish session...
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Close client side. Finish session...
+Close client side. Finish session...
+Close client side. Finish session...
+Close client side. Finish session...
+Close client side. Finish session...
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Close client side. Finish session...
+Close client side. Finish session...
+Close client side. Finish session...
+Close client side. Finish session...
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+Close client side. Finish session...
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+Close client side. Finish session...
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Close client side. Finish session...
+java.net.SocketException: Broken pipe (Write failed)
+Close client side. Finish session...
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Close client side. Finish session...
+Close client side. Finish session...
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Close client side. Finish session...
+Close client side. Finish session...
+java.net.SocketException: Broken pipe (Write failed)
+Close client side. Finish session...
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+Close client side. Finish session...
+Close client side. Finish session...
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+Close client side. Finish session...
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Close client side. Finish session...
+Close client side. Finish session...
+Close client side. Finish session...
+Close client side. Finish session...
+Close client side. Finish session...
+Close client side. Finish session...
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Close client side. Finish session...
+java.net.SocketException: Broken pipe (Write failed)
+Close client side. Finish session...
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+Close client side. Finish session...
+Close client side. Finish session...
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+Close client side. Finish session...
+Close client side. Finish session...
+Close client side. Finish session...
+Close client side. Finish session...
+Close client side. Finish session...
+Close client side. Finish session...
+Close client side. Finish session...
+Close client side. Finish session...
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Close client side. Finish session...
+java.net.SocketException: Broken pipe (Write failed)
+Close client side. Finish session...
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Close client side. Finish session...
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Close client side. Finish session...
+java.net.SocketException: Broken pipe (Write failed)
+Close client side. Finish session...
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Close client side. Finish session...
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Close client side. Finish session...
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Close client side. Finish session...
+java.net.SocketException: Broken pipe (Write failed)
+Close client side. Finish session...
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Protocol wrong type for socket (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:199)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:128)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Close client side. Finish session...
+java.net.SocketException: Broken pipe (Write failed)
+Close client side. Finish session...
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Close client side. Finish session...
+java.net.SocketException: Protocol wrong type for socket (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:199)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:128)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Close client side. Finish session...
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Close client side. Finish session...
+java.net.SocketException: Broken pipe (Write failed)
+Close client side. Finish session...
+Close client side. Finish session...
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+Close client side. Finish session...
+Close client side. Finish session...
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Close client side. Finish session...
+java.net.SocketException: Broken pipe (Write failed)
+Close client side. Finish session...
+Close client side. Finish session...
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Close client side. Finish session...
+Close client side. Finish session...
+Close client side. Finish session...
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+Close client side. Finish session...
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+Close client side. Finish session...
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+Close client side. Finish session...
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+Close client side. Finish session...
+Close client side. Finish session...
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+Close client side. Finish session...
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+Close client side. Finish session...
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Close client side. Finish session...
+Close client side. Finish session...
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+Close client side. Finish session...
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Close client side. Finish session...
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at Misc.Transfer.sendImage(Transfer.java:108)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:134)
+	at java.base/java.io.DataOutputStream.writeInt(DataOutputStream.java:197)
+	at Misc.Transfer.send(Transfer.java:19)
+	at Client.AsyncClient$ConnectionHandler.run(AsyncClient.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+java.io.IOException: Server is not available: try to connect later...
+Server is not available: try to connect later...
+	at Client.AsyncClient.<init>(AsyncClient.java:73)
+	at Client.AsyncClient.<init>(AsyncClient.java:49)
+	at Test.DenieOfService.main(DenieOfService.java:38)
+
+Max connected clients: 796
