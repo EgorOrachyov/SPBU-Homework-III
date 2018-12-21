@@ -12,7 +12,7 @@ public class Server {
         configuration.setMaxNumOfClients(1000);
         configuration.setNumOfClientsLimited(false);
         configuration.setTaskPoolProperties(4);
-        configuration.setConnectionPoolProperties(1, 1, 8);
+        configuration.setConnectionPoolProperties(1, 1, 4);
 
         ConnectionFactory connectionFactory = new ConnectionFactory(configuration);
         connectionFactory.run();
