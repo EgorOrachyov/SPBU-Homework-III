@@ -107,7 +107,7 @@ public class ConnectionHandler implements Runnable {
                         Transfer.send(outputStream, Message.RESULT);
                         Transfer.sendImage(outputStream, task.getResult());
 
-                        Image result = task.getResult();
+                        //Image result = task.getResult();
                         //System.out.println("Send image | size: " + (result.getWidth() * result.getHeight()));
 
                         task = null;

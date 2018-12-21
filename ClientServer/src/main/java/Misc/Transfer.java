@@ -118,20 +118,20 @@ public class Transfer {
         final int width = stream.readInt();
         final int height = stream.readInt();
 
-        final int[] data = new int[width * height];
+        int[] data = new int[width * height];
         byte[] m = new byte[width * height * 4];
+
         stream.readFully(m, 0, width * height * 4);
 
         int k = 0;
         for (int i = 0; i < width * height; ++i) {
 
-            data[i] = (m[k    ] << 24) |
-                      (m[k + 1] << 16) |
-                      (m[k + 2] << 8 ) |
-                      (m[k + 3]      ) ;
+            data[i] = ( m[k    ] << 24 ) & 0xFF000000 |
+                      ( m[k + 1] << 16 ) & 0x00FF0000 |
+                      ( m[k + 2] <<  8 ) & 0x0000FF00 |
+                      ( m[k + 3]       ) & 0x000000FF ;
 
             k += 4;
-
         }
 
         return new Image(width, height, data);

@@ -11,8 +11,8 @@ public class Server {
         configuration.setPort(40000);
         configuration.setMaxNumOfClients(1000);
         configuration.setNumOfClientsLimited(false);
-        configuration.setTaskPoolProperties(4);
-        configuration.setConnectionPoolProperties(1, 1, 4);
+        configuration.setTaskPoolProperties(1);
+        configuration.setConnectionPoolProperties(1, 1, 1);
 
         ConnectionFactory connectionFactory = new ConnectionFactory(configuration);
         connectionFactory.run();

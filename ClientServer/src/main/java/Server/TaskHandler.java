@@ -62,7 +62,6 @@ public class TaskHandler implements Runnable {
             result.setBytes(data);
 
             processDone.set(true);
-
         }
 
     }

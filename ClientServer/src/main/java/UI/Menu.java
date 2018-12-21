@@ -54,7 +54,7 @@ public class Menu extends JFrame {
         JLabel pathNote = new JLabel("Path");
         pathNote.setBounds(10, 50, 50, 20);
 
-        path = new JTextField("src/main/java/Debug/Images/test2.jpg");
+        path = new JTextField("src/main/java/Debug/Images/test5.jpg");
         path.setBounds(70, 50, 370, 20);
 
         JLabel filtersNote = new JLabel("Filters");
