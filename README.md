@@ -40,7 +40,7 @@ Programming workshop (Java language)
 * Managing progress bar for current task on client-side
 * Pool of tasks for server
 * Scheduled pool for clients-connections on server-side
-* Reflection based filtering loading and sending to client on server-side
+* Reflection based filters loading and sending to client on server-side
 * Load tests for server (average and median time for client service)
 * Deny of service test for server
 * Performance measurent for fixed number of clients
