@@ -325,7 +325,4 @@ public class Menu extends JFrame {
         thread.start();
     }
 
-    // src/main/java/Debug/Images/test1.png
-    // src/main/java/Debug/Images/test2.jpg
-
 }

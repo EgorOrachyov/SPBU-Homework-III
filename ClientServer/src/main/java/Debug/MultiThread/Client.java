@@ -30,7 +30,7 @@ public class Client {
 
                 String line = in.nextLine();
 
-                consoleOut.println("Server: " + line);
+                consoleOut.println("RunServer: " + line);
                 consoleOut.println("Enter Message: ");
 
                 String input = consoleIn.nextLine();

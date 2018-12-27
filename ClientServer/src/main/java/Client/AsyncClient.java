@@ -69,8 +69,8 @@ public class AsyncClient implements Runnable {
             }
         }
         catch (IOException e) {
-            System.out.println("Server is not available: try to connect later...");
-            throw new IOException("Server is not available: try to connect later...");
+            System.out.println("RunServer is not available: try to connect later...");
+            throw new IOException("RunServer is not available: try to connect later...");
         }
     }
 
@@ -213,44 +213,4 @@ public class AsyncClient implements Runnable {
         }
     }
 
-    public static void main(String ... args) {
-
-        try {
-            AsyncClient client = new AsyncClient("localhost", 40000, true);
-            client.submitTask(new FilterTask(new Image("src/main/java/Debug/Images/test2.jpg"), 1));
-
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-
-            //client.cancelTask();
-
-            while (client.isProcessTask()) {
-                //System.out.println(client.getCurrentTaskProgress());
-            }
-
-            ConcurrentLinkedQueue<FilterTask> result = client.getCompletedTasks();
-            FilterTask task;
-
-            do {
-                task = result.poll();
-            } while (task == null);
-
-            if (task != null) {
-                System.out.println("Task was done");
-                //task.getSource().saveImage("src/main/java/Debug/Images/server3.png");
-            }
-            else {
-                System.out.println("Task was not done");
-            }
-
-            client.done(true);
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
 }

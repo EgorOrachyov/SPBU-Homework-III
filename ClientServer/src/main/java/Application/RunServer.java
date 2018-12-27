@@ -1,6 +1,13 @@
-package Server;
+package Application;
 
-public class Server {
+import Server.Configuration;
+import Server.ConnectionFactory;
+
+/**
+ * Run new instance of server side of application with
+ * desired connection properties
+ */
+public class RunServer {
 
     public static void main(String ... args) {
 

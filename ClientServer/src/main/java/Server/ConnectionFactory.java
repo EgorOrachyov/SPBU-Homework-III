@@ -21,8 +21,8 @@ public class ConnectionFactory implements Runnable {
         try {
             serverSocket = new ServerSocket(configuration.getPort());
 
-            System.out.println("----------- Server Initialize -----------");
-            System.out.println("Create Server Socket");
+            System.out.println("----------- RunServer Initialize -----------");
+            System.out.println("Create RunServer Socket");
         }
         catch (IOException e) {
             e.printStackTrace();
@@ -34,13 +34,13 @@ public class ConnectionFactory implements Runnable {
     public void run() {
 
         // Send runnable to handle input from console to
-        // have control on Server
+        // have control on RunServer
         Thread thread = new Thread(new InputHandler());
         thread.setDaemon(true);
         thread.start();
 
         try {
-            System.out.println("-------------- Server Works -------------");
+            System.out.println("-------------- RunServer Works -------------");
 
             while (!configuration.isServerShutDown()) {
 
@@ -76,7 +76,7 @@ public class ConnectionFactory implements Runnable {
         System.out.println("---------- Initialize Shutdown ----------");
 
         configuration.setServerShutDown(true);
-        System.out.println("Server shutdown");
+        System.out.println("RunServer shutdown");
 
         while (configuration.getNumOfClients() > 0) {
             Thread.yield();
